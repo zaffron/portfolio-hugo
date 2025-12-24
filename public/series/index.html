@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Series | Avinash Rijal - Personal Blog &amp; Portfolio</title>
@@ -17,7 +17,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:1313/series/">
+<link rel="canonical" href="https://avinashrijal.com.np/series/">
 
 
 
@@ -27,11 +27,11 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://localhost:1313/series/">
+<meta property="og:url" content="https://avinashrijal.com.np/series/">
 <meta property="og:title" content="Series">
 <meta property="og:description" content="Hi! I am Avinash Rijal. A Full stack web developer and DevOps Engineer from Nepal.">
 
-<meta property="og:image" content="http://localhost:1313/og-default.png">
+<meta property="og:image" content="https://avinashrijal.com.np/og-default.png">
 
 <meta property="og:site_name" content="Avinash Rijal - Personal Blog &amp; Portfolio">
 <meta property="og:locale" content="en-us">
@@ -41,11 +41,11 @@
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="http://localhost:1313/series/">
+<meta name="twitter:url" content="https://avinashrijal.com.np/series/">
 <meta name="twitter:title" content="Series">
 <meta name="twitter:description" content="Hi! I am Avinash Rijal. A Full stack web developer and DevOps Engineer from Nepal.">
 
-<meta name="twitter:image" content="http://localhost:1313/og-default.png">
+<meta name="twitter:image" content="https://avinashrijal.com.np/og-default.png">
 
 
 
@@ -183,121 +183,38 @@
   <main>
     
 <section class="py-20 min-h-screen">
-  <div class="container mx-auto px-6">
-    <h1 class="text-4xl md:text-5xl font-bold text-center mb-4">Series</h1>
-    <p class="text-center text-gray-600 mb-8"></p>
-
+  <div class="container mx-auto px-6 max-w-6xl">
     
-    <div class="max-w-4xl mx-auto mb-8">
-      <div class="bg-white rounded-xl shadow-lg p-6">
-        <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
-          <svg class="w-5 h-5 text-[#6b63ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
-          </svg>
-          Filter by Tags
-        </h3>
-        <div class="flex flex-wrap gap-2">
-          <button onclick="filterByTag('all')"
-                  class="tag-filter active px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#6b63ff] text-white">
-            All Posts
-          </button>
-          
-          
-          
-        </div>
-      </div>
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        
+          All Series
+        
+      </h1>
+      <p class="text-gray-600 text-lg">
+        
+          Browse posts by series
+        
+      </p>
     </div>
 
     
-    <div class="max-w-4xl mx-auto mb-8">
-      <div class="relative">
-        <input type="text" id="search-input" placeholder="Search posts..."
-               class="w-full px-6 py-4 pl-12 rounded-xl border-2 border-gray-200 focus:border-[#6b63ff] focus:outline-none transition-colors">
-        <svg class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+    </div>
+
+    
+    <div class="mt-12 text-center">
+      <a href="/posts"
+         class="inline-flex items-center gap-2 text-[#6b63ff] hover:gap-3 transition-all font-medium">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"/>
         </svg>
-      </div>
+        Back to Blog
+      </a>
     </div>
-
-    
-    <div class="max-w-4xl mx-auto" id="posts-container">
-      
-      
-
-      
-      <div id="no-results" class="hidden text-center py-12">
-        <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-        </svg>
-        <p class="text-xl text-gray-500">No posts found matching your search.</p>
-      </div>
-    </div>
-
-    
-    
   </div>
 </section>
-
-<script>
-  
-  const searchInput = document.getElementById('search-input');
-  const postsContainer = document.getElementById('posts-container');
-  const noResults = document.getElementById('no-results');
-  const posts = document.querySelectorAll('.post-item');
-  let activeTag = 'all';
-
-  searchInput.addEventListener('input', function(e) {
-    const searchTerm = e.target.value.toLowerCase();
-    filterPosts(searchTerm, activeTag);
-  });
-
-  
-  function filterByTag(tag) {
-    activeTag = tag;
-    const searchTerm = searchInput.value.toLowerCase();
-
-    
-    document.querySelectorAll('.tag-filter').forEach(btn => {
-      btn.classList.remove('active', 'bg-[#6b63ff]', 'text-white');
-      btn.classList.add('bg-gray-100', 'text-gray-700');
-    });
-    event.target.classList.add('active', 'bg-[#6b63ff]', 'text-white');
-    event.target.classList.remove('bg-gray-100', 'text-gray-700');
-
-    filterPosts(searchTerm, tag);
-  }
-
-  function filterPosts(searchTerm, tag) {
-    let visibleCount = 0;
-
-    posts.forEach(post => {
-      const title = post.dataset.title;
-      const summary = post.dataset.summary;
-      const tags = post.dataset.tags;
-
-      const matchesSearch = !searchTerm ||
-                           title.includes(searchTerm) ||
-                           summary.includes(searchTerm) ||
-                           tags.includes(searchTerm);
-
-      const matchesTag = tag === 'all' || tags.includes(tag.toLowerCase());
-
-      if (matchesSearch && matchesTag) {
-        post.classList.remove('hidden');
-        visibleCount++;
-      } else {
-        post.classList.add('hidden');
-      }
-    });
-
-    
-    if (visibleCount === 0) {
-      noResults.classList.remove('hidden');
-    } else {
-      noResults.classList.add('hidden');
-    }
-  }
-</script>
 
   </main>
 

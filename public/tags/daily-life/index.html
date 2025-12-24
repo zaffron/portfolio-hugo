@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daily-Life | Avinash Rijal - Personal Blog &amp; Portfolio</title>
@@ -17,7 +17,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:1313/tags/daily-life/">
+<link rel="canonical" href="https://avinashrijal.com.np/tags/daily-life/">
 
 
 
@@ -27,11 +27,11 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://localhost:1313/tags/daily-life/">
+<meta property="og:url" content="https://avinashrijal.com.np/tags/daily-life/">
 <meta property="og:title" content="Daily-Life">
 <meta property="og:description" content="Hi! I am Avinash Rijal. A Full stack web developer and DevOps Engineer from Nepal.">
 
-<meta property="og:image" content="http://localhost:1313/og-default.png">
+<meta property="og:image" content="https://avinashrijal.com.np/og-default.png">
 
 <meta property="og:site_name" content="Avinash Rijal - Personal Blog &amp; Portfolio">
 <meta property="og:locale" content="en-us">
@@ -41,11 +41,11 @@
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="http://localhost:1313/tags/daily-life/">
+<meta name="twitter:url" content="https://avinashrijal.com.np/tags/daily-life/">
 <meta name="twitter:title" content="Daily-Life">
 <meta name="twitter:description" content="Hi! I am Avinash Rijal. A Full stack web developer and DevOps Engineer from Nepal.">
 
-<meta name="twitter:image" content="http://localhost:1313/og-default.png">
+<meta name="twitter:image" content="https://avinashrijal.com.np/og-default.png">
 
 
 
@@ -184,47 +184,37 @@
     
 <section class="py-20 min-h-screen">
   <div class="container mx-auto px-6">
-    <h1 class="text-4xl md:text-5xl font-bold text-center mb-4">Daily-Life</h1>
-    <p class="text-center text-gray-600 mb-8"></p>
-
     
-    <div class="max-w-4xl mx-auto mb-8">
-      <div class="bg-white rounded-xl shadow-lg p-6">
-        <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
-          <svg class="w-5 h-5 text-[#6b63ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-sm font-medium mb-4">
+        
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
           </svg>
-          Filter by Tags
-        </h3>
-        <div class="flex flex-wrap gap-2">
-          <button onclick="filterByTag('all')"
-                  class="tag-filter active px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#6b63ff] text-white">
-            All Posts
-          </button>
-          
-          
-            
-              
-            
-          
-            
-              
-            
-          
-          
-            <button onclick="filterByTag('daily-life')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              daily-life
-            </button>
-          
-        </div>
+          Tag
+        
       </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Daily-Life</h1>
+      <p class="text-gray-600 text-lg">4 posts in this tag</p>
     </div>
+
+    
+    <nav class="max-w-4xl mx-auto mb-8 text-sm text-gray-600">
+      <ol class="flex flex-wrap items-center gap-2">
+        <li><a href="/" class="hover:text-[#6b63ff] transition-colors">Home</a></li>
+        <li>/</li>
+        <li><a href="/posts" class="hover:text-[#6b63ff] transition-colors">Blog</a></li>
+        <li>/</li>
+        <li><a href="/tags" class="hover:text-[#6b63ff] transition-colors">Tags</a></li>
+        <li>/</li>
+        <li class="text-gray-400">Daily-Life</li>
+      </ol>
+    </nav>
 
     
     <div class="max-w-4xl mx-auto mb-8">
       <div class="relative">
-        <input type="text" id="search-input" placeholder="Search posts..."
+        <input type="text" id="search-input" placeholder="Search in Daily-Life..."
                class="w-full px-6 py-4 pl-12 rounded-xl border-2 border-gray-200 focus:border-[#6b63ff] focus:outline-none transition-colors">
         <svg class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
@@ -240,27 +230,64 @@
                  data-title="hello to the new guitar"
                  data-summary="&lt;p&gt;so, i brought my guitar today. it is &lt;strong&gt;enya ea-x1 pro&lt;/strong&gt;.
 the guitar is 41&amp;rsquo;&amp;rsquo; variant. there is solid spruce top which is dried for 10 years. side is made up of rosewood, neck from mahogany, fingerboard from black richlite and bridge from black richlite. so, no more waiting for guitar to sound good as time progress.&lt;/p&gt;
-&lt;p&gt;also, it is my first experience with trans-acoustic guitar. the self amp inside the guitar works really well and it sounds amazing when played. here, the trans-acoustic means i don&amp;rsquo;t have to plug in the amp and do the sound modification like chores/reverb. they are built inside the guitar itself.&lt;/p&gt;"
-                 data-tags="daily-life">
+&lt;p&gt;also, it is my first experience with trans-acoustic guitar. the self amp inside the guitar works really well and it sounds amazing when played. here, the trans-acoustic means i don&amp;rsquo;t have to plug in the amp and do the sound modification like chores/reverb. they are built inside the guitar itself.&lt;/p&gt;">
+          
+          
+          <div class="mb-6 rounded-lg overflow-hidden">
+            <a href="/posts/hello-guitar/">
+              <img src="eax1pro.jpg"
+                   alt="Hello to the new guitar"
+                   class="w-full h-64 object-cover hover:scale-105 transition-transform">
+            </a>
+          </div>
+          
+
           <h2 class="text-2xl md:text-3xl font-bold mb-3">
             <a href="/posts/hello-guitar/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
               Hello to the new guitar
             </a>
           </h2>
 
-          <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
-            <time datetime="2022-01-28">
+          <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
+            
+            
+            <div class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+              </svg>
+              <span>Avinash Rijal</span>
+            </div>
+            <span>•</span>
+            
+
+            
+            <time datetime="2022-01-28" class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
               January 28, 2022
             </time>
+
             
-              <span>•</span>
-              <div class="flex gap-2 flex-wrap">
-                
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    daily-life
-                  </span>
-                
-              </div>
+            <span>•</span>
+            <div class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>1 min read</span>
+            </div>
+          </div>
+
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            
+              
+                <a href="/categories/daily-life"
+                   class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-lg text-xs font-medium hover:bg-opacity-20 transition-all">
+                  Daily Life
+                </a>
+              
+            
             
           </div>
 
@@ -269,6 +296,69 @@ The guitar is 41&rsquo;&rsquo; variant. There is solid spruce top which is dried
 <p>Also, it is my first experience with trans-acoustic guitar. The self amp inside the guitar works really well and it sounds amazing when played. Here, the trans-acoustic means I don&rsquo;t have to plug in the amp and do the sound modification like chores/reverb. They are built inside the guitar itself.</p></p>
 
           <a href="/posts/hello-guitar/"
+             class="inline-flex items-center gap-2 text-[#6b63ff] hover:gap-3 transition-all font-medium">
+            Read More
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+        </article>
+      
+        <article class="post-item mb-12 bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+                 data-title="hello to the new guitar"
+                 data-summary="&lt;p&gt;so, i brought my guitar today. it is &lt;strong&gt;enya ea-x1 pro&lt;/strong&gt;.
+the guitar is 41&amp;rsquo;&amp;rsquo; variant. there is solid spruce top which is dried for 10 years. side is made up of rosewood, neck from mahogany, fingerboard from black richlite and bridge from black richlite. so, no more waiting for guitar to sound good as time progress.&lt;/p&gt;
+&lt;p&gt;also, it is my first experience with trans-acoustic guitar. the self amp inside the guitar works really well and it sounds amazing when played. here, the trans-acoustic means i don&amp;rsquo;t have to plug in the amp and do the sound modification like chores/reverb. they are built inside the guitar itself.&lt;/p&gt;">
+          
+          
+          <div class="mb-6 rounded-lg overflow-hidden">
+            <a href="/posts_backup_20251224_211821/hello-guitar/">
+              <img src="eax1pro.jpg"
+                   alt="Hello to the new guitar"
+                   class="w-full h-64 object-cover hover:scale-105 transition-transform">
+            </a>
+          </div>
+          
+
+          <h2 class="text-2xl md:text-3xl font-bold mb-3">
+            <a href="/posts_backup_20251224_211821/hello-guitar/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
+              Hello to the new guitar
+            </a>
+          </h2>
+
+          <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
+            
+            
+
+            
+            <time datetime="2022-01-28" class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              January 28, 2022
+            </time>
+
+            
+            <span>•</span>
+            <div class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>1 min read</span>
+            </div>
+          </div>
+
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            
+            
+          </div>
+
+          <p class="text-gray-600 mb-4"><p>So, I brought my guitar today. It is <strong>Enya EA-X1 Pro</strong>.
+The guitar is 41&rsquo;&rsquo; variant. There is solid spruce top which is dried for 10 years. Side is made up of Rosewood, Neck from Mahogany, Fingerboard from Black Richlite and bridge from Black Richlite. So, no more waiting for guitar to sound good as time progress.</p>
+<p>Also, it is my first experience with trans-acoustic guitar. The self amp inside the guitar works really well and it sounds amazing when played. Here, the trans-acoustic means I don&rsquo;t have to plug in the amp and do the sound modification like chores/reverb. They are built inside the guitar itself.</p></p>
+
+          <a href="/posts_backup_20251224_211821/hello-guitar/"
              class="inline-flex items-center gap-2 text-[#6b63ff] hover:gap-3 transition-all font-medium">
             Read More
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -290,27 +380,56 @@ supermarkets, these eggs are sometimes sold covered in a thick layer of salted
 charcoal paste. the eggs may also be sold with the salted paste removed,
 wrapped in plastic, and vacuum packed. from the salt curing process, the
 salted duck eggs have a briny aroma, a gelatin-like egg white and a
-firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;"
-                 data-tags="daily-life">
+firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;">
+          
+          
+
           <h2 class="text-2xl md:text-3xl font-bold mb-3">
             <a href="/posts/hello-world/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
               Hello World
             </a>
           </h2>
 
-          <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
-            <time datetime="2015-05-01">
+          <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
+            
+            
+            <div class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+              </svg>
+              <span>Avinash Rijal</span>
+            </div>
+            <span>•</span>
+            
+
+            
+            <time datetime="2015-05-01" class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
               May 1, 2015
             </time>
+
             
-              <span>•</span>
-              <div class="flex gap-2 flex-wrap">
-                
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    daily-life
-                  </span>
-                
-              </div>
+            <span>•</span>
+            <div class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>1 min read</span>
+            </div>
+          </div>
+
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            
+              
+                <a href="/categories/daily-life"
+                   class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-lg text-xs font-medium hover:bg-opacity-20 transition-all">
+                  Daily Life
+                </a>
+              
+            
             
           </div>
 
@@ -336,6 +455,79 @@ firm-textured, round yolk that is bright orange-red in color.</p></p>
           </a>
         </article>
       
+        <article class="post-item mb-12 bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+                 data-title="hello world"
+                 data-summary="&lt;p&gt;this is my first post on my new fake blog! how exciting!&lt;/p&gt;
+&lt;p&gt;i&amp;rsquo;m sure i&amp;rsquo;ll write a lot more interesting things in the future.&lt;/p&gt;
+&lt;p&gt;oh, and here&amp;rsquo;s a great quote from this wikipedia on
+&lt;a href=&#34;http://en.wikipedia.org/wiki/salted_duck_egg&#34;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a salted duck egg is a chinese preserved food product made by soaking duck
+eggs in brine, or packing each egg in damp, salted charcoal. in asian
+supermarkets, these eggs are sometimes sold covered in a thick layer of salted
+charcoal paste. the eggs may also be sold with the salted paste removed,
+wrapped in plastic, and vacuum packed. from the salt curing process, the
+salted duck eggs have a briny aroma, a gelatin-like egg white and a
+firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;">
+          
+          
+
+          <h2 class="text-2xl md:text-3xl font-bold mb-3">
+            <a href="/posts_backup_20251224_211821/hello-world/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
+              Hello World
+            </a>
+          </h2>
+
+          <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
+            
+            
+
+            
+            <time datetime="2015-05-01" class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              May 1, 2015
+            </time>
+
+            
+            <span>•</span>
+            <div class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>1 min read</span>
+            </div>
+          </div>
+
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            
+            
+          </div>
+
+          <p class="text-gray-600 mb-4"><p>This is my first post on my new fake blog! How exciting!</p>
+<p>I&rsquo;m sure I&rsquo;ll write a lot more interesting things in the future.</p>
+<p>Oh, and here&rsquo;s a great quote from this Wikipedia on
+<a href="http://en.wikipedia.org/wiki/Salted_duck_egg">salted duck eggs</a>.</p>
+<blockquote>
+<p>A salted duck egg is a Chinese preserved food product made by soaking duck
+eggs in brine, or packing each egg in damp, salted charcoal. In Asian
+supermarkets, these eggs are sometimes sold covered in a thick layer of salted
+charcoal paste. The eggs may also be sold with the salted paste removed,
+wrapped in plastic, and vacuum packed. From the salt curing process, the
+salted duck eggs have a briny aroma, a gelatin-like egg white and a
+firm-textured, round yolk that is bright orange-red in color.</p></p>
+
+          <a href="/posts_backup_20251224_211821/hello-world/"
+             class="inline-flex items-center gap-2 text-[#6b63ff] hover:gap-3 transition-all font-medium">
+            Read More
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+        </article>
+      
 
       
       <div id="no-results" class="hidden text-center py-12">
@@ -348,6 +540,21 @@ firm-textured, round yolk that is bright orange-red in color.</p></p>
 
     
     
+
+    
+    <div class="max-w-4xl mx-auto mt-12 flex items-center justify-between">
+      <a href="/tags"
+         class="inline-flex items-center gap-2 text-[#6b63ff] hover:gap-3 transition-all font-medium">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"/>
+        </svg>
+        All Tags
+      </a>
+      <a href="/posts"
+         class="inline-flex items-center gap-2 text-gray-600 hover:text-[#6b63ff] transition-colors font-medium">
+        Back to Blog
+      </a>
+    </div>
   </div>
 </section>
 
@@ -357,45 +564,20 @@ firm-textured, round yolk that is bright orange-red in color.</p></p>
   const postsContainer = document.getElementById('posts-container');
   const noResults = document.getElementById('no-results');
   const posts = document.querySelectorAll('.post-item');
-  let activeTag = 'all';
 
   searchInput.addEventListener('input', function(e) {
     const searchTerm = e.target.value.toLowerCase();
-    filterPosts(searchTerm, activeTag);
-  });
-
-  
-  function filterByTag(tag) {
-    activeTag = tag;
-    const searchTerm = searchInput.value.toLowerCase();
-
-    
-    document.querySelectorAll('.tag-filter').forEach(btn => {
-      btn.classList.remove('active', 'bg-[#6b63ff]', 'text-white');
-      btn.classList.add('bg-gray-100', 'text-gray-700');
-    });
-    event.target.classList.add('active', 'bg-[#6b63ff]', 'text-white');
-    event.target.classList.remove('bg-gray-100', 'text-gray-700');
-
-    filterPosts(searchTerm, tag);
-  }
-
-  function filterPosts(searchTerm, tag) {
     let visibleCount = 0;
 
     posts.forEach(post => {
       const title = post.dataset.title;
       const summary = post.dataset.summary;
-      const tags = post.dataset.tags;
 
       const matchesSearch = !searchTerm ||
                            title.includes(searchTerm) ||
-                           summary.includes(searchTerm) ||
-                           tags.includes(searchTerm);
+                           summary.includes(searchTerm);
 
-      const matchesTag = tag === 'all' || tags.includes(tag.toLowerCase());
-
-      if (matchesSearch && matchesTag) {
+      if (matchesSearch) {
         post.classList.remove('hidden');
         visibleCount++;
       } else {
@@ -409,7 +591,7 @@ firm-textured, round yolk that is bright orange-red in color.</p></p>
     } else {
       noResults.classList.add('hidden');
     }
-  }
+  });
 </script>
 
   </main>

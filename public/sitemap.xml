@@ -2,62 +2,165 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/from-clicks-to-keystrokes-my-journey-into-the-vim-cult/</loc>
+    <loc>https://avinashrijal.com.np/categories/</loc>
     <lastmod>2025-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/programming/</loc>
+    <loc>https://avinashrijal.com.np/tags/editor/</loc>
     <lastmod>2025-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://avinashrijal.com.np/posts/from-clicks-to-keystrokes-my-journey-into-the-vim-cult/</loc>
     <lastmod>2025-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/how-to-serve-cnn-models-with-fast-api/</loc>
+    <loc>https://avinashrijal.com.np/posts_backup_20251224_211821/from-clicks-to-keystrokes-my-journey-into-the-vim-cult/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/tags/neovim/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/categories/opinion/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/tags/productivity/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/categories/programming/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/tags/programming/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/tags/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/tags/vim/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/tags/api/</loc>
     <lastmod>2025-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/red/</loc>
-    <lastmod>2023-01-15T09:00:00-07:00</lastmod>
+    <loc>https://avinashrijal.com.np/tags/cnn/</loc>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/serve-home-server-with-true-fib/</loc>
-    <lastmod>2023-01-15T09:00:00-07:00</lastmod>
+    <loc>https://avinashrijal.com.np/tags/fastapi/</loc>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/developer/</loc>
+    <loc>https://avinashrijal.com.np/posts/how-to-serve-cnn-models-with-fast-api/</loc>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/posts_backup_20251224_211821/how-to-serve-cnn-models-with-fast-api/</loc>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/categories/machine-learning/</loc>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/tags/ml/</loc>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/tags/python/</loc>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/categories/tutorial/</loc>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/tags/ddns/</loc>
     <lastmod>2023-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/editor-setup-hiboo/</loc>
+    <loc>https://avinashrijal.com.np/categories/devops/</loc>
     <lastmod>2023-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://avinashrijal.com.np/tags/homeserver/</loc>
+    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/tags/nat/</loc>
+    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/tags/networking/</loc>
+    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/tags/red/</loc>
+    <lastmod>2023-01-15T09:00:00-07:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/posts/serve-home-server-with-true-fib/</loc>
+    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/posts_backup_20251224_211821/serve-home-server-with-true-fib/</loc>
+    <lastmod>2023-01-15T09:00:00-07:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/tags/developer/</loc>
+    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/posts/editor-setup-hiboo/</loc>
+    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/posts_backup_20251224_211821/editor-setup-hiboo/</loc>
+    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/tags/setup/</loc>
+    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/tags/vscode/</loc>
+    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/posts/</loc>
     <lastmod>2023-01-01T08:30:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://avinashrijal.com.np/posts_backup_20251224_211821/</loc>
+    <lastmod>2023-01-01T08:30:00-07:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/</loc>
     <lastmod>2023-01-01T08:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/daily-life/</loc>
+    <loc>https://avinashrijal.com.np/categories/daily-life/</loc>
     <lastmod>2022-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/hello-guitar/</loc>
+    <loc>https://avinashrijal.com.np/tags/daily-life/</loc>
     <lastmod>2022-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/awesome-images/</loc>
+    <loc>https://avinashrijal.com.np/tags/guitar/</loc>
+    <lastmod>2022-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/posts/hello-guitar/</loc>
+    <lastmod>2022-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/posts_backup_20251224_211821/hello-guitar/</loc>
+    <lastmod>2022-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/tags/music/</loc>
+    <lastmod>2022-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/posts/awesome-images/</loc>
     <lastmod>2020-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gatsby/</loc>
+    <loc>https://avinashrijal.com.np/posts_backup_20251224_211821/awesome-images/</loc>
     <lastmod>2020-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/images/</loc>
+    <loc>https://avinashrijal.com.np/tags/gatsby/</loc>
     <lastmod>2020-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/mdx/</loc>
+    <loc>https://avinashrijal.com.np/tags/images/</loc>
     <lastmod>2020-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/hi-folks/</loc>
+    <loc>https://avinashrijal.com.np/tags/mdx/</loc>
+    <lastmod>2020-06-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/tags/beginnings/</loc>
     <lastmod>2015-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/hello-world/</loc>
+    <loc>https://avinashrijal.com.np/tags/lorem-ipsum/</loc>
+    <lastmod>2015-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/posts/hi-folks/</loc>
+    <lastmod>2015-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/posts_backup_20251224_211821/hi-folks/</loc>
+    <lastmod>2015-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avinashrijal.com.np/posts/hello-world/</loc>
     <lastmod>2015-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://avinashrijal.com.np/posts_backup_20251224_211821/hello-world/</loc>
+    <lastmod>2015-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/</loc>
+    <loc>https://avinashrijal.com.np/series/</loc>
   </url>
 </urlset>

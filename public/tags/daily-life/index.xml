@@ -2,24 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Daily-Life on Avinash Rijal - Personal Blog &amp; Portfolio</title>
-    <link>http://localhost:1313/tags/daily-life/</link>
+    <link>https://avinashrijal.com.np/tags/daily-life/</link>
     <description>Recent content in Daily-Life on Avinash Rijal - Personal Blog &amp; Portfolio</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 28 Jan 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/daily-life/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://avinashrijal.com.np/tags/daily-life/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello to the new guitar</title>
-      <link>http://localhost:1313/posts/hello-guitar/</link>
+      <link>https://avinashrijal.com.np/posts/hello-guitar/</link>
       <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hello-guitar/</guid>
+      <guid>https://avinashrijal.com.np/posts/hello-guitar/</guid>
+      <description>&lt;p&gt;So, I brought my guitar today. It is &lt;strong&gt;Enya EA-X1 Pro&lt;/strong&gt;.&#xA;The guitar is 41&amp;rsquo;&amp;rsquo; variant. There is solid spruce top which is dried for 10 years. Side is made up of Rosewood, Neck from Mahogany, Fingerboard from Black Richlite and bridge from Black Richlite. So, no more waiting for guitar to sound good as time progress.&lt;/p&gt;&#xA;&lt;p&gt;Also, it is my first experience with trans-acoustic guitar. The self amp inside the guitar works really well and it sounds amazing when played. Here, the trans-acoustic means I don&amp;rsquo;t have to plug in the amp and do the sound modification like chores/reverb. They are built inside the guitar itself.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello to the new guitar</title>
+      <link>https://avinashrijal.com.np/posts_backup_20251224_211821/hello-guitar/</link>
+      <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://avinashrijal.com.np/posts_backup_20251224_211821/hello-guitar/</guid>
       <description>&lt;p&gt;So, I brought my guitar today. It is &lt;strong&gt;Enya EA-X1 Pro&lt;/strong&gt;.&#xA;The guitar is 41&amp;rsquo;&amp;rsquo; variant. There is solid spruce top which is dried for 10 years. Side is made up of Rosewood, Neck from Mahogany, Fingerboard from Black Richlite and bridge from Black Richlite. So, no more waiting for guitar to sound good as time progress.&lt;/p&gt;&#xA;&lt;p&gt;Also, it is my first experience with trans-acoustic guitar. The self amp inside the guitar works really well and it sounds amazing when played. Here, the trans-acoustic means I don&amp;rsquo;t have to plug in the amp and do the sound modification like chores/reverb. They are built inside the guitar itself.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hello World</title>
-      <link>http://localhost:1313/posts/hello-world/</link>
+      <link>https://avinashrijal.com.np/posts/hello-world/</link>
       <pubDate>Fri, 01 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <guid>https://avinashrijal.com.np/posts/hello-world/</guid>
+      <description>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m sure I&amp;rsquo;ll write a lot more interesting things in the future.&lt;/p&gt;&#xA;&lt;p&gt;Oh, and here&amp;rsquo;s a great quote from this Wikipedia on&#xA;&lt;a href=&#34;http://en.wikipedia.org/wiki/Salted_duck_egg&#34;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck&#xA;eggs in brine, or packing each egg in damp, salted charcoal. In Asian&#xA;supermarkets, these eggs are sometimes sold covered in a thick layer of salted&#xA;charcoal paste. The eggs may also be sold with the salted paste removed,&#xA;wrapped in plastic, and vacuum packed. From the salt curing process, the&#xA;salted duck eggs have a briny aroma, a gelatin-like egg white and a&#xA;firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello World</title>
+      <link>https://avinashrijal.com.np/posts_backup_20251224_211821/hello-world/</link>
+      <pubDate>Fri, 01 May 2015 00:00:00 +0000</pubDate>
+      <guid>https://avinashrijal.com.np/posts_backup_20251224_211821/hello-world/</guid>
       <description>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m sure I&amp;rsquo;ll write a lot more interesting things in the future.&lt;/p&gt;&#xA;&lt;p&gt;Oh, and here&amp;rsquo;s a great quote from this Wikipedia on&#xA;&lt;a href=&#34;http://en.wikipedia.org/wiki/Salted_duck_egg&#34;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck&#xA;eggs in brine, or packing each egg in damp, salted charcoal. In Asian&#xA;supermarkets, these eggs are sometimes sold covered in a thick layer of salted&#xA;charcoal paste. The eggs may also be sold with the salted paste removed,&#xA;wrapped in plastic, and vacuum packed. From the salt curing process, the&#xA;salted duck eggs have a briny aroma, a gelatin-like egg white and a&#xA;firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Daily Life on Avinash Rijal - Personal Blog &amp; Portfolio</title>
+    <link>https://avinashrijal.com.np/categories/daily-life/</link>
+    <description>Recent content in Daily Life on Avinash Rijal - Personal Blog &amp; Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://avinashrijal.com.np/categories/daily-life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello to the new guitar</title>
+      <link>https://avinashrijal.com.np/posts/hello-guitar/</link>
+      <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://avinashrijal.com.np/posts/hello-guitar/</guid>
+      <description>&lt;p&gt;So, I brought my guitar today. It is &lt;strong&gt;Enya EA-X1 Pro&lt;/strong&gt;.&#xA;The guitar is 41&amp;rsquo;&amp;rsquo; variant. There is solid spruce top which is dried for 10 years. Side is made up of Rosewood, Neck from Mahogany, Fingerboard from Black Richlite and bridge from Black Richlite. So, no more waiting for guitar to sound good as time progress.&lt;/p&gt;&#xA;&lt;p&gt;Also, it is my first experience with trans-acoustic guitar. The self amp inside the guitar works really well and it sounds amazing when played. Here, the trans-acoustic means I don&amp;rsquo;t have to plug in the amp and do the sound modification like chores/reverb. They are built inside the guitar itself.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Awesome Images</title>
+      <link>https://avinashrijal.com.np/posts/awesome-images/</link>
+      <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://avinashrijal.com.np/posts/awesome-images/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;great.jpg&#34; alt=&#34;Great Gatsby&#34; title=&#34;Great Gatsby&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;netlify-cms-media-configuration&#34;&gt;Netlify CMS Media Configuration&lt;/h2&gt;&#xA;&lt;p&gt;First, in your &lt;code&gt;static/admin/config.yml&lt;/code&gt;, make sure you have the following:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;media_folder: content/assets&#xA;public_folder: ../assets&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Docs: &lt;a href=&#34;https://www.netlifycms.org/docs/configuration-options/#media-and-public-folders&#34;&gt;https://www.netlifycms.org/docs/configuration-options/#media-and-public-folders&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;gatsby-plugins&#34;&gt;Gatsby Plugins&lt;/h2&gt;&#xA;&lt;p&gt;From &lt;a href=&#34;https://github.com/cwgw&#34;&gt;@cwgw&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;p&gt;So digging a little deeper, it looks like Gatsby only looks for &amp;ldquo;subplugins&amp;rdquo; at one specific path, &lt;code&gt;options.plugins&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;gatsby-plugin-mdx&lt;/code&gt; uses &lt;code&gt;options.gatsbyRemarkPlugins&lt;/code&gt;. This is fine for transforming markdown as the plugin handles that itself, but Gatsby-specific api files like &lt;code&gt;gatsby-browser.js&lt;/code&gt; don&amp;rsquo;t get loaded because Gatsby doesn&amp;rsquo;t know they exist.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New Beginnings</title>
+      <link>https://avinashrijal.com.np/posts/hi-folks/</link>
+      <pubDate>Thu, 28 May 2015 00:00:00 +0000</pubDate>
+      <guid>https://avinashrijal.com.np/posts/hi-folks/</guid>
+      <description>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and&#xA;Consonantia, there live the blind texts. Separated they live in Bookmarksgrove&#xA;right at the coast of the Semantics, a large language ocean. A small river named&#xA;Duden flows by their place and supplies it with the necessary regelialia.&lt;/p&gt;&#xA;&lt;h2 id=&#34;on-deer-horse-aboard-tritely-yikes-and-much&#34;&gt;On deer horse aboard tritely yikes and much&lt;/h2&gt;&#xA;&lt;p&gt;The Big Oxmox advised her not to do so, because there were thousands of bad&#xA;Commas, wild Question Marks and devious Semikoli, but the Little Blind Text&#xA;didn’t listen. She packed her seven versalia, put her initial into the belt and&#xA;made herself on the way.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello World</title>
+      <link>https://avinashrijal.com.np/posts/hello-world/</link>
+      <pubDate>Fri, 01 May 2015 00:00:00 +0000</pubDate>
+      <guid>https://avinashrijal.com.np/posts/hello-world/</guid>
+      <description>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m sure I&amp;rsquo;ll write a lot more interesting things in the future.&lt;/p&gt;&#xA;&lt;p&gt;Oh, and here&amp;rsquo;s a great quote from this Wikipedia on&#xA;&lt;a href=&#34;http://en.wikipedia.org/wiki/Salted_duck_egg&#34;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck&#xA;eggs in brine, or packing each egg in damp, salted charcoal. In Asian&#xA;supermarkets, these eggs are sometimes sold covered in a thick layer of salted&#xA;charcoal paste. The eggs may also be sold with the salted paste removed,&#xA;wrapped in plastic, and vacuum packed. From the salt curing process, the&#xA;salted duck eggs have a briny aroma, a gelatin-like egg white and a&#xA;firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

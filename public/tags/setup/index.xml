@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Setup on Avinash Rijal - Personal Blog &amp; Portfolio</title>
+    <link>https://avinashrijal.com.np/tags/setup/</link>
+    <description>Recent content in Setup on Avinash Rijal - Personal Blog &amp; Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://avinashrijal.com.np/tags/setup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Editor Setup While Working for Hiboo</title>
+      <link>https://avinashrijal.com.np/posts/editor-setup-hiboo/</link>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://avinashrijal.com.np/posts/editor-setup-hiboo/</guid>
+      <description>&lt;p&gt;I use &lt;strong&gt;VSCode&lt;/strong&gt;. It&amp;rsquo;s free, simple and runs smoothly on all platforms.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s talk about extensions. In past I have used many extensions and after filtering out most of the extensions that were memory/processor hogging; I have came to these extensions for overall usage. You can copy and paste them on your terminal if you would like to install them.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;code --install-extension christian-kohler.npm-intellisense&#xA;code --install-extension dbaeumer.vscode-eslint&#xA;code --install-extension eamodio.gitlens&#xA;code --install-extension ecmel.vscode-html-css&#xA;code --install-extension eg2.vscode-npm-script&#xA;code --install-extension esbenp.prettier-vscode&#xA;code --install-extension formulahendry.auto-close-tag&#xA;code --install-extension formulahendry.auto-rename-tag&#xA;code --install-extension GraphQL.vscode-graphql&#xA;code --install-extension IronGeek.vscode-env&#xA;code --install-extension jpoissonnier.vscode-styled-components&#xA;code --install-extension kumar-harsh.graphql-for-vscode&#xA;code --install-extension lllllllqw.jsdoc&#xA;code --install-extension mike-co.import-sorter&#xA;code --install-extension ms-azuretools.vscode-docker&#xA;code --install-extension ms-vscode-remote.remote-containers&#xA;code --install-extension ms-vsliveshare.vsliveshare&#xA;code --install-extension patbenatar.advanced-new-file&#xA;code --install-extension rbbit.typescript-hero&#xA;code --install-extension sburg.vscode-javascript-booster&#xA;code --install-extension Shan.code-settings-sync&#xA;code --install-extension sleistner.vscode-fileutils&#xA;code --install-extension smlombardi.slime&#xA;code --install-extension steoates.autoimport&#xA;code --install-extension stevencl.addDocComments&#xA;code --install-extension VisualStudioExptTeam.vscodeintellicode&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;Theme&lt;/em&gt;&lt;/strong&gt;: The theme I am using is slime. It comes with the extension pack installed above. It is calm and smooth.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
