@@ -6,175 +6,16 @@
     <meta name="robots" content="noindex" />
     <title>Content Manager</title>
 
-    <!-- Tailwind CSS for preview -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use actual site CSS -->
+    <link rel="stylesheet" href="/css/main.css" />
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-      /* Base styles for preview */
-      body {
-        font-family: 'Poppins', sans-serif;
-      }
-
-      /* Preview container styling */
-      .preview-container {
-        max-width: 1024px;
-        margin: 0 auto;
-        padding: 3rem 1.5rem;
-        background: #f9fafb;
-        min-height: 100vh;
-      }
-
-      .preview-article {
-        background: white;
-        border-radius: 1rem;
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        padding: 3rem;
-        margin-bottom: 3rem;
-      }
-
-      .preview-article h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        color: #111827;
-        line-height: 1.2;
-      }
-
-      .preview-meta {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 1rem;
-        font-size: 0.875rem;
-        color: #6b7280;
-        margin-bottom: 1.5rem;
-      }
-
-      .preview-category {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        background: rgba(107, 99, 255, 0.1);
-        color: #6b63ff;
-        border-radius: 0.5rem;
-        font-weight: 500;
-        font-size: 0.75rem;
-      }
-
-      .preview-tag {
-        display: inline-block;
-        padding: 0.5rem 0.75rem;
-        background: #f3f4f6;
-        color: #374151;
-        border-radius: 9999px;
-        font-size: 0.75rem;
-      }
-
-      .preview-description {
-        font-size: 1.25rem;
-        color: #4b5563;
-        line-height: 1.75;
-        margin-bottom: 2rem;
-      }
-
-      .preview-featured-image {
-        width: 100%;
-        max-height: 500px;
-        object-fit: cover;
-        border-radius: 1rem;
-        margin-bottom: 2rem;
-      }
-
-      .preview-content {
-        font-size: 1.125rem;
-        line-height: 1.75;
-        color: #374151;
-      }
-
-      .preview-content h2 {
-        font-size: 1.875rem;
-        font-weight: 600;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        color: #111827;
-      }
-
-      .preview-content h3 {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-top: 1.5rem;
-        margin-bottom: 0.75rem;
-        color: #111827;
-      }
-
-      .preview-content p {
-        margin-bottom: 1.5rem;
-      }
-
-      .preview-content ul,
-      .preview-content ol {
-        margin-bottom: 1.5rem;
-        padding-left: 1.5rem;
-        list-style: disc;
-      }
-
-      .preview-content ol {
-        list-style: decimal;
-      }
-
-      .preview-content li {
-        margin-bottom: 0.5rem;
-      }
-
-      .preview-content code {
-        background: #f3f4f6;
-        color: #6b63ff;
-        padding: 0.25rem 0.5rem;
-        border-radius: 0.25rem;
-        font-size: 0.875rem;
-        font-weight: 500;
-        font-family: 'Courier New', monospace;
-      }
-
-      .preview-content pre {
-        background: #1f2937;
-        color: #f9fafb;
-        padding: 1.5rem;
-        border-radius: 0.5rem;
-        overflow-x: auto;
-        margin-bottom: 1.5rem;
-      }
-
-      .preview-content pre code {
-        background: transparent;
-        color: inherit;
-        padding: 0;
-      }
-
-      .preview-content blockquote {
-        border-left: 4px solid #6b63ff;
-        padding-left: 1.5rem;
-        margin: 1.5rem 0;
-        font-style: italic;
-        color: #4b5563;
-      }
-
-      .preview-content a {
-        color: #6b63ff;
-        text-decoration: underline;
-      }
-
-      .preview-content img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 0.5rem;
-        margin: 1.5rem 0;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Include the script that builds the page and powers Decap CMS -->
@@ -183,137 +24,168 @@
     <script>
       // Wait for React and CMS to be available
       function initPreview() {
-        // Check if React and CMS are loaded
-        if (typeof React === 'undefined' || typeof CMS === 'undefined') {
-          console.log('Waiting for React and CMS to load...');
-          setTimeout(initPreview, 100);
-          return;
-        }
-
-        console.log('React and CMS loaded, registering preview template...');
-
-        // Helper functions
-        function createClass(spec) {
-          return React.createClass ? React.createClass(spec) : class extends React.Component {
-            render() {
-              return spec.render.call(this);
-            }
-          };
-        }
-
-        function h(tag, props) {
-          var children = Array.prototype.slice.call(arguments, 2);
-          return React.createElement.apply(React, [tag, props].concat(children));
-        }
+        console.log("React and CMS loaded, registering preview template...");
 
         // Register preview template for posts
         var PostPreview = createClass({
-        render: function() {
-          var entry = this.props.entry;
-          var widgetFor = this.props.widgetFor;
-          var getAsset = this.props.getAsset;
+          render: function () {
+            var entry = this.props.entry;
+            var widgetFor = this.props.widgetFor;
+            var getAsset = this.props.getAsset;
 
-          var title = entry.getIn(['data', 'title']) || 'Untitled';
-          var description = entry.getIn(['data', 'description']) || '';
-          var body = entry.getIn(['data', 'body']) || '';
-          var date = entry.getIn(['data', 'date']);
-          var categories = entry.getIn(['data', 'categories']);
-          var tags = entry.getIn(['data', 'tags']);
-          var author = entry.getIn(['data', 'author']) || 'Avinash Rijal';
-          var featuredImage = entry.getIn(['data', 'featured_image']);
-          var featuredImageAlt = entry.getIn(['data', 'featured_image_alt']) || title;
+            var title = entry.getIn(["data", "title"]) || "Untitled";
+            var description = entry.getIn(["data", "description"]) || "";
+            var body = entry.getIn(["data", "body"]) || "";
+            var date = entry.getIn(["data", "date"]);
+            var categories = entry.getIn(["data", "categories"]);
+            var tags = entry.getIn(["data", "tags"]);
+            var author = entry.getIn(["data", "author"]) || "Avinash Rijal";
+            var featuredImage = entry.getIn(["data", "featured_image"]);
+            var featuredImageAlt =
+              entry.getIn(["data", "featured_image_alt"]) || title;
 
-          // Format date
-          var formattedDate = 'Draft';
-          if (date) {
-            try {
-              var dateObj = new Date(date);
-              if (!isNaN(dateObj.getTime())) {
-                formattedDate = dateObj.toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                });
+            // Format date
+            var formattedDate = "Draft";
+            if (date) {
+              try {
+                var dateObj = new Date(date);
+                if (!isNaN(dateObj.getTime())) {
+                  formattedDate = dateObj.toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  });
+                }
+              } catch (e) {
+                formattedDate = String(date);
               }
-            } catch(e) {
-              formattedDate = String(date);
             }
-          }
 
-          // Calculate reading time
-          var readingTime = 1;
-          if (body) {
-            var wordCount = String(body).split(/\s+/).length;
-            readingTime = Math.ceil(wordCount / 200);
-          }
-
-          // Get image URL
-          var imageUrl = '';
-          if (featuredImage) {
-            if (typeof featuredImage === 'string') {
-              imageUrl = featuredImage;
-            } else if (getAsset) {
-              var asset = getAsset(featuredImage);
-              imageUrl = asset ? asset.toString() : '';
+            // Calculate reading time
+            var readingTime = 1;
+            if (body) {
+              var wordCount = String(body).split(/\s+/).length;
+              readingTime = Math.ceil(wordCount / 200);
             }
-          }
 
-          return h('div', { className: 'preview-container' },
-            h('article', { className: 'preview-article' },
-              // Breadcrumbs
-              h('nav', { className: 'text-sm text-gray-600 mb-8' },
-                'Home / Blog',
-                categories && categories.size > 0 ? ' / ' + categories.get(0) : '',
-                h('span', { className: 'text-gray-400' }, ' / ' + title)
+            // Get image URL
+            var imageUrl = "";
+            if (featuredImage) {
+              if (typeof featuredImage === "string") {
+                imageUrl = featuredImage;
+              } else if (getAsset) {
+                var asset = getAsset(featuredImage);
+                imageUrl = asset ? asset.toString() : "";
+              }
+            }
+
+            return h(
+              "article",
+              { className: "py-12 md:py-20" },
+              h(
+                "div",
+                { className: "container mx-auto px-6 max-w-4xl" },
+
+                // Breadcrumbs
+                h(
+                  "nav",
+                  { className: "mb-8 text-sm text-gray-600" },
+                  "Home / Blog",
+                  categories && categories.size > 0
+                    ? " / " + categories.get(0)
+                    : "",
+                  h("span", { className: "text-gray-400" }, " / " + title),
+                ),
+
+                // Header
+                h(
+                  "header",
+                  { className: "mb-12" },
+
+                  // Title
+                  h("h1", { className: "text-4xl md:text-5xl font-bold mb-6 text-gray-900" }, title),
+
+                  // Meta information
+                  h(
+                    "div",
+                    { className: "flex flex-wrap items-center gap-4 text-gray-600 mb-6" },
+                    author ? h("span", {}, "👤 " + author) : null,
+                    author ? h("span", {}, "•") : null,
+                    h("time", {}, formattedDate),
+                    h("span", {}, "•"),
+                    h("span", {}, readingTime + " min read"),
+                  ),
+
+                  // Categories (larger badges)
+                  categories && categories.size > 0
+                    ? h(
+                        "div",
+                        { className: "flex flex-wrap gap-2 mb-6" },
+                        categories
+                          .map(function (cat, i) {
+                            return h(
+                              "span",
+                              {
+                                key: i,
+                                className: "px-4 py-2 bg-[#6b63ff] bg-opacity-15 text-[#6b63ff] rounded-lg font-medium"
+                              },
+                              cat,
+                            );
+                          })
+                          .toArray(),
+                      )
+                    : null,
+
+                  // Tags (smaller badges)
+                  tags && tags.size > 0
+                    ? h(
+                        "div",
+                        { className: "flex flex-wrap gap-2 mb-6" },
+                        tags
+                          .map(function (tag, i) {
+                            return h(
+                              "span",
+                              {
+                                key: i,
+                                className: "px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                              },
+                              "#" + tag,
+                            );
+                          })
+                          .toArray(),
+                      )
+                    : null,
+
+                  // Description
+                  description
+                    ? h("p", { className: "text-xl text-gray-600 leading-relaxed" }, description)
+                    : null,
+                ),
+
+                // Featured image
+                imageUrl
+                  ? h(
+                      "div",
+                      { className: "mb-12 rounded-xl overflow-hidden shadow-lg" },
+                      h("img", {
+                        src: imageUrl,
+                        alt: featuredImageAlt,
+                        className: "w-full h-auto",
+                      }),
+                    )
+                  : null,
+
+                // Body content with prose styling
+                h("div", { className: "prose prose-lg max-w-none mb-12" }, widgetFor("body")),
               ),
-
-              // Title
-              h('h1', {}, title),
-
-              // Meta information
-              h('div', { className: 'preview-meta' },
-                h('span', {}, '👤 ' + author),
-                h('span', {}, '•'),
-                h('span', {}, formattedDate),
-                h('span', {}, '•'),
-                h('span', {}, readingTime + ' min read')
-              ),
-
-              // Categories
-              categories && categories.size > 0 ? h('div', { className: 'mb-6', style: { display: 'flex', flexWrap: 'wrap', gap: '0.5rem' } },
-                categories.map(function(cat, i) {
-                  return h('span', { key: i, className: 'preview-category' }, cat);
-                }).toArray()
-              ) : null,
-
-              // Tags
-              tags && tags.size > 0 ? h('div', { className: 'mb-6', style: { display: 'flex', flexWrap: 'wrap', gap: '0.5rem' } },
-                tags.map(function(tag, i) {
-                  return h('span', { key: i, className: 'preview-tag' }, '#' + tag);
-                }).toArray()
-              ) : null,
-
-              // Description
-              description ? h('p', { className: 'preview-description' }, description) : null,
-
-              // Featured image
-              imageUrl ? h('img', {
-                src: imageUrl,
-                alt: featuredImageAlt,
-                className: 'preview-featured-image'
-              }) : null,
-
-              // Body content
-              h('div', { className: 'preview-content' }, widgetFor('body'))
-            )
-          );
-        }
-      });
+            );
+          },
+        });
 
         // Register the preview template
-        CMS.registerPreviewTemplate('posts', PostPreview);
+        CMS.registerPreviewTemplate("posts", PostPreview);
 
-        console.log('Decap CMS preview template registered successfully');
+        console.log("Decap CMS preview template registered successfully");
       }
 
       // Start checking for React and CMS availability
