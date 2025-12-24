@@ -1,5 +1,6 @@
 +++
-title = 'Post 3'
+title = "Post 3"
+slug = "post-3"
 date = 2023-03-15T11:00:00-07:00
 draft = false
 tags = ['red','green','blue']

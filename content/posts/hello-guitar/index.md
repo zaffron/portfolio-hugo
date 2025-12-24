@@ -1,5 +1,6 @@
 +++
 title = "Hello to the new guitar"
+slug = "hello-guitar"
 date = "2022-01-28T15:35:03.437Z"
 description = "Enya EA-X1 Pro"
 draft = false

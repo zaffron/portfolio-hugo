@@ -1,5 +1,6 @@
 +++
 title = "Serving Your Home Server with True Fiber Internet Without a Static IP"
+slug = "serve-home-server-with-true-fib"
 date = 2023-01-15T09:00:00-07:00
 draft = false
 description = "Serve your home server without buying static IP and using IP behind NAT"

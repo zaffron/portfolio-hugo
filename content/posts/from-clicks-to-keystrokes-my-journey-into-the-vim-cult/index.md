@@ -1,10 +1,12 @@
 +++
-title = "From Clicks to Keystrokes: My Journey into the Vim Cult"
+title = "From Clicks to Keystrokes: My Journey into the Vim Cult🚀🔥"
+slug = "from-clicks-to-keystrokes-my-journey-into-the-vim-cult"
 description = "A nostalgic yet fiery journey from Sublime Text to embracing the Vim cult, battling the learning curve, and ultimately finding enlightenment in Neovim’s efficiency and freedom. 🚀💻"
 date = "2025-12-24T16:32:00.000+07:00"
 draft = false
 tags = ["programming"]
 +++
+
 Back in the days, it was somewhere around when I first started my developer career, I was a Sublime text fan, most of you may have never herd of it but it was like "winrar" which kept bugging you for activating it but never obstructed you from using it. It was a good time. I was happy and I was productive. Sometimes, I used to give jetbrains a try but it soon phased out after my crack stopped working and I as a junior developer didn't have enough salary to pay for their plans while paying my rent.
 
 ### The curiosity phase
@@ -17,10 +19,10 @@ Then after a month I switched to new company, it was all going good but then cam
 
 Then my fellow senior elaborated how he is learning emacs after mastering vim and it has absolutely made his life better. The thought that was going through my mind was - "what the F is this guy talking about". A rooted behavior of not using a mouse instantly made me think that there is no way in a world you could be more productive on a terminal than using a mouse.
 
-* how are you even going to select the text
-* how is he even planning to scroll and quickly find the functions
-* how is he going to go through function definitions with alt + click
-  *all of these random thoughts started coming through my mind*
+- how are you even going to select the text
+- how is he even planning to scroll and quickly find the functions
+- how is he going to go through function definitions with alt + click
+  _all of these random thoughts started coming through my mind_
 
 ### Speech from the priest
 
@@ -40,7 +42,7 @@ As the title suggests, the only thing that was easy was installing the `vim`. Af
 
 As Steve Jobs once said, it went something like this "It was about connecting the dots", you never knew the experience and skill you got on one thing could come in handy somewhere along your life and you never know. Now don't go too far and think I remembered something and quickly grasped and learned vim. What I meant to tell was, the thing that gave me the power to accept the suck was "Dota 2". Yes, you heard that right, but might be wondering how the F it connects to this?
 
-Well, let me tell you few things about Dota 2. It's a MMORPG game which has quite a bit of learning curve.  When I first learnt it, there were no guides telling me what to do and how to do it. Every day I logged into the game, sucked ass and repeated only to get good at long run. What Dota taught me was that, perseverance is the keep to mastering a thing.
+Well, let me tell you few things about Dota 2. It's a MMORPG game which has quite a bit of learning curve. When I first learnt it, there were no guides telling me what to do and how to do it. Every day I logged into the game, sucked ass and repeated only to get good at long run. What Dota taught me was that, perseverance is the keep to mastering a thing.
 
 I was not going to to fumble so easily, when my opponent is not the SEA players, I thought I can absolutely do this. I can absolutely accept some pain and go through this. I can learn vim. I will be good, I will memorize the whole damn thing in my muscle memory and get good. I was ready, I was becoming a masochist.
 
@@ -57,11 +59,11 @@ As a developer, I know learning is what I have chosen for my life and it will be
 
 As of today, I am still using vim, though it's nvim but the vim remains as a soul. Now, it's just more easier with lua configs.
 
-* You say AI, I have that
-* You say autocompletions, I have that
-* You say better performance, I already have that in the bag
-* You say better search, fuzzy finding never had a competitor to begin with
-* You say better language support, LSP has got me covered for everything
+- You say AI, I have that
+- You say autocompletions, I have that
+- You say better performance, I already have that in the bag
+- You say better search, fuzzy finding never had a competitor to begin with
+- You say better language support, LSP has got me covered for everything
   For now I absolutely don't see any reason to move to anything else. Sometimes, I give them the try, just to let that feeling of "Vibe Coding" coolaid go through my veins but it's not for me. I don't much care about how much news you throw at me like "Oh, microsoft just release the go compiler for typescript, it's absolutely fast and VScode is now a lot faster", you should understand that, just because you give tortoise a wheel it doesn't becomes a bike. The cult is preserved, I am the part of it and I to this day is much thankful to all the community that worked hard to build this. You guys are great.
 
 Thank you
