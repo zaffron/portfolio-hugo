@@ -5,23 +5,254 @@ backend:
 site_url: https://avinashrijal.com.np
 local_backend: true
 
-# Images go into the post folder (page bundle)
-media_folder: "content/posts/{{slug}}"
-public_folder: ""
+# Global media library for general uploads
+media_folder: "static/uploads"
+public_folder: "/uploads"
 
 collections:
   - name: "posts"
     label: "Posts"
+    label_singular: "Post"
     folder: "content/posts"
-    path: "{{slug}}/index"
+    path: "{{year}}/{{slug}}/index"
     create: true
+    slug: "{{slug}}"
+    preview_path: "posts/{{slug}}"
+
+    # View filters for better organization
+    view_filters:
+      - label: "Drafts"
+        field: draft
+        pattern: true
+      - label: "Published"
+        field: draft
+        pattern: false
+
+    view_groups:
+      - label: "Year"
+        field: date
+        pattern: \d{4}
+      - label: "Category"
+        field: categories
+
+    # Sort by date descending
+    sortable_fields: ["date", "title", "lastmod"]
 
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string", required: false }
-      - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Draft", name: "draft", widget: "boolean", default: true }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      # === Basic Information ===
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        hint: "Post title (60 characters max for SEO)"
+        pattern: [".{1,60}", "Title must be 60 characters or less"]
 
+      - label: "Slug"
+        name: "slug"
+        widget: "string"
+        hint: "URL-friendly version of title (auto-generated if left empty)"
+        required: false
+
+      - label: "Description"
+        name: "description"
+        widget: "text"
+        hint: "Brief description for post listing (150-160 characters for SEO)"
+        pattern: [".{1,160}", "Description should be 150-160 characters"]
+
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DDTHH:mm:ssZ"
+        date_format: "YYYY-MM-DD"
+        time_format: "HH:mm"
+
+      - label: "Last Modified"
+        name: "lastmod"
+        widget: "datetime"
+        format: "YYYY-MM-DDTHH:mm:ssZ"
+        date_format: "YYYY-MM-DD"
+        time_format: "HH:mm"
+        required: false
+        hint: "Leave empty to use creation date"
+
+      - label: "Draft"
+        name: "draft"
+        widget: "boolean"
+        default: true
+        hint: "Set to false to publish"
+
+      - label: "Author"
+        name: "author"
+        widget: "string"
+        default: "Avinash Rijal"
+
+      # === Taxonomies ===
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        options:
+          - { label: "Programming", value: "Programming" }
+          - { label: "DevOps", value: "DevOps" }
+          - { label: "Machine Learning", value: "Machine Learning" }
+          - { label: "Tutorial", value: "Tutorial" }
+          - { label: "Opinion", value: "Opinion" }
+          - { label: "Daily Life", value: "Daily Life" }
+          - { label: "Web Development", value: "Web Development" }
+          - { label: "Career", value: "Career" }
+        required: false
+        hint: "Select one or more categories"
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+        hint: "Add relevant tags (e.g., hugo, python, docker)"
+
+      - label: "Series"
+        name: "series"
+        widget: "string"
+        required: false
+        hint: "If this post is part of a series, enter the series name"
+
+      - label: "Series Order"
+        name: "series_order"
+        widget: "number"
+        value_type: "int"
+        min: 0
+        default: 0
+        required: false
+        hint: "Order in the series (0 for standalone posts)"
+
+      # === Media ===
+      - label: "Featured Image"
+        name: "featured_image"
+        widget: "image"
+        required: false
+        hint: "Main image for this post (recommended: 1200x630px)"
+        media_folder: "/content/posts/{{year}}/{{slug}}"
+        public_folder: ""
+
+      - label: "Featured Image Alt Text"
+        name: "featured_image_alt"
+        widget: "string"
+        required: false
+        hint: "Describe the image for accessibility and SEO"
+
+      # === SEO Section ===
+      - label: "SEO Settings"
+        name: "seo"
+        widget: "object"
+        collapsed: true
+        required: false
+        fields:
+          - label: "Meta Description"
+            name: "meta_description"
+            widget: "text"
+            required: false
+            hint: "Override default description for search engines (150-160 chars)"
+            pattern: [".{0,160}", "Meta description should be 160 characters or less"]
+
+          - label: "Keywords"
+            name: "keywords"
+            widget: "list"
+            required: false
+            hint: "SEO keywords (use sparingly, tags are often enough)"
+
+          - label: "Canonical URL"
+            name: "canonical"
+            widget: "string"
+            required: false
+            hint: "If this content exists elsewhere, specify the original URL"
+
+          - label: "Robots Directive"
+            name: "robots"
+            widget: "select"
+            options:
+              - { label: "Index, Follow", value: "index, follow" }
+              - { label: "Index, Nofollow", value: "index, nofollow" }
+              - { label: "Noindex, Follow", value: "noindex, follow" }
+              - { label: "Noindex, Nofollow", value: "noindex, nofollow" }
+            default: "index, follow"
+            required: false
+
+      # === Social Media ===
+      - label: "Social Media"
+        name: "social"
+        widget: "object"
+        collapsed: true
+        required: false
+        fields:
+          - label: "Open Graph Image"
+            name: "og_image"
+            widget: "image"
+            required: false
+            hint: "Override featured image for social sharing (recommended: 1200x630px)"
+            media_folder: "/content/posts/{{year}}/{{slug}}"
+            public_folder: ""
+
+          - label: "Open Graph Type"
+            name: "og_type"
+            widget: "select"
+            options:
+              - { label: "Article", value: "article" }
+              - { label: "Website", value: "website" }
+            default: "article"
+            required: false
+
+          - label: "Twitter Card Type"
+            name: "twitter_card"
+            widget: "select"
+            options:
+              - { label: "Summary Large Image", value: "summary_large_image" }
+              - { label: "Summary", value: "summary" }
+            default: "summary_large_image"
+            required: false
+
+          - label: "Twitter Handle"
+            name: "twitter_handle"
+            widget: "string"
+            default: "@avinashrijal"
+            required: false
+            hint: "Override default Twitter handle"
+
+      # === Advanced ===
+      - label: "Advanced Settings"
+        name: "advanced"
+        widget: "object"
+        collapsed: true
+        required: false
+        fields:
+          - label: "Weight"
+            name: "weight"
+            widget: "number"
+            value_type: "int"
+            min: 0
+            default: 0
+            required: false
+            hint: "Lower numbers appear first in lists (0 = normal order)"
+
+          - label: "Enable Table of Contents"
+            name: "toc"
+            widget: "boolean"
+            default: true
+            required: false
+            hint: "Show table of contents for long posts"
+
+          - label: "Disable Comments"
+            name: "disable_comments"
+            widget: "boolean"
+            default: false
+            required: false
+            hint: "Hide comments section for this post"
+
+          - label: "Custom CSS"
+            name: "custom_css"
+            widget: "string"
+            required: false
+            hint: "Path to custom CSS file for this post (e.g., /css/custom.css)"
+
+      # === Content ===
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        hint: "Write your post content here"

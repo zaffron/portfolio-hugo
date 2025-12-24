@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programming on Avinash Rijal - Personal Blog &amp; Portfolio</title>
-    <link>http://localhost:3000/tags/programming/</link>
+    <link>http://localhost:1313/tags/programming/</link>
     <description>Recent content in Programming on Avinash Rijal - Personal Blog &amp; Portfolio</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:3000/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>From Clicks to Keystrokes: My Journey into the Vim Cult🚀🔥</title>
-      <link>http://localhost:3000/posts/from-clicks-to-keystrokes-my-journey-into-the-vim-cult/</link>
+      <link>http://localhost:1313/posts/from-clicks-to-keystrokes-my-journey-into-the-vim-cult/</link>
       <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/posts/from-clicks-to-keystrokes-my-journey-into-the-vim-cult/</guid>
+      <guid>http://localhost:1313/posts/from-clicks-to-keystrokes-my-journey-into-the-vim-cult/</guid>
       <description>&lt;p&gt;Back in the days, it was somewhere around when I first started my developer career, I was a Sublime text fan, most of you may have never herd of it but it was like &amp;ldquo;winrar&amp;rdquo; which kept bugging you for activating it but never obstructed you from using it. It was a good time. I was happy and I was productive. Sometimes, I used to give jetbrains a try but it soon phased out after my crack stopped working and I as a junior developer didn&amp;rsquo;t have enough salary to pay for their plans while paying my rent.&lt;/p&gt;</description>
     </item>
   </channel>

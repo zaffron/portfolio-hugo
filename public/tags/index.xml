@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Avinash Rijal - Personal Blog &amp; Portfolio</title>
-    <link>http://localhost:3000/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Avinash Rijal - Personal Blog &amp; Portfolio</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:3000/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Programming</title>
-      <link>http://localhost:3000/tags/programming/</link>
+      <link>http://localhost:1313/tags/programming/</link>
       <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/programming/</guid>
+      <guid>http://localhost:1313/tags/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>Red</title>
-      <link>http://localhost:3000/tags/red/</link>
+      <link>http://localhost:1313/tags/red/</link>
       <pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
-      <guid>http://localhost:3000/tags/red/</guid>
+      <guid>http://localhost:1313/tags/red/</guid>
       <description></description>
     </item>
     <item>
       <title>Developer</title>
-      <link>http://localhost:3000/tags/developer/</link>
+      <link>http://localhost:1313/tags/developer/</link>
       <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/developer/</guid>
+      <guid>http://localhost:1313/tags/developer/</guid>
       <description></description>
     </item>
     <item>
       <title>Daily-Life</title>
-      <link>http://localhost:3000/tags/daily-life/</link>
+      <link>http://localhost:1313/tags/daily-life/</link>
       <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/daily-life/</guid>
+      <guid>http://localhost:1313/tags/daily-life/</guid>
       <description></description>
     </item>
     <item>
       <title>Gatsby</title>
-      <link>http://localhost:3000/tags/gatsby/</link>
+      <link>http://localhost:1313/tags/gatsby/</link>
       <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/gatsby/</guid>
+      <guid>http://localhost:1313/tags/gatsby/</guid>
       <description></description>
     </item>
     <item>
       <title>Images</title>
-      <link>http://localhost:3000/tags/images/</link>
+      <link>http://localhost:1313/tags/images/</link>
       <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/images/</guid>
+      <guid>http://localhost:1313/tags/images/</guid>
       <description></description>
     </item>
     <item>
       <title>Mdx</title>
-      <link>http://localhost:3000/tags/mdx/</link>
+      <link>http://localhost:1313/tags/mdx/</link>
       <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/mdx/</guid>
+      <guid>http://localhost:1313/tags/mdx/</guid>
       <description></description>
     </item>
   </channel>

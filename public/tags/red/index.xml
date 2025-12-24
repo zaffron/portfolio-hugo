@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Red on Avinash Rijal - Personal Blog &amp; Portfolio</title>
-    <link>http://localhost:3000/tags/red/</link>
+    <link>http://localhost:1313/tags/red/</link>
     <description>Recent content in Red on Avinash Rijal - Personal Blog &amp; Portfolio</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Jan 2023 09:00:00 -0700</lastBuildDate>
-    <atom:link href="http://localhost:3000/tags/red/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/red/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Serving Your Home Server with True Fiber Internet Without a Static IP</title>
-      <link>http://localhost:3000/posts/serve-home-server-with-true-fib/</link>
+      <link>http://localhost:1313/posts/serve-home-server-with-true-fib/</link>
       <pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
-      <guid>http://localhost:3000/posts/serve-home-server-with-true-fib/</guid>
+      <guid>http://localhost:1313/posts/serve-home-server-with-true-fib/</guid>
       <description>&lt;h3 id=&#34;problem-description&#34;&gt;Problem Description&lt;/h3&gt;&#xA;&lt;p&gt;Recently, I switched to a new internet service provider in Thailand called &amp;ldquo;True.&amp;rdquo; The name is quite inconvenient for searching solutions related to their services due to its common use as a Boolean variable or word. Previously, I was using &amp;ldquo;AIS,&amp;rdquo; which was affordable, costing only 200B to get a static IP. However, with &amp;ldquo;True,&amp;rdquo; obtaining a static IP for my home server has become quite expensive, costing around 1000B.&lt;/p&gt;</description>
     </item>
   </channel>
