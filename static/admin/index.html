@@ -5,29 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Content Manager</title>
-
-    <!-- Use actual site CSS -->
-    <link rel="stylesheet" href="/css/main.css" />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
     <script>
-      // Wait for React and CMS to be available
-      function initPreview() {
-        console.log("React and CMS loaded, registering preview template...");
+      // Register the preview stylesheet
+      CMS.registerPreviewStyle("/css/main.css");
 
-        // Register preview template for posts
-        var PostPreview = createClass({
+      // Register preview template for posts
+      var PostPreview = createClass({
           render: function () {
             var entry = this.props.entry;
             var widgetFor = this.props.widgetFor;
@@ -182,14 +170,10 @@
           },
         });
 
-        // Register the preview template
-        CMS.registerPreviewTemplate("posts", PostPreview);
+      // Register the preview template
+      CMS.registerPreviewTemplate("posts", PostPreview);
 
-        console.log("Decap CMS preview template registered successfully");
-      }
-
-      // Start checking for React and CMS availability
-      initPreview();
+      console.log("Decap CMS preview template registered successfully");
     </script>
   </body>
 </html>
