@@ -1437,9 +1437,16 @@ video {
 .order-2 {
   order: 2;
 }
+.-mx-6 {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+.-mt-6 {
+  margin-top: -1.5rem;
 }
 .mb-1 {
   margin-bottom: 0.25rem;
@@ -1533,6 +1540,9 @@ video {
 }
 .h-40 {
   height: 10rem;
+}
+.h-48 {
+  height: 12rem;
 }
 .h-5 {
   height: 1.25rem;
@@ -1710,6 +1720,12 @@ video {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+.break-words {
+  overflow-wrap: break-word;
+}
 .rounded-2xl {
   border-radius: 1rem;
 }
@@ -1725,6 +1741,10 @@ video {
 .rounded-r-lg {
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+}
+.rounded-t-xl {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
 }
 .border {
   border-width: 1px;
@@ -1952,6 +1972,9 @@ video {
 .leading-relaxed {
   line-height: 1.625;
 }
+.leading-tight {
+  line-height: 1.25;
+}
 .text-\[\#6b63ff\] {
   --tw-text-opacity: 1;
   color: rgb(107 99 255 / var(--tw-text-opacity, 1));
@@ -2166,8 +2189,21 @@ video {
     order: 2;
   }
 
+  .md\:-mx-8 {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+
+  .md\:-mt-8 {
+    margin-top: -2rem;
+  }
+
   .md\:block {
     display: block;
+  }
+
+  .md\:inline {
+    display: inline;
   }
 
   .md\:flex {
@@ -2176,6 +2212,18 @@ video {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:h-5 {
+    height: 1.25rem;
+  }
+
+  .md\:h-64 {
+    height: 16rem;
+  }
+
+  .md\:w-5 {
+    width: 1.25rem;
   }
 
   .md\:w-\[320px\] {
@@ -2206,8 +2254,25 @@ video {
     justify-content: flex-end;
   }
 
+  .md\:gap-2 {
+    gap: 0.5rem;
+  }
+
+  .md\:gap-4 {
+    gap: 1rem;
+  }
+
   .md\:gap-8 {
     gap: 2rem;
+  }
+
+  .md\:p-8 {
+    padding: 2rem;
+  }
+
+  .md\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .md\:py-20 {
@@ -2242,11 +2307,26 @@ video {
     font-size: 3rem;
     line-height: 1;
   }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 @media (min-width: 1024px) {
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .lg\:text-6xl {
