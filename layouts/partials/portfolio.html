@@ -1,0 +1,44 @@
+<section class="section py-20" id="portfolio">
+  <h2 class="text-4xl font-bold text-center mb-2">Portfolio</h2>
+  <span class="block text-center text-gray-600 mb-12">Most Recent Work</span>
+
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      {{ range $.Site.Data.featuredWorks }}
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+        {{ if .image }}
+        <div class="relative overflow-hidden h-64 bg-gray-200">
+          <img src="{{ .image }}" alt="{{ .name }}"
+               class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+        </div>
+        {{ end }}
+
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3">{{ .name }}</h3>
+          <p class="text-gray-600 mb-4 line-clamp-3">{{ .description }}</p>
+
+          {{ if .technologyUsed }}
+          <div class="flex flex-wrap gap-2 mb-4">
+            {{ range first 3 .technologyUsed }}
+            <span class="text-xs px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full">
+              {{ . }}
+            </span>
+            {{ end }}
+          </div>
+          {{ end }}
+
+          {{ if .url }}
+          <a href="{{ .url }}" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 text-[#6b63ff] hover:gap-3 transition-all font-medium">
+            Preview
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

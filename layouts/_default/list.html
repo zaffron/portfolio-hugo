@@ -1,0 +1,193 @@
+{{ define "main" }}
+<section class="py-20 min-h-screen">
+  <div class="container mx-auto px-6">
+    <h1 class="text-4xl md:text-5xl font-bold text-center mb-4">{{ .Title }}</h1>
+    <p class="text-center text-gray-600 mb-8">{{ .Description }}</p>
+
+    <!-- All Tags -->
+    <div class="max-w-4xl mx-auto mb-8">
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#6b63ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+          </svg>
+          Filter by Tags
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <button onclick="filterByTag('all')"
+                  class="tag-filter active px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#6b63ff] text-white">
+            All Posts
+          </button>
+          {{ $tags := slice }}
+          {{ range .Pages }}
+            {{ range .Params.tags }}
+              {{ $tags = $tags | append . }}
+            {{ end }}
+          {{ end }}
+          {{ range ($tags | uniq) }}
+            <button onclick="filterByTag('{{ . | urlize }}')"
+                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
+              {{ . }}
+            </button>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="max-w-4xl mx-auto mb-8">
+      <div class="relative">
+        <input type="text" id="search-input" placeholder="Search posts..."
+               class="w-full px-6 py-4 pl-12 rounded-xl border-2 border-gray-200 focus:border-[#6b63ff] focus:outline-none transition-colors">
+        <svg class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Posts Container -->
+    <div class="max-w-4xl mx-auto" id="posts-container">
+      {{ $paginator := .Paginate .Pages 10 }}
+      {{ range $paginator.Pages }}
+        <article class="post-item mb-12 bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+                 data-title="{{ .Title | lower }}"
+                 data-summary="{{ .Summary | lower }}"
+                 data-tags="{{ if .Params.tags }}{{ delimit .Params.tags "," | lower }}{{ end }}">
+          <h2 class="text-2xl md:text-3xl font-bold mb-3">
+            <a href="{{ .RelPermalink }}" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
+              {{ .Title }}
+            </a>
+          </h2>
+
+          <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">
+              {{ .Date.Format "January 2, 2006" }}
+            </time>
+            {{ if .Params.tags }}
+              <span>•</span>
+              <div class="flex gap-2 flex-wrap">
+                {{ range .Params.tags }}
+                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
+                    {{ . }}
+                  </span>
+                {{ end }}
+              </div>
+            {{ end }}
+          </div>
+
+          <p class="text-gray-600 mb-4">{{ .Summary }}</p>
+
+          <a href="{{ .RelPermalink }}"
+             class="inline-flex items-center gap-2 text-[#6b63ff] hover:gap-3 transition-all font-medium">
+            Read More
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+        </article>
+      {{ end }}
+
+      <!-- No Results Message -->
+      <div id="no-results" class="hidden text-center py-12">
+        <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <p class="text-xl text-gray-500">No posts found matching your search.</p>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    {{ if gt $paginator.TotalPages 1 }}
+    <div class="max-w-4xl mx-auto mt-12">
+      <nav class="flex justify-center items-center gap-2">
+        {{ if $paginator.HasPrev }}
+          <a href="{{ $paginator.Prev.URL }}"
+             class="px-4 py-2 rounded-lg bg-white border-2 border-gray-200 hover:border-[#6b63ff] hover:text-[#6b63ff] transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </a>
+        {{ end }}
+
+        {{ range $paginator.Pagers }}
+          <a href="{{ .URL }}"
+             class="px-4 py-2 rounded-lg {{ if eq . $paginator }}bg-[#6b63ff] text-white{{ else }}bg-white border-2 border-gray-200 hover:border-[#6b63ff] hover:text-[#6b63ff]{{ end }} transition-colors">
+            {{ .PageNumber }}
+          </a>
+        {{ end }}
+
+        {{ if $paginator.HasNext }}
+          <a href="{{ $paginator.Next.URL }}"
+             class="px-4 py-2 rounded-lg bg-white border-2 border-gray-200 hover:border-[#6b63ff] hover:text-[#6b63ff] transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        {{ end }}
+      </nav>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<script>
+  // Search functionality
+  const searchInput = document.getElementById('search-input');
+  const postsContainer = document.getElementById('posts-container');
+  const noResults = document.getElementById('no-results');
+  const posts = document.querySelectorAll('.post-item');
+  let activeTag = 'all';
+
+  searchInput.addEventListener('input', function(e) {
+    const searchTerm = e.target.value.toLowerCase();
+    filterPosts(searchTerm, activeTag);
+  });
+
+  // Tag filtering
+  function filterByTag(tag) {
+    activeTag = tag;
+    const searchTerm = searchInput.value.toLowerCase();
+
+    // Update active tag button
+    document.querySelectorAll('.tag-filter').forEach(btn => {
+      btn.classList.remove('active', 'bg-[#6b63ff]', 'text-white');
+      btn.classList.add('bg-gray-100', 'text-gray-700');
+    });
+    event.target.classList.add('active', 'bg-[#6b63ff]', 'text-white');
+    event.target.classList.remove('bg-gray-100', 'text-gray-700');
+
+    filterPosts(searchTerm, tag);
+  }
+
+  function filterPosts(searchTerm, tag) {
+    let visibleCount = 0;
+
+    posts.forEach(post => {
+      const title = post.dataset.title;
+      const summary = post.dataset.summary;
+      const tags = post.dataset.tags;
+
+      const matchesSearch = !searchTerm ||
+                           title.includes(searchTerm) ||
+                           summary.includes(searchTerm) ||
+                           tags.includes(searchTerm);
+
+      const matchesTag = tag === 'all' || tags.includes(tag.toLowerCase());
+
+      if (matchesSearch && matchesTag) {
+        post.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        post.classList.add('hidden');
+      }
+    });
+
+    // Show/hide no results message
+    if (visibleCount === 0) {
+      noResults.classList.remove('hidden');
+    } else {
+      noResults.classList.add('hidden');
+    }
+  }
+</script>
+{{ end }}

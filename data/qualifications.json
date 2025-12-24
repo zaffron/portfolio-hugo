@@ -1,0 +1,41 @@
+{
+  "education": [
+    {
+      "title": "Commerce",
+      "subtitle": "Nepal - SPA Academy",
+      "time": "2013-2015"
+    },
+    {
+      "title": "Bachelor In Computer Applications (BCA)",
+      "subtitle": "India - Bangalore University",
+      "time": "2015-2018"
+    }
+  ],
+  "work": [
+    {
+      "title": "Intern - Junior Dev",
+      "subtitle": "Nepal - Subkura",
+      "time": "2018 - Jan/Aug"
+    },
+    {
+      "title": "Developer",
+      "subtitle": "Nepal - Studytweaks",
+      "time": "2018 - On Contract"
+    },
+    {
+      "title": "Software Developer - I",
+      "subtitle": "France - DzangoTech",
+      "time": "2018 - 2019"
+    },
+    {
+      "title": "Software Developer - II",
+      "subtitle": "France - Hiboo",
+      "time": "2019 - 2022"
+    },
+    {
+      "title": "Full stack Developer/ML Engineer",
+      "subtitle": "Bangkok - Ooozou",
+      "time": "2022 - present"
+    }
+  ]
+}

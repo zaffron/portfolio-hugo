@@ -1,0 +1,50 @@
+{{ define "main" }}
+<article class="py-20">
+  <div class="container mx-auto px-6 max-w-4xl">
+    <!-- Article Header -->
+    <header class="mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">{{ .Title }}</h1>
+
+      <div class="flex flex-wrap items-center gap-4 text-gray-600 mb-6">
+        <time datetime="{{ .Date.Format "2006-01-02" }}" class="flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+          {{ .Date.Format "January 2, 2006" }}
+        </time>
+
+        {{ if .Params.tags }}
+          <span>•</span>
+          <div class="flex gap-2">
+            {{ range .Params.tags }}
+              <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-sm">
+                {{ . }}
+              </span>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+
+      {{ if .Description }}
+        <p class="text-xl text-gray-600 leading-relaxed">{{ .Description }}</p>
+      {{ end }}
+    </header>
+
+    <!-- Article Content -->
+    <div class="prose prose-lg max-w-none">
+      {{ .Content }}
+    </div>
+
+    <!-- Back to Blog -->
+    <div class="mt-12 pt-8 border-t border-gray-200">
+      <a href="/posts"
+         class="inline-flex items-center gap-2 text-[#6b63ff] hover:gap-3 transition-all font-medium">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"/>
+        </svg>
+        Back to Blog
+      </a>
+    </div>
+  </div>
+</article>
+{{ end }}

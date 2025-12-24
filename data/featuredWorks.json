@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Studytweaks",
+    "description": "Worked on creating a site with Gatsby and Wordpress as headless API for content management",
+    "url": "https://studytweaks.com",
+    "image": "/images/project-thumbnails/studytweaks.png",
+    "technologyUsed": [
+      "React",
+      "SSR",
+      "Gatsby",
+      "Algolia",
+      "SASS",
+      "Wordpress API",
+      "GraphQL"
+    ]
+  },
+  {
+    "name": "Makro(Thailand)",
+    "description": "Worked on product design and development. Model developments for auto categorization, re-ranking and recommendation of products",
+    "url": "https://makro.pro",
+    "image": "/images/project-thumbnails/makro.png",
+    "technologyUsed": []
+  },
+  {
+    "name": "Oozou(Thailand)",
+    "description": "Worked as a software developer on contract basis for their clients",
+    "url": "https://oozou.com",
+    "image": "/images/project-thumbnails/oozou.png",
+    "technologyUsed": []
+  },
+  {
+    "name": "Slimwiki 2.0",
+    "description": "Worked extensively on development and migration to v2.0 of slimwiki",
+    "url": "https://oozou.com",
+    "image": "/images/project-thumbnails/slimwiki.png",
+    "technologyUsed": []
+  },
+  {
+    "name": "Hiboo",
+    "description": "Worked on data ETL, develop UI and API for intercepting the data and process them",
+    "url": "https://hiboo.io",
+    "image": "/images/project-thumbnails/hiboo.png",
+    "technologyUsed": [
+      "React",
+      "SSR",
+      "Gatsby",
+      "Algolia",
+      "SASS",
+      "Wordpress API",
+      "GraphQL"
+    ]
+  },
+  {
+    "name": "Dzango",
+    "description": "Worked as a software developer on contract basis for their clients",
+    "url": "https://dzango.com/",
+    "image": "/images/project-thumbnails/dzango.png",
+    "technologyUsed": []
+  },
+  {
+    "name": "PTE App",
+    "description": "Worked on developing PTE app for Pearson Test of English(PTE) academic test. It reviews basic reading, writing, listening and speaking practices and concepts using this extensive study guide.",
+    "url": "",
+    "image": "/images/project-thumbnails/pte.png",
+    "technologyUsed": ["VueJS", "Larvel"]
+  },
+  {
+    "name": "Dzango admin panel",
+    "description": "An all-in-one management system specifically for dzango tech accelerator organization. It manages employee attendances, reveiws, events, customers data, employee history and many more.",
+    "url": "",
+    "image": "/images/project-thumbnails/dzango-admin.png",
+    "technologyUsed": ["VueJS", "Larvel"]
+  }
+]

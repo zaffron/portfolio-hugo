@@ -1,51 +1,377 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width" />
-<title>
-  Programming | My New Hugo Site
-</title>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=3000&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hi! I am Avinash Rijal. A Full stack web developer and DevOps Engineer from Nepal.">
+  <meta name="author" content="Avinash Rijal">
+  <title>Programming | Avinash Rijal - Personal Blog &amp; Portfolio</title>
 
-<link
-  rel="stylesheet"
-  href="/css/main.min.f1f2122e51386a6728caba75d800a379fcaf7f80bc38ced37113f7fd2d644461.css"
-  integrity="sha256-8fISLlE4amcoyrp12ACjefyvf4C8OM7TcRP3/S1kRGE="
-/>
+  
+  <link rel="icon" href="/favicon.ico">
 
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="/css/main.css">
 </head>
-<body>
-  <header>
-    <h1>My New Hugo Site</h1>
+<body class="font-sans antialiased">
+  <header class="fixed top-0 w-full bg-white shadow-sm z-50">
+  <nav class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <a href="/" class="text-2xl font-bold text-[#6b63ff]">
+        Avinash Rijal
+      </a>
 
-  <nav>
-    <ul>
-    <li>
-      <a href="/">Home</a>
-    </li>
-    <li>
-      <a href="/posts/">Posts</a>
-    </li>
-    <li>
-      <a href="/tags/">Tags</a>
-    </li>
-    </ul>
+      
+      <ul class="hidden md:flex items-center gap-8">
+        
+          <li>
+            <a href="/" class="text-gray-700 hover:text-[#6b63ff] transition-colors font-medium">
+              Home
+            </a>
+          </li>
+        
+          <li>
+            <a href="/#about" class="text-gray-700 hover:text-[#6b63ff] transition-colors font-medium">
+              About
+            </a>
+          </li>
+        
+          <li>
+            <a href="/#skills" class="text-gray-700 hover:text-[#6b63ff] transition-colors font-medium">
+              Skills
+            </a>
+          </li>
+        
+          <li>
+            <a href="/#portfolio" class="text-gray-700 hover:text-[#6b63ff] transition-colors font-medium">
+              Portfolio
+            </a>
+          </li>
+        
+          <li>
+            <a href="/#contact" class="text-gray-700 hover:text-[#6b63ff] transition-colors font-medium">
+              Contact
+            </a>
+          </li>
+        
+          <li>
+            <a href="/posts/" class="text-gray-700 hover:text-[#6b63ff] transition-colors font-medium">
+              Blog
+            </a>
+          </li>
+        
+      </ul>
+
+      
+      <button id="mobile-menu-button" class="md:hidden text-gray-700">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+      <ul class="flex flex-col gap-4">
+        
+          <li>
+            <a href="/" class="block text-gray-700 hover:text-[#6b63ff] transition-colors font-medium">
+              Home
+            </a>
+          </li>
+        
+          <li>
+            <a href="/#about" class="block text-gray-700 hover:text-[#6b63ff] transition-colors font-medium">
+              About
+            </a>
+          </li>
+        
+          <li>
+            <a href="/#skills" class="block text-gray-700 hover:text-[#6b63ff] transition-colors font-medium">
+              Skills
+            </a>
+          </li>
+        
+          <li>
+            <a href="/#portfolio" class="block text-gray-700 hover:text-[#6b63ff] transition-colors font-medium">
+              Portfolio
+            </a>
+          </li>
+        
+          <li>
+            <a href="/#contact" class="block text-gray-700 hover:text-[#6b63ff] transition-colors font-medium">
+              Contact
+            </a>
+          </li>
+        
+          <li>
+            <a href="/posts/" class="block text-gray-700 hover:text-[#6b63ff] transition-colors font-medium">
+              Blog
+            </a>
+          </li>
+        
+      </ul>
+    </div>
   </nav>
+</header>
 
 
-  </header>
+<div class="h-20"></div>
+
+<script>
+  document.getElementById('mobile-menu-button').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
+
+
   <main>
     
-  <h1>Programming</h1>
+<section class="py-20 min-h-screen">
+  <div class="container mx-auto px-6">
+    <h1 class="text-4xl md:text-5xl font-bold text-center mb-4">Programming</h1>
+    <p class="text-center text-gray-600 mb-8"></p>
+
+    
+    <div class="max-w-4xl mx-auto mb-8">
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#6b63ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+          </svg>
+          Filter by Tags
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <button onclick="filterByTag('all')"
+                  class="tag-filter active px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#6b63ff] text-white">
+            All Posts
+          </button>
+          
+          
+            
+              
+            
+          
+          
+            <button onclick="filterByTag('programming')"
+                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
+              programming
+            </button>
+          
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="max-w-4xl mx-auto mb-8">
+      <div class="relative">
+        <input type="text" id="search-input" placeholder="Search posts..."
+               class="w-full px-6 py-4 pl-12 rounded-xl border-2 border-gray-200 focus:border-[#6b63ff] focus:outline-none transition-colors">
+        <svg class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+      </div>
+    </div>
+
+    
+    <div class="max-w-4xl mx-auto" id="posts-container">
+      
+      
+        <article class="post-item mb-12 bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+                 data-title="from clicks to keystrokes: my journey into the vim cult🚀🔥"
+                 data-summary="&lt;p&gt;back in the days, it was somewhere around when i first started my developer career, i was a sublime text fan, most of you may have never herd of it but it was like &amp;ldquo;winrar&amp;rdquo; which kept bugging you for activating it but never obstructed you from using it. it was a good time. i was happy and i was productive. sometimes, i used to give jetbrains a try but it soon phased out after my crack stopped working and i as a junior developer didn&amp;rsquo;t have enough salary to pay for their plans while paying my rent.&lt;/p&gt;"
+                 data-tags="programming">
+          <h2 class="text-2xl md:text-3xl font-bold mb-3">
+            <a href="/posts/from-clicks-to-keystrokes-my-journey-into-the-vim-cult/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
+              From Clicks to Keystrokes: My Journey into the Vim Cult🚀🔥
+            </a>
+          </h2>
+
+          <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+            <time datetime="2025-03-14">
+              March 14, 2025
+            </time>
+            
+              <span>•</span>
+              <div class="flex gap-2 flex-wrap">
+                
+                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
+                    programming
+                  </span>
+                
+              </div>
+            
+          </div>
+
+          <p class="text-gray-600 mb-4"><p>Back in the days, it was somewhere around when I first started my developer career, I was a Sublime text fan, most of you may have never herd of it but it was like &ldquo;winrar&rdquo; which kept bugging you for activating it but never obstructed you from using it. It was a good time. I was happy and I was productive. Sometimes, I used to give jetbrains a try but it soon phased out after my crack stopped working and I as a junior developer didn&rsquo;t have enough salary to pay for their plans while paying my rent.</p></p>
+
+          <a href="/posts/from-clicks-to-keystrokes-my-journey-into-the-vim-cult/"
+             class="inline-flex items-center gap-2 text-[#6b63ff] hover:gap-3 transition-all font-medium">
+            Read More
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+        </article>
+      
+
+      
+      <div id="no-results" class="hidden text-center py-12">
+        <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <p class="text-xl text-gray-500">No posts found matching your search.</p>
+      </div>
+    </div>
+
+    
+    
+  </div>
+</section>
+
+<script>
   
+  const searchInput = document.getElementById('search-input');
+  const postsContainer = document.getElementById('posts-container');
+  const noResults = document.getElementById('no-results');
+  const posts = document.querySelectorAll('.post-item');
+  let activeTag = 'all';
+
+  searchInput.addEventListener('input', function(e) {
+    const searchTerm = e.target.value.toLowerCase();
+    filterPosts(searchTerm, activeTag);
+  });
+
   
-    <h2><a href="/posts/from-clicks-to-keystrokes-my-journey-into-the-vim-cult/">From Clicks to Keystrokes: My Journey into the Vim Cult🚀🔥</a></h2>
-  
+  function filterByTag(tag) {
+    activeTag = tag;
+    const searchTerm = searchInput.value.toLowerCase();
+
+    
+    document.querySelectorAll('.tag-filter').forEach(btn => {
+      btn.classList.remove('active', 'bg-[#6b63ff]', 'text-white');
+      btn.classList.add('bg-gray-100', 'text-gray-700');
+    });
+    event.target.classList.add('active', 'bg-[#6b63ff]', 'text-white');
+    event.target.classList.remove('bg-gray-100', 'text-gray-700');
+
+    filterPosts(searchTerm, tag);
+  }
+
+  function filterPosts(searchTerm, tag) {
+    let visibleCount = 0;
+
+    posts.forEach(post => {
+      const title = post.dataset.title;
+      const summary = post.dataset.summary;
+      const tags = post.dataset.tags;
+
+      const matchesSearch = !searchTerm ||
+                           title.includes(searchTerm) ||
+                           summary.includes(searchTerm) ||
+                           tags.includes(searchTerm);
+
+      const matchesTag = tag === 'all' || tags.includes(tag.toLowerCase());
+
+      if (matchesSearch && matchesTag) {
+        post.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        post.classList.add('hidden');
+      }
+    });
+
+    
+    if (visibleCount === 0) {
+      noResults.classList.remove('hidden');
+    } else {
+      noResults.classList.add('hidden');
+    }
+  }
+</script>
 
   </main>
-  <footer>
-    <p>Copyright 2025. All rights reserved.</p>
 
-  </footer>
+  <footer class="bg-gray-900 text-white py-12">
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-2xl font-bold mb-4">Avinash Rijal</h3>
+        <p class="text-gray-400">Hi! I am Avinash Rijal. A Full stack web developer and DevOps Engineer from Nepal.</p>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          
+            <li>
+              <a href="/" class="text-gray-400 hover:text-white transition-colors">
+                Home
+              </a>
+            </li>
+          
+            <li>
+              <a href="/#about" class="text-gray-400 hover:text-white transition-colors">
+                About
+              </a>
+            </li>
+          
+            <li>
+              <a href="/#skills" class="text-gray-400 hover:text-white transition-colors">
+                Skills
+              </a>
+            </li>
+          
+            <li>
+              <a href="/#portfolio" class="text-gray-400 hover:text-white transition-colors">
+                Portfolio
+              </a>
+            </li>
+          
+            <li>
+              <a href="/#contact" class="text-gray-400 hover:text-white transition-colors">
+                Contact
+              </a>
+            </li>
+          
+            <li>
+              <a href="/posts/" class="text-gray-400 hover:text-white transition-colors">
+                Blog
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Connect</h4>
+        <div class="flex gap-4">
+          <a href="https://linkedin.com/in/dev-avinash-rijal/" target="_blank" rel="noopener"
+             class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#6b63ff] transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://github.com/zaffron" target="_blank" rel="noopener"
+             class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#6b63ff] transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="http://twitter.com/avinashrijal" target="_blank" rel="noopener"
+             class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#6b63ff] transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+      <p>&copy; 2025 Avinash Rijal. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

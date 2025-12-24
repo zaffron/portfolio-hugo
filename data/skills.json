@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "subtitle": "More than 6 years",
+    "skills": [
+      {
+        "name": "HTML / CSS / SCSS / LESS",
+        "years": 4
+      },
+      {
+        "name": "JS / React / VueJS",
+        "years": 4
+      },
+      {
+        "name": "Gatsby / NextJS / Netlify",
+        "years": 2
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "ML Engineer",
+    "subtitle": "Around 1 year",
+    "skills": [
+      {
+        "name": "Auto categorization",
+        "years": 1
+      },
+      {
+        "name": "Re-ranking",
+        "years": 1
+      },
+      {
+        "name": "Content Generation",
+        "years": 1
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Backend Developer",
+    "subtitle": "More than 5 years",
+    "skills": [
+      {
+        "name": "PHP / Laravel / MySQL",
+        "years": 2
+      },
+      {
+        "name": "NodeJS / NestJS",
+        "years": 4
+      },
+      {
+        "name": "Mongoose / Postgres",
+        "years": 4
+      },
+      {
+        "name": "Firebase / Socket.io",
+        "years": 1
+      },
+      {
+        "name": "AWS",
+        "years": 2
+      },
+      {
+        "name": "Python",
+        "years": 2
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "DevOps Engineer",
+    "subtitle": "More than 3 years",
+    "skills": [
+      {
+        "name": "CI/CD",
+        "years": 3
+      },
+      {
+        "name": "Docker",
+        "years": 4
+      },
+      {
+        "name": "Ansible/Terraform",
+        "years": 1
+      }
+    ]
+  }
+]

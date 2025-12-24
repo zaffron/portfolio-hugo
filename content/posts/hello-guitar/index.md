@@ -1,8 +1,9 @@
 +++
 title = "Hello to the new guitar"
 slug = "hello-guitar"
-date = "2022-01-28T15:35:03.437Z"
+date = "2022-01-28"
 description = "Enya EA-X1 Pro"
+featured_image = "eax1pro.jpg"
 draft = false
 tags = ['daily-life']
 +++

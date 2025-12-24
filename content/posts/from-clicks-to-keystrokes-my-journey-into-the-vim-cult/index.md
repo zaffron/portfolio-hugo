@@ -2,7 +2,7 @@
 title = "From Clicks to Keystrokes: My Journey into the Vim Cult🚀🔥"
 slug = "from-clicks-to-keystrokes-my-journey-into-the-vim-cult"
 description = "A nostalgic yet fiery journey from Sublime Text to embracing the Vim cult, battling the learning curve, and ultimately finding enlightenment in Neovim’s efficiency and freedom. 🚀💻"
-date = "2025-12-24T16:32:00.000+07:00"
+date = "2025-03-14"
 draft = false
 tags = ["programming"]
 +++

@@ -1,4 +1,64 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://avinashrijal.com.np/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'ultron'
+title = 'Avinash Rijal - Personal Blog & Portfolio'
+
+[pagination]
+pagerSize = 10
+path = 'page'
+
+[params]
+  author = 'Avinash Rijal'
+  description = "Hi! I am Avinash Rijal. A Full stack web developer and DevOps Engineer from Nepal."
+  logo = '/avinash-icon.png'
+
+[params.social]
+  twitter = 'http://twitter.com/avinashrijal'
+  github = 'https://github.com/zaffron'
+  linkedin = 'https://linkedin.com/in/dev-avinash-rijal/'
+  instagram = 'https://instagram.com/zaffing'
+  youtube = 'https://youtube.com/channel/UC5bcQ0iZFpGWq7FI4mH3Jtw/about'
+  facebook = 'https://facebook.com/avlas.rijal'
+
+[params.contact]
+  email = 'avinashrijal@gmail.com'
+  phone = '+66916667535'
+
+[params.address]
+  city = 'Bangkok'
+  region = 'Phra Khanong'
+  country = 'Thailand'
+  zipCode = '10260'
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+
+  [[menus.main]]
+    name = 'About'
+    url = '/#about'
+    weight = 20
+
+  [[menus.main]]
+    name = 'Skills'
+    url = '/#skills'
+    weight = 30
+
+  [[menus.main]]
+    name = 'Portfolio'
+    url = '/#portfolio'
+    weight = 40
+
+  [[menus.main]]
+    name = 'Contact'
+    url = '/#contact'
+    weight = 50
+
+  [[menus.main]]
+    name = 'Blog'
+    pageRef = '/posts'
+    weight = 60
+
+[server]
+port = 3000
