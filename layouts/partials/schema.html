@@ -1,83 +1,81 @@
 {{ if eq .Type "posts" }}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "{{ .Title }}",
-  "description": "{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}",
-  {{ if .Params.featured_image }}
-  "image": {
-    "@type": "ImageObject",
-    "url": "{{ .Params.featured_image | absURL }}"{{ if .Params.featured_image_alt }},
-    "caption": "{{ .Params.featured_image_alt }}"{{ end }}
-  },
-  {{ else if .Site.Params.seo.defaultOGImage }}
-  "image": {
-    "@type": "ImageObject",
-    "url": "{{ .Site.Params.seo.defaultOGImage | absURL }}"
-  },
-  {{ end }}
-  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
-  {{ if .Lastmod }}
-  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
-  {{ else }}
-  "dateModified": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
-  {{ end }}
-  "author": {
-    "@type": "Person",
-    "name": "{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}",
-    "url": "{{ .Site.BaseURL }}"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "{{ .Site.Title }}",
-    "url": "{{ .Site.BaseURL }}"{{ if .Site.Params.logo }},
-    "logo": {
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ .Title }}",
+    "description": "{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}",
+    {{ if .Params.featured_image }}
+    "image": {
       "@type": "ImageObject",
-      "url": "{{ .Site.Params.logo | absURL }}"
-    }{{ end }}
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ .Permalink }}"
-  }{{ if .Params.categories }},
-  "articleSection": {{ .Params.categories | jsonify }}{{ end }}{{ if .Params.tags }},
-  "keywords": {{ .Params.tags | jsonify }}{{ end }}{{ if .WordCount }},
-  "wordCount": {{ .WordCount }}{{ end }}
-}
-</script>
-{{ end }}
-
-{{ if .IsHome }}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "{{ .Site.Title }}",
-  "url": "{{ .Site.BaseURL }}",
-  "description": "{{ .Site.Params.description }}",
-  "publisher": {
-    "@type": "Person",
-    "name": "{{ .Site.Params.author }}"
+      "url": "{{ .Params.featured_image | absURL }}"{{ if .Params.featured_image_alt }},
+      "caption": "{{ .Params.featured_image_alt }}"{{ end }}
+    },
+    {{ else if .Site.Params.seo.defaultOGImage }}
+    "image": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.Params.seo.defaultOGImage | absURL }}"
+    },
+    {{ end }}
+    "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+    {{ if .Lastmod }}
+    "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+    {{ else }}
+    "dateModified": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+    {{ end }}
+    "author": {
+      "@type": "Person",
+      "name": "{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}",
+      "url": "{{ .Site.BaseURL }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ .Site.Title }}",
+      "url": "{{ .Site.BaseURL }}"{{ if .Site.Params.logo }},
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ .Site.Params.logo | absURL }}"
+      }{{ end }}
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ .Permalink }}"
+    }{{ if .Params.categories }},
+    "articleSection": {{ .Params.categories | jsonify }}{{ end }}{{ if .Params.tags }},
+    "keywords": {{ .Params.tags | jsonify }}{{ end }}{{ if .WordCount }},
+    "wordCount": {{ .WordCount }}{{ end }}
   }
-}
+</script>
+{{ end }} {{ if .IsHome }}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL }}",
+    "description": "{{ .Site.Params.description }}",
+    "publisher": {
+      "@type": "Person",
+      "name": "{{ .Site.Params.author }}"
+    }
+  }
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "{{ .Site.Params.author }}",
-  "url": "{{ .Site.BaseURL }}",
-  "description": "{{ .Site.Params.description }}"{{ if .Site.Params.logo }},
-  "image": "{{ .Site.Params.logo | absURL }}"{{ end }}{{ if .Site.Params.social }},
-  "sameAs": [
-    {{ with .Site.Params.social.twitter }}"{{ . }}",{{ end }}
-    {{ with .Site.Params.social.github }}"{{ . }}",{{ end }}
-    {{ with .Site.Params.social.linkedin }}"{{ . }}",{{ end }}
-    {{ with .Site.Params.social.instagram }}"{{ . }}",{{ end }}
-    {{ with .Site.Params.social.youtube }}"{{ . }}",{{ end }}
-    {{ with .Site.Params.social.facebook }}"{{ . }}"{{ end }}
-  ]{{ end }}
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ .Site.Params.author }}",
+    "url": "{{ .Site.BaseURL }}",
+    "description": "{{ .Site.Params.description }}"{{ if .Site.Params.logo }},
+    "image": "{{ .Site.Params.logo | absURL }}"{{ end }}{{ if .Site.Params.social }},
+    "sameAs": [
+      {{ with .Site.Params.social.twitter }}"{{ . }}",{{ end }}
+      {{ with .Site.Params.social.github }}"{{ . }}",{{ end }}
+      {{ with .Site.Params.social.linkedin }}"{{ . }}",{{ end }}
+      {{ with .Site.Params.social.instagram }}"{{ . }}",{{ end }}
+      {{ with .Site.Params.social.youtube }}"{{ . }}",{{ end }}
+      {{ with .Site.Params.social.facebook }}"{{ . }}"{{ end }}
+    ]{{ end }}
+  }
 </script>
 {{ end }}

@@ -8,18 +8,34 @@
       <!-- Desktop Menu -->
       <ul class="hidden md:flex items-center gap-8">
         {{ range .Site.Menus.main }}
-          <li>
-            <a href="{{ .URL }}" class="text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] transition-colors font-medium">
-              {{ .Name }}
-            </a>
-          </li>
+        <li>
+          <a
+            href="{{ .URL }}"
+            class="text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] transition-colors font-medium"
+          >
+            {{ .Name }}
+          </a>
+        </li>
         {{ end }}
       </ul>
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-button" class="md:hidden text-gray-700 dark:text-gray-300">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      <button
+        id="mobile-menu-button"
+        class="md:hidden text-gray-700 dark:text-gray-300"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
         </svg>
       </button>
     </div>
@@ -28,11 +44,14 @@
     <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
       <ul class="flex flex-col gap-4">
         {{ range .Site.Menus.main }}
-          <li>
-            <a href="{{ .URL }}" class="block text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] transition-colors font-medium">
-              {{ .Name }}
-            </a>
-          </li>
+        <li>
+          <a
+            href="{{ .URL }}"
+            class="block text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] transition-colors font-medium"
+          >
+            {{ .Name }}
+          </a>
+        </li>
         {{ end }}
       </ul>
     </div>
@@ -43,7 +62,9 @@
 <div class="h-20"></div>
 
 <script>
-  document.getElementById('mobile-menu-button').addEventListener('click', function() {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
-  });
+  document
+    .getElementById("mobile-menu-button")
+    .addEventListener("click", function () {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
 </script>

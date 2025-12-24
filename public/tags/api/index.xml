@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Api on Avinash Rijal - Personal Blog &amp; Portfolio</title>
-    <link>https://avinashrijal.com.np/tags/api/</link>
+    <link>http://localhost:3000/tags/api/</link>
     <description>Recent content in Api on Avinash Rijal - Personal Blog &amp; Portfolio</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 05 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://avinashrijal.com.np/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:3000/tags/api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to serve CNN models with Fast API</title>
-      <link>https://avinashrijal.com.np/posts/how-to-serve-cnn-models-with-fast-api/</link>
+      <link>http://localhost:3000/posts/how-to-serve-cnn-models-with-fast-api/</link>
       <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://avinashrijal.com.np/posts/how-to-serve-cnn-models-with-fast-api/</guid>
+      <guid>http://localhost:3000/posts/how-to-serve-cnn-models-with-fast-api/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;../assets/cnn-with-fast-api.webp&#34; alt=&#34;cnn-with-fast-api&#34; title=&#34;CNN with Fast API&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Tags: #programming, #python&lt;/p&gt;&#xA;&lt;p&gt;Recently I have run into an issue with a client who asked me to build a CNN model for certain task. Let&amp;rsquo;s keep &amp;ldquo;why&amp;rdquo; a secret and let&amp;rsquo;s talk about why I am writing this blog.&#xA;The issue that we ran into later on was, my client was not ready to use the sagemaker for deploying the model even though we trained it on sagemaker. He wanted a custom repo where we could track the files and have our own custom inference.&#xA;On top of that he wanted &lt;code&gt;Fast API&lt;/code&gt;&lt;/p&gt;</description>
     </item>
   </channel>
