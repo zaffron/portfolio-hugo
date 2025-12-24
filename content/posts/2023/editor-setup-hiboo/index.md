@@ -2,7 +2,7 @@
 title = "My Editor Setup While Working for Hiboo"
 slug = "editor-setup-hiboo"
 description = "Basic details of how I have setup my editor to work upmost for the Hiboo app/api"
-featured_image = "editor-setup-hiboo.png"
+featured_image = "/uploads/editor-setup-hiboo.png"
 date = "2023-01-15"
 lastmod = "2023-01-15"
 author = "Avinash Rijal"

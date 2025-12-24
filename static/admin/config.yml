@@ -128,9 +128,9 @@ collections:
         name: "featured_image"
         widget: "image"
         required: false
-        hint: "Main image for this post (recommended: 1200x630px)"
-        media_folder: "/content/posts/{{year}}/{{slug}}"
-        public_folder: ""
+        hint: "Upload to /uploads or type relative path (e.g., image.jpg for page bundle)"
+        allow_multiple: false
+        choose_url: true
 
       - label: "Featured Image Alt Text"
         name: "featured_image_alt"
@@ -187,8 +187,7 @@ collections:
             widget: "image"
             required: false
             hint: "Override featured image for social sharing (recommended: 1200x630px)"
-            media_folder: "/content/posts/{{year}}/{{slug}}"
-            public_folder: ""
+            choose_url: true
 
           - label: "Open Graph Type"
             name: "og_type"
