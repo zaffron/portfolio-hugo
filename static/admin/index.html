@@ -5,9 +5,288 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Content Manager</title>
+
+    <!-- Tailwind CSS for preview -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      /* Base styles for preview */
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+
+      /* Preview container styling */
+      .preview-container {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
+        background: #f9fafb;
+        min-height: 100vh;
+      }
+
+      .preview-article {
+        background: white;
+        border-radius: 1rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        padding: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      .preview-article h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #111827;
+        line-height: 1.2;
+      }
+
+      .preview-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+        font-size: 0.875rem;
+        color: #6b7280;
+        margin-bottom: 1.5rem;
+      }
+
+      .preview-category {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: rgba(107, 99, 255, 0.1);
+        color: #6b63ff;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        font-size: 0.75rem;
+      }
+
+      .preview-description {
+        font-size: 1.25rem;
+        color: #4b5563;
+        line-height: 1.75;
+        margin-bottom: 2rem;
+      }
+
+      .preview-featured-image {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .preview-content {
+        font-size: 1.125rem;
+        line-height: 1.75;
+        color: #374151;
+      }
+
+      .preview-content h2 {
+        font-size: 1.875rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: #111827;
+      }
+
+      .preview-content h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: #111827;
+      }
+
+      .preview-content p {
+        margin-bottom: 1.5rem;
+      }
+
+      .preview-content ul,
+      .preview-content ol {
+        margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+      }
+
+      .preview-content li {
+        margin-bottom: 0.5rem;
+      }
+
+      .preview-content code {
+        background: #f3f4f6;
+        color: #6b63ff;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+
+      .preview-content pre {
+        background: #1f2937;
+        color: #f9fafb;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        margin-bottom: 1.5rem;
+      }
+
+      .preview-content pre code {
+        background: transparent;
+        color: inherit;
+        padding: 0;
+      }
+
+      .preview-content blockquote {
+        border-left: 4px solid #6b63ff;
+        padding-left: 1.5rem;
+        margin: 1.5rem 0;
+        font-style: italic;
+        color: #4b5563;
+      }
+
+      .preview-content a {
+        color: #6b63ff;
+        text-decoration: underline;
+      }
+
+      .preview-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+        margin: 1.5rem 0;
+      }
+    </style>
   </head>
   <body>
     <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+    <script>
+      // Register preview template for posts
+      CMS.registerPreviewTemplate('posts', createClass({
+        render: function() {
+          const entry = this.props.entry;
+          const title = entry.getIn(['data', 'title']);
+          const description = entry.getIn(['data', 'description']);
+          const body = entry.getIn(['data', 'body']);
+          const date = entry.getIn(['data', 'date']);
+          const categories = entry.getIn(['data', 'categories']);
+          const tags = entry.getIn(['data', 'tags']);
+          const author = entry.getIn(['data', 'author']) || 'Avinash Rijal';
+          const featuredImage = entry.getIn(['data', 'featured_image']);
+          const featuredImageAlt = entry.getIn(['data', 'featured_image_alt']);
+
+          // Format date
+          let formattedDate = 'Draft';
+          if (date) {
+            try {
+              const dateObj = new Date(date);
+              formattedDate = dateObj.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              });
+            } catch(e) {
+              formattedDate = date.toString();
+            }
+          }
+
+          // Calculate reading time (rough estimate)
+          let readingTime = 1;
+          if (body) {
+            const wordCount = body.split(/\s+/).length;
+            readingTime = Math.ceil(wordCount / 200); // 200 words per minute
+          }
+
+          return h('div', { className: 'preview-container' },
+            h('article', { className: 'preview-article' },
+              // Breadcrumbs
+              h('nav', { className: 'text-sm text-gray-600 mb-8' },
+                h('span', {}, 'Home / Blog'),
+                categories && categories.size > 0 ? h('span', {}, ' / ' + categories.get(0)) : null,
+                h('span', { className: 'text-gray-400' }, ' / ' + title)
+              ),
+
+              // Title
+              h('h1', {}, title),
+
+              // Meta information
+              h('div', { className: 'preview-meta' },
+                // Author
+                h('div', { className: 'flex items-center gap-2' },
+                  h('svg', {
+                    className: 'w-5 h-5',
+                    fill: 'none',
+                    stroke: 'currentColor',
+                    viewBox: '0 0 24 24'
+                  },
+                    h('path', {
+                      strokeLinecap: 'round',
+                      strokeLinejoin: 'round',
+                      strokeWidth: '2',
+                      d: 'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z'
+                    })
+                  ),
+                  h('span', {}, author)
+                ),
+
+                h('span', {}, '•'),
+
+                // Date
+                h('time', {}, formattedDate),
+
+                h('span', {}, '•'),
+
+                // Reading time
+                h('span', {}, readingTime + ' min read')
+              ),
+
+              // Categories
+              categories && categories.size > 0 ? h('div', { className: 'mb-6 flex flex-wrap gap-2' },
+                categories.map(function(cat) {
+                  return h('span', { className: 'preview-category' }, cat);
+                }).toArray()
+              ) : null,
+
+              // Tags
+              tags && tags.size > 0 ? h('div', { className: 'mb-6 flex flex-wrap gap-2' },
+                tags.map(function(tag) {
+                  return h('span', {
+                    className: 'px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs'
+                  }, '#' + tag);
+                }).toArray()
+              ) : null,
+
+              // Description
+              description ? h('p', { className: 'preview-description' }, description) : null,
+
+              // Featured image
+              featuredImage ? h('img', {
+                src: featuredImage,
+                alt: featuredImageAlt || title,
+                className: 'preview-featured-image'
+              }) : null,
+
+              // Body content
+              h('div', {
+                className: 'preview-content',
+                dangerouslySetInnerHTML: {
+                  __html: this.props.widgetFor('body')
+                }
+              })
+            )
+          );
+        }
+      }));
+
+      // Helper function to create React class
+      function createClass(methods) {
+        return React.createClass(methods);
+      }
+    </script>
   </body>
 </html>
