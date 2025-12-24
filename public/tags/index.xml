@@ -6,29 +6,8 @@
     <description>Recent content in Tags on Avinash Rijal - Personal Blog &amp; Portfolio</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Dec 2025 23:07:00 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 14 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:3000/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Paper</title>
-      <link>http://localhost:3000/tags/paper/</link>
-      <pubDate>Wed, 24 Dec 2025 23:07:00 +0700</pubDate>
-      <guid>http://localhost:3000/tags/paper/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Test</title>
-      <link>http://localhost:3000/tags/test/</link>
-      <pubDate>Wed, 24 Dec 2025 23:07:00 +0700</pubDate>
-      <guid>http://localhost:3000/tags/test/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Water</title>
-      <link>http://localhost:3000/tags/water/</link>
-      <pubDate>Wed, 24 Dec 2025 23:07:00 +0700</pubDate>
-      <guid>http://localhost:3000/tags/water/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Editor</title>
       <link>http://localhost:3000/tags/editor/</link>

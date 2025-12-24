@@ -26,6 +26,9 @@
     <loc>http://localhost:3000/tags/programming/</loc>
     <lastmod>2025-03-14T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:3000/tags/</loc>
+    <lastmod>2025-03-14T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:3000/tags/vim/</loc>
     <lastmod>2025-03-14T00:00:00+00:00</lastmod>
   </url><url>
@@ -128,12 +131,6 @@
     <loc>http://localhost:3000/posts/hello-world/</loc>
     <lastmod>2015-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:3000/tags/paper/</loc>
-  </url><url>
     <loc>http://localhost:3000/series/</loc>
-  </url><url>
-    <loc>http://localhost:3000/tags/test/</loc>
-  </url><url>
-    <loc>http://localhost:3000/tags/water/</loc>
   </url>
 </urlset>
