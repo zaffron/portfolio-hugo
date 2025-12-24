@@ -21,8 +21,11 @@
 
   {{ $css := resources.Get "css/main.css" | css.PostCSS }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+  <!-- Dark mode init script (prevents flash) -->
+  {{ partial "dark-mode-init.html" . }}
 </head>
-<body class="font-sans antialiased">
+<body class="font-sans antialiased bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
   {{ partial "header.html" . }}
 
   <main>
@@ -30,5 +33,12 @@
   </main>
 
   {{ partial "footer.html" . }}
+
+  <!-- Dark mode toggle button -->
+  {{ partial "dark-mode-toggle.html" . }}
+
+  <!-- Dark mode JavaScript -->
+  {{ $darkModeJS := resources.Get "js/dark-mode.js" }}
+  <script src="{{ $darkModeJS.RelPermalink }}"></script>
 </body>
 </html>

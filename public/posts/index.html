@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=3000&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Posts | Avinash Rijal - Personal Blog &amp; Portfolio</title>
@@ -17,7 +17,7 @@
 
 
 
-<link rel="canonical" href="https://avinashrijal.com.np/posts/">
+<link rel="canonical" href="http://localhost:3000/posts/">
 
 
 
@@ -27,11 +27,11 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://avinashrijal.com.np/posts/">
+<meta property="og:url" content="http://localhost:3000/posts/">
 <meta property="og:title" content="Posts">
 <meta property="og:description" content="Hi! I am Avinash Rijal. A Full stack web developer and DevOps Engineer from Nepal.">
 
-<meta property="og:image" content="https://avinashrijal.com.np/og-default.png">
+<meta property="og:image" content="http://localhost:3000/og-default.png">
 
 <meta property="og:site_name" content="Avinash Rijal - Personal Blog &amp; Portfolio">
 <meta property="og:locale" content="en-us">
@@ -49,11 +49,11 @@
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://avinashrijal.com.np/posts/">
+<meta name="twitter:url" content="http://localhost:3000/posts/">
 <meta name="twitter:title" content="Posts">
 <meta name="twitter:description" content="Hi! I am Avinash Rijal. A Full stack web developer and DevOps Engineer from Nepal.">
 
-<meta name="twitter:image" content="https://avinashrijal.com.np/og-default.png">
+<meta name="twitter:image" content="http://localhost:3000/og-default.png">
 
 
 
@@ -73,7 +73,7 @@
   
   "image": {
     "@type": "ImageObject",
-    "url": "https:\/\/avinashrijal.com.np\/og-default.png"
+    "url": "http:\/\/localhost:3000\/og-default.png"
   },
   
   "datePublished": "2023-01-01T08:30:00-07:00",
@@ -83,20 +83,20 @@
   "author": {
     "@type": "Person",
     "name": "Avinash Rijal",
-    "url": "https:\/\/avinashrijal.com.np\/"
+    "url": "http:\/\/localhost:3000\/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Avinash Rijal - Personal Blog \u0026 Portfolio",
-    "url": "https:\/\/avinashrijal.com.np\/",
+    "url": "http:\/\/localhost:3000\/",
     "logo": {
       "@type": "ImageObject",
-      "url": "https:\/\/avinashrijal.com.np\/avinash-icon.png"
+      "url": "http:\/\/localhost:3000\/avinash-icon.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https:\/\/avinashrijal.com.np\/posts\/"
+    "@id": "http:\/\/localhost:3000\/posts\/"
   },
   "wordCount":  42 
 }
@@ -113,8 +113,20 @@
 
   
   <link rel="stylesheet" href="/css/main.css">
+
+  
+  <script>
+  
+  (function() {
+    const theme = localStorage.getItem('theme') || 'light';
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
+
 </head>
-<body class="font-sans antialiased">
+<body class="font-sans antialiased bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
   <header class="fixed top-0 w-full bg-white shadow-sm z-50">
   <nav class="container mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
@@ -230,15 +242,15 @@
     
 <section class="py-20 min-h-screen">
   <div class="container mx-auto px-6">
-    <h1 class="text-4xl md:text-5xl font-bold text-center mb-4">Posts</h1>
-    <p class="text-center text-gray-600 mb-8"></p>
+    <h1 class="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900 dark:text-gray-100">Posts</h1>
+    <p class="text-center text-gray-600 dark:text-gray-400 mb-8"></p>
 
     
     <div class="max-w-4xl mx-auto mb-8 space-y-4">
 
       
-      <div class="bg-white rounded-xl shadow-lg p-6">
-        <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6">
+        <h3 class="text-lg font-semibold mb-4 flex items-center gap-2 text-gray-900 dark:text-gray-100">
           <svg class="w-5 h-5 text-[#6b63ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
           </svg>
@@ -295,32 +307,32 @@
           
           
             <button onclick="filterByCategory('programming')"
-                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
+                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-[#6b63ff] hover:text-white">
               Programming
             </button>
           
             <button onclick="filterByCategory('opinion')"
-                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
+                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-[#6b63ff] hover:text-white">
               Opinion
             </button>
           
             <button onclick="filterByCategory('machine-learning')"
-                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
+                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-[#6b63ff] hover:text-white">
               Machine Learning
             </button>
           
             <button onclick="filterByCategory('tutorial')"
-                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
+                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-[#6b63ff] hover:text-white">
               Tutorial
             </button>
           
             <button onclick="filterByCategory('devops')"
-                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
+                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-[#6b63ff] hover:text-white">
               DevOps
             </button>
           
             <button onclick="filterByCategory('daily-life')"
-                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
+                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-[#6b63ff] hover:text-white">
               Daily Life
             </button>
           
@@ -328,19 +340,19 @@
       </div>
 
       
-      <div class="bg-white rounded-xl shadow-lg p-6">
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6">
         <div class="grid md:grid-cols-2 gap-4">
 
           
           <div>
-            <label class="block text-sm font-semibold mb-2 flex items-center gap-2">
+            <label class="block text-sm font-semibold mb-2 flex items-center gap-2 text-gray-900 dark:text-gray-100">
               <svg class="w-4 h-4 text-[#6b63ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
               </svg>
               Filter by Tag
             </label>
             <select id="tag-filter"
-                    class="w-full px-4 py-2 rounded-lg border-2 border-gray-200 focus:border-[#6b63ff] focus:outline-none transition-colors">
+                    class="w-full px-4 py-2 rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:border-[#6b63ff] focus:outline-none transition-colors">
               <option value="all">All Tags</option>
               
               
@@ -472,14 +484,14 @@
 
           
           <div>
-            <label class="block text-sm font-semibold mb-2 flex items-center gap-2">
+            <label class="block text-sm font-semibold mb-2 flex items-center gap-2 text-gray-900 dark:text-gray-100">
               <svg class="w-4 h-4 text-[#6b63ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"/>
               </svg>
               Sort By
             </label>
             <select id="sort-filter"
-                    class="w-full px-4 py-2 rounded-lg border-2 border-gray-200 focus:border-[#6b63ff] focus:outline-none transition-colors">
+                    class="w-full px-4 py-2 rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:border-[#6b63ff] focus:outline-none transition-colors">
               <option value="newest">Newest First</option>
               <option value="oldest">Oldest First</option>
               <option value="title">Title (A-Z)</option>
@@ -491,7 +503,7 @@
 
         
         <button onclick="clearAllFilters()"
-                class="mt-4 w-full px-4 py-2 rounded-lg border-2 border-gray-300 text-gray-700 hover:border-[#6b63ff] hover:text-[#6b63ff] transition-colors font-medium flex items-center justify-center gap-2">
+                class="mt-4 w-full px-4 py-2 rounded-lg border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-[#6b63ff] hover:text-[#6b63ff] transition-colors font-medium flex items-center justify-center gap-2">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
           </svg>
@@ -502,21 +514,21 @@
       
       <div class="relative">
         <input type="text" id="search-input" placeholder="Search posts by title or content..."
-               class="w-full px-6 py-4 pl-12 rounded-xl border-2 border-gray-200 focus:border-[#6b63ff] focus:outline-none transition-colors shadow-lg">
-        <svg class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               class="w-full px-6 py-4 pl-12 rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-[#6b63ff] focus:outline-none transition-colors shadow-lg dark:shadow-gray-900/50">
+        <svg class="w-5 h-5 text-gray-400 dark:text-gray-500 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
         </svg>
       </div>
 
       
       <div id="active-filters" class="hidden">
-        <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
+        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-200 dark:border-blue-800">
           <div class="flex items-center justify-between flex-wrap gap-2">
             <div class="flex items-center gap-2 flex-wrap">
-              <span class="text-sm font-semibold text-blue-900">Active Filters:</span>
-              <span id="active-filters-list" class="text-sm text-blue-700"></span>
+              <span class="text-sm font-semibold text-blue-900 dark:text-blue-200">Active Filters:</span>
+              <span id="active-filters-list" class="text-sm text-blue-700 dark:text-blue-300"></span>
             </div>
-            <span id="results-count" class="text-sm text-blue-700 font-medium"></span>
+            <span id="results-count" class="text-sm text-blue-700 dark:text-blue-300 font-medium"></span>
           </div>
         </div>
       </div>
@@ -526,7 +538,7 @@
     <div class="max-w-4xl mx-auto" id="posts-container">
       
       
-        <article class="post-item mb-12 bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow overflow-hidden"
+        <article class="post-item mb-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 md:p-8 hover:shadow-xl dark:hover:shadow-gray-900/70 transition-shadow overflow-hidden"
                  data-title="from clicks to keystrokes: my journey into the vim cult🚀🔥"
                  data-summary="&lt;p&gt;back in the days, it was somewhere around when i first started my developer career, i was a sublime text fan, most of you may have never herd of it but it was like &amp;ldquo;winrar&amp;rdquo; which kept bugging you for activating it but never obstructed you from using it. it was a good time. i was happy and i was productive. sometimes, i used to give jetbrains a try but it soon phased out after my crack stopped working and i as a junior developer didn&amp;rsquo;t have enough salary to pay for their plans while paying my rent.&lt;/p&gt;"
                  data-categories="programming,opinion"
@@ -538,7 +550,7 @@
           
 
           <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 leading-tight break-words">
-            <a href="/posts/from-clicks-to-keystrokes-my-journey-into-the-vim-cult/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
+            <a href="/posts/from-clicks-to-keystrokes-my-journey-into-the-vim-cult/" class="text-gray-900 dark:text-gray-100 hover:text-[#6b63ff] transition-colors">
               From Clicks to Keystrokes: My Journey into the Vim Cult🚀🔥
             </a>
           </h2>
@@ -565,7 +577,7 @@
             <span class="whitespace-nowrap">8 min read</span>
           </div>
 
-          <p class="text-gray-600 mb-6 line-clamp-3 break-words"><p>Back in the days, it was somewhere around when I first started my developer career, I was a Sublime text fan, most of you may have never herd of it but it was like &ldquo;winrar&rdquo; which kept bugging you for activating it but never obstructed you from using it. It was a good time. I was happy and I was productive. Sometimes, I used to give jetbrains a try but it soon phased out after my crack stopped working and I as a junior developer didn&rsquo;t have enough salary to pay for their plans while paying my rent.</p></p>
+          <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 break-words"><p>Back in the days, it was somewhere around when I first started my developer career, I was a Sublime text fan, most of you may have never herd of it but it was like &ldquo;winrar&rdquo; which kept bugging you for activating it but never obstructed you from using it. It was a good time. I was happy and I was productive. Sometimes, I used to give jetbrains a try but it soon phased out after my crack stopped working and I as a junior developer didn&rsquo;t have enough salary to pay for their plans while paying my rent.</p></p>
 
           <a href="/posts/from-clicks-to-keystrokes-my-journey-into-the-vim-cult/"
              class="inline-flex items-center gap-2 text-[#6b63ff] hover:gap-3 transition-all font-medium text-sm md:text-base">
@@ -576,7 +588,7 @@
           </a>
         </article>
       
-        <article class="post-item mb-12 bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow overflow-hidden"
+        <article class="post-item mb-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 md:p-8 hover:shadow-xl dark:hover:shadow-gray-900/70 transition-shadow overflow-hidden"
                  data-title="how to serve cnn models with fast api"
                  data-summary="&lt;p&gt;&lt;img src=&#34;../assets/cnn-with-fast-api.webp&#34; alt=&#34;cnn-with-fast-api&#34; title=&#34;cnn with fast api&#34;&gt;&lt;/p&gt;
 &lt;p&gt;tags: #programming, #python&lt;/p&gt;
@@ -592,7 +604,7 @@ on top of that he wanted &lt;code&gt;fast api&lt;/code&gt;&lt;/p&gt;"
           
 
           <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 leading-tight break-words">
-            <a href="/posts/how-to-serve-cnn-models-with-fast-api/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
+            <a href="/posts/how-to-serve-cnn-models-with-fast-api/" class="text-gray-900 dark:text-gray-100 hover:text-[#6b63ff] transition-colors">
               How to serve CNN models with Fast API
             </a>
           </h2>
@@ -623,7 +635,7 @@ on top of that he wanted &lt;code&gt;fast api&lt;/code&gt;&lt;/p&gt;"
             <span class="whitespace-nowrap">5 min read</span>
           </div>
 
-          <p class="text-gray-600 mb-6 line-clamp-3 break-words"><p><img src="../assets/cnn-with-fast-api.webp" alt="cnn-with-fast-api" title="CNN with Fast API"></p>
+          <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 break-words"><p><img src="../assets/cnn-with-fast-api.webp" alt="cnn-with-fast-api" title="CNN with Fast API"></p>
 <p>Tags: #programming, #python</p>
 <p>Recently I have run into an issue with a client who asked me to build a CNN model for certain task. Let&rsquo;s keep &ldquo;why&rdquo; a secret and let&rsquo;s talk about why I am writing this blog.
 The issue that we ran into later on was, my client was not ready to use the sagemaker for deploying the model even though we trained it on sagemaker. He wanted a custom repo where we could track the files and have our own custom inference.
@@ -638,7 +650,7 @@ On top of that he wanted <code>Fast API</code></p></p>
           </a>
         </article>
       
-        <article class="post-item mb-12 bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow overflow-hidden"
+        <article class="post-item mb-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 md:p-8 hover:shadow-xl dark:hover:shadow-gray-900/70 transition-shadow overflow-hidden"
                  data-title="serving your home server with true fiber internet without a static ip"
                  data-summary="&lt;h3 id=&#34;problem-description&#34;&gt;problem description&lt;/h3&gt;
 &lt;p&gt;recently, i switched to a new internet service provider in thailand called &amp;ldquo;true.&amp;rdquo; the name is quite inconvenient for searching solutions related to their services due to its common use as a boolean variable or word. previously, i was using &amp;ldquo;ais,&amp;rdquo; which was affordable, costing only 200b to get a static ip. however, with &amp;ldquo;true,&amp;rdquo; obtaining a static ip for my home server has become quite expensive, costing around 1000b.&lt;/p&gt;"
@@ -651,7 +663,7 @@ On top of that he wanted <code>Fast API</code></p></p>
           
 
           <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 leading-tight break-words">
-            <a href="/posts/serve-home-server-with-true-fib/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
+            <a href="/posts/serve-home-server-with-true-fib/" class="text-gray-900 dark:text-gray-100 hover:text-[#6b63ff] transition-colors">
               Serving Your Home Server with True Fiber Internet Without a Static IP
             </a>
           </h2>
@@ -678,7 +690,7 @@ On top of that he wanted <code>Fast API</code></p></p>
             <span class="whitespace-nowrap">3 min read</span>
           </div>
 
-          <p class="text-gray-600 mb-6 line-clamp-3 break-words"><h3 id="problem-description">Problem Description</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 break-words"><h3 id="problem-description">Problem Description</h3>
 <p>Recently, I switched to a new internet service provider in Thailand called &ldquo;True.&rdquo; The name is quite inconvenient for searching solutions related to their services due to its common use as a Boolean variable or word. Previously, I was using &ldquo;AIS,&rdquo; which was affordable, costing only 200B to get a static IP. However, with &ldquo;True,&rdquo; obtaining a static IP for my home server has become quite expensive, costing around 1000B.</p></p>
 
           <a href="/posts/serve-home-server-with-true-fib/"
@@ -690,7 +702,7 @@ On top of that he wanted <code>Fast API</code></p></p>
           </a>
         </article>
       
-        <article class="post-item mb-12 bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow overflow-hidden"
+        <article class="post-item mb-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 md:p-8 hover:shadow-xl dark:hover:shadow-gray-900/70 transition-shadow overflow-hidden"
                  data-title="my editor setup while working for hiboo"
                  data-summary="&lt;p&gt;i use &lt;strong&gt;vscode&lt;/strong&gt;. it&amp;rsquo;s free, simple and runs smoothly on all platforms.&lt;/p&gt;
 &lt;p&gt;let&amp;rsquo;s talk about extensions. in past i have used many extensions and after filtering out most of the extensions that were memory/processor hogging; i have came to these extensions for overall usage. you can copy and paste them on your terminal if you would like to install them.&lt;/p&gt;
@@ -738,7 +750,7 @@ code --install-extension visualstudioexptteam.vscodeintellicode
           
 
           <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 leading-tight break-words">
-            <a href="/posts/editor-setup-hiboo/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
+            <a href="/posts/editor-setup-hiboo/" class="text-gray-900 dark:text-gray-100 hover:text-[#6b63ff] transition-colors">
               My Editor Setup While Working for Hiboo
             </a>
           </h2>
@@ -765,7 +777,7 @@ code --install-extension visualstudioexptteam.vscodeintellicode
             <span class="whitespace-nowrap">2 min read</span>
           </div>
 
-          <p class="text-gray-600 mb-6 line-clamp-3 break-words"><p>I use <strong>VSCode</strong>. It&rsquo;s free, simple and runs smoothly on all platforms.</p>
+          <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 break-words"><p>I use <strong>VSCode</strong>. It&rsquo;s free, simple and runs smoothly on all platforms.</p>
 <p>Let&rsquo;s talk about extensions. In past I have used many extensions and after filtering out most of the extensions that were memory/processor hogging; I have came to these extensions for overall usage. You can copy and paste them on your terminal if you would like to install them.</p>
 <pre tabindex="0"><code>code --install-extension christian-kohler.npm-intellisense
 code --install-extension dbaeumer.vscode-eslint
@@ -804,7 +816,7 @@ code --install-extension VisualStudioExptTeam.vscodeintellicode
           </a>
         </article>
       
-        <article class="post-item mb-12 bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow overflow-hidden"
+        <article class="post-item mb-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 md:p-8 hover:shadow-xl dark:hover:shadow-gray-900/70 transition-shadow overflow-hidden"
                  data-title="hello to the new guitar"
                  data-summary="&lt;p&gt;so, i brought my guitar today. it is &lt;strong&gt;enya ea-x1 pro&lt;/strong&gt;.
 the guitar is 41&amp;rsquo;&amp;rsquo; variant. there is solid spruce top which is dried for 10 years. side is made up of rosewood, neck from mahogany, fingerboard from black richlite and bridge from black richlite. so, no more waiting for guitar to sound good as time progress.&lt;/p&gt;
@@ -826,7 +838,7 @@ the guitar is 41&amp;rsquo;&amp;rsquo; variant. there is solid spruce top which 
           
 
           <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 leading-tight break-words">
-            <a href="/posts/hello-guitar/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
+            <a href="/posts/hello-guitar/" class="text-gray-900 dark:text-gray-100 hover:text-[#6b63ff] transition-colors">
               Hello to the new guitar
             </a>
           </h2>
@@ -849,7 +861,7 @@ the guitar is 41&amp;rsquo;&amp;rsquo; variant. there is solid spruce top which 
             <span class="whitespace-nowrap">1 min read</span>
           </div>
 
-          <p class="text-gray-600 mb-6 line-clamp-3 break-words"><p>So, I brought my guitar today. It is <strong>Enya EA-X1 Pro</strong>.
+          <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 break-words"><p>So, I brought my guitar today. It is <strong>Enya EA-X1 Pro</strong>.
 The guitar is 41&rsquo;&rsquo; variant. There is solid spruce top which is dried for 10 years. Side is made up of Rosewood, Neck from Mahogany, Fingerboard from Black Richlite and bridge from Black Richlite. So, no more waiting for guitar to sound good as time progress.</p>
 <p>Also, it is my first experience with trans-acoustic guitar. The self amp inside the guitar works really well and it sounds amazing when played. Here, the trans-acoustic means I don&rsquo;t have to plug in the amp and do the sound modification like chores/reverb. They are built inside the guitar itself.</p></p>
 
@@ -862,7 +874,7 @@ The guitar is 41&rsquo;&rsquo; variant. There is solid spruce top which is dried
           </a>
         </article>
       
-        <article class="post-item mb-12 bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow overflow-hidden"
+        <article class="post-item mb-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 md:p-8 hover:shadow-xl dark:hover:shadow-gray-900/70 transition-shadow overflow-hidden"
                  data-title="awesome images"
                  data-summary="&lt;p&gt;&lt;img src=&#34;great.jpg&#34; alt=&#34;great gatsby&#34; title=&#34;great gatsby&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;netlify-cms-media-configuration&#34;&gt;netlify cms media configuration&lt;/h2&gt;
@@ -883,7 +895,7 @@ public_folder: ../assets
           
 
           <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 leading-tight break-words">
-            <a href="/posts/awesome-images/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
+            <a href="/posts/awesome-images/" class="text-gray-900 dark:text-gray-100 hover:text-[#6b63ff] transition-colors">
               Awesome Images
             </a>
           </h2>
@@ -906,7 +918,7 @@ public_folder: ../assets
             <span class="whitespace-nowrap">1 min read</span>
           </div>
 
-          <p class="text-gray-600 mb-6 line-clamp-3 break-words"><p><img src="great.jpg" alt="Great Gatsby" title="Great Gatsby"></p>
+          <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 break-words"><p><img src="great.jpg" alt="Great Gatsby" title="Great Gatsby"></p>
 <h2 id="netlify-cms-media-configuration">Netlify CMS Media Configuration</h2>
 <p>First, in your <code>static/admin/config.yml</code>, make sure you have the following:</p>
 <pre tabindex="0"><code>media_folder: content/assets
@@ -926,7 +938,7 @@ public_folder: ../assets
           </a>
         </article>
       
-        <article class="post-item mb-12 bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow overflow-hidden"
+        <article class="post-item mb-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 md:p-8 hover:shadow-xl dark:hover:shadow-gray-900/70 transition-shadow overflow-hidden"
                  data-title="new beginnings"
                  data-summary="&lt;p&gt;far far away, behind the word mountains, far from the countries vokalia and
 consonantia, there live the blind texts. separated they live in bookmarksgrove
@@ -946,7 +958,7 @@ made herself on the way.&lt;/p&gt;"
           
 
           <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 leading-tight break-words">
-            <a href="/posts/hi-folks/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
+            <a href="/posts/hi-folks/" class="text-gray-900 dark:text-gray-100 hover:text-[#6b63ff] transition-colors">
               New Beginnings
             </a>
           </h2>
@@ -969,7 +981,7 @@ made herself on the way.&lt;/p&gt;"
             <span class="whitespace-nowrap">5 min read</span>
           </div>
 
-          <p class="text-gray-600 mb-6 line-clamp-3 break-words"><p>Far far away, behind the word mountains, far from the countries Vokalia and
+          <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 break-words"><p>Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 right at the coast of the Semantics, a large language ocean. A small river named
 Duden flows by their place and supplies it with the necessary regelialia.</p>
@@ -988,7 +1000,7 @@ made herself on the way.</p></p>
           </a>
         </article>
       
-        <article class="post-item mb-12 bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow overflow-hidden"
+        <article class="post-item mb-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 md:p-8 hover:shadow-xl dark:hover:shadow-gray-900/70 transition-shadow overflow-hidden"
                  data-title="hello world"
                  data-summary="&lt;p&gt;this is my first post on my new fake blog! how exciting!&lt;/p&gt;
 &lt;p&gt;i&amp;rsquo;m sure i&amp;rsquo;ll write a lot more interesting things in the future.&lt;/p&gt;
@@ -1011,7 +1023,7 @@ firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;"
           
 
           <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 leading-tight break-words">
-            <a href="/posts/hello-world/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
+            <a href="/posts/hello-world/" class="text-gray-900 dark:text-gray-100 hover:text-[#6b63ff] transition-colors">
               Hello World
             </a>
           </h2>
@@ -1034,7 +1046,7 @@ firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;"
             <span class="whitespace-nowrap">1 min read</span>
           </div>
 
-          <p class="text-gray-600 mb-6 line-clamp-3 break-words"><p>This is my first post on my new fake blog! How exciting!</p>
+          <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 break-words"><p>This is my first post on my new fake blog! How exciting!</p>
 <p>I&rsquo;m sure I&rsquo;ll write a lot more interesting things in the future.</p>
 <p>Oh, and here&rsquo;s a great quote from this Wikipedia on
 <a href="http://en.wikipedia.org/wiki/Salted_duck_egg">salted duck eggs</a>.</p>
@@ -1059,11 +1071,11 @@ firm-textured, round yolk that is bright orange-red in color.</p></p>
 
       
       <div id="no-results" class="hidden text-center py-12">
-        <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-16 h-16 text-gray-300 dark:text-gray-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
-        <p class="text-xl text-gray-500 mb-2">No posts found</p>
-        <p class="text-gray-400">Try adjusting your filters or search terms</p>
+        <p class="text-xl text-gray-500 dark:text-gray-500 mb-2">No posts found</p>
+        <p class="text-gray-400 dark:text-gray-500">Try adjusting your filters or search terms</p>
       </div>
     </div>
 
@@ -1118,10 +1130,10 @@ firm-textured, round yolk that is bright orange-red in color.</p></p>
     
     document.querySelectorAll('.category-filter').forEach(btn => {
       btn.classList.remove('active', 'bg-[#6b63ff]', 'text-white');
-      btn.classList.add('bg-gray-100', 'text-gray-700');
+      btn.classList.add('bg-gray-100', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
     });
     event.target.classList.add('active', 'bg-[#6b63ff]', 'text-white');
-    event.target.classList.remove('bg-gray-100', 'text-gray-700');
+    event.target.classList.remove('bg-gray-100', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
 
     filterAndSortPosts();
   }
@@ -1142,10 +1154,10 @@ firm-textured, round yolk that is bright orange-red in color.</p></p>
     
     document.querySelectorAll('.category-filter').forEach(btn => {
       btn.classList.remove('active', 'bg-[#6b63ff]', 'text-white');
-      btn.classList.add('bg-gray-100', 'text-gray-700');
+      btn.classList.add('bg-gray-100', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
     });
     document.querySelector('.category-filter').classList.add('active', 'bg-[#6b63ff]', 'text-white');
-    document.querySelector('.category-filter').classList.remove('bg-gray-100', 'text-gray-700');
+    document.querySelector('.category-filter').classList.remove('bg-gray-100', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
 
     filterAndSortPosts();
   }
@@ -1339,5 +1351,44 @@ firm-textured, round yolk that is bright orange-red in color.</p></p>
   </div>
 </footer>
 
+
+  
+  <button
+  id="theme-toggle"
+  type="button"
+  class="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-200 dark:border-gray-700 hover:scale-110"
+  aria-label="Toggle dark mode"
+>
+  
+  <svg
+    id="theme-toggle-light-icon"
+    class="hidden w-6 h-6 text-yellow-500"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+    ></path>
+  </svg>
+
+  
+  <svg
+    id="theme-toggle-dark-icon"
+    class="hidden w-6 h-6 text-gray-800 dark:text-gray-200"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+  </svg>
+</button>
+
+
+  
+  
+  <script src="/js/dark-mode.js"></script>
 </body>
 </html>
