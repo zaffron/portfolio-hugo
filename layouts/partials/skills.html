@@ -1,11 +1,11 @@
-<section class="section py-20 bg-gray-50" id="skills">
-  <h2 class="text-4xl font-bold text-center mb-2">Skills</h2>
-  <span class="block text-center text-gray-600 mb-12">My Technical Level</span>
+<section class="section py-20 bg-gray-50 dark:bg-gray-900" id="skills">
+  <h2 class="text-4xl font-bold text-center mb-2 text-gray-900 dark:text-gray-100">Skills</h2>
+  <span class="block text-center text-gray-600 dark:text-gray-400 mb-12">My Technical Level</span>
 
   <div class="container mx-auto px-6">
     <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
       {{ range $.Site.Data.skills }}
-      <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg dark:shadow-gray-900/50 hover:shadow-xl dark:hover:shadow-gray-900/70 transition-shadow">
         <div class="flex items-center gap-3 mb-6">
           <div class="text-3xl text-[#6b63ff]">
             {{ if eq .title "Frontend Developer" }}
@@ -19,8 +19,8 @@
             {{ end }}
           </div>
           <div>
-            <h3 class="text-xl font-bold">{{ .title }}</h3>
-            <p class="text-sm text-gray-600">{{ .subtitle }}</p>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100">{{ .title }}</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">{{ .subtitle }}</p>
           </div>
         </div>
 
@@ -28,10 +28,10 @@
           {{ range .skills }}
           <div>
             <div class="flex justify-between mb-2">
-              <span class="text-sm font-medium">{{ .name }}</span>
+              <span class="text-sm font-medium text-gray-900 dark:text-gray-100">{{ .name }}</span>
               <span class="text-sm text-gray-500">{{ .years }} {{ if eq .years 1 }}year{{ else }}years{{ end }}</span>
             </div>
-            <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
               <div class="bg-[#6b63ff] h-2 rounded-full transition-all duration-500"
                    style="width: {{ mul .years 20 }}%"></div>
             </div>

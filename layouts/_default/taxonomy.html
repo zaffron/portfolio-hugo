@@ -21,12 +21,12 @@
           Series
         {{ end }}
       </div>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ .Title }}</h1>
-      <p class="text-gray-600 text-lg">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }} in this {{ .Type | singularize }}</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 dark:text-gray-100">{{ .Title }}</h1>
+      <p class="text-gray-600 dark:text-gray-400 text-lg">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }} in this {{ .Type | singularize }}</p>
     </div>
 
     <!-- Breadcrumbs -->
-    <nav class="max-w-4xl mx-auto mb-8 text-sm text-gray-600">
+    <nav class="max-w-4xl mx-auto mb-8 text-sm text-gray-600 dark:text-gray-400">
       <ol class="flex flex-wrap items-center gap-2">
         <li><a href="/" class="hover:text-[#6b63ff] transition-colors">Home</a></li>
         <li>/</li>
@@ -34,7 +34,7 @@
         <li>/</li>
         <li><a href="/{{ .Type }}" class="hover:text-[#6b63ff] transition-colors">{{ .Type | humanize }}</a></li>
         <li>/</li>
-        <li class="text-gray-400">{{ .Title }}</li>
+        <li class="text-gray-400 dark:text-gray-500">{{ .Title }}</li>
       </ol>
     </nav>
 
@@ -42,7 +42,7 @@
     <div class="max-w-4xl mx-auto mb-8">
       <div class="relative">
         <input type="text" id="search-input" placeholder="Search in {{ .Title }}..."
-               class="w-full px-6 py-4 pl-12 rounded-xl border-2 border-gray-200 focus:border-[#6b63ff] focus:outline-none transition-colors">
+               class="w-full px-6 py-4 pl-12 rounded-xl border-2 border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 focus:border-[#6b63ff] focus:outline-none transition-colors">
         <svg class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
         </svg>
@@ -53,7 +53,7 @@
     <div class="max-w-4xl mx-auto" id="posts-container">
       {{ $paginator := .Paginate .Pages 10 }}
       {{ range $paginator.Pages }}
-        <article class="post-item mb-12 bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+        <article class="post-item mb-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-8 hover:shadow-xl dark:hover:shadow-gray-900/50 transition-shadow"
                  data-title="{{ .Title | lower }}"
                  data-summary="{{ .Summary | lower }}">
           <!-- Featured Image -->
@@ -68,7 +68,7 @@
           {{ end }}
 
           <h2 class="text-2xl md:text-3xl font-bold mb-3">
-            <a href="{{ .RelPermalink }}" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
+            <a href="{{ .RelPermalink }}" class="text-gray-900 dark:text-gray-100 hover:text-[#6b63ff] transition-colors">
               {{ .Title }}
             </a>
           </h2>
@@ -116,14 +116,14 @@
             {{ if and (ne $.Type "tags") .Params.tags }}
               {{ range .Params.tags }}
                 <a href="/tags/{{ . | urlize }}"
-                   class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs hover:bg-gray-200 transition-colors">
+                   class="px-2 py-1 bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-300 rounded-full text-xs hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
                   #{{ . }}
                 </a>
               {{ end }}
             {{ end }}
           </div>
 
-          <p class="text-gray-600 mb-4">{{ .Summary }}</p>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">{{ .Summary }}</p>
 
           <a href="{{ .RelPermalink }}"
              class="inline-flex items-center gap-2 text-[#6b63ff] hover:gap-3 transition-all font-medium">
@@ -137,7 +137,7 @@
 
       <!-- No Results Message -->
       <div id="no-results" class="hidden text-center py-12">
-        <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-16 h-16 text-gray-300 dark:text-gray-700 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
         <p class="text-xl text-gray-500">No posts found matching your search.</p>
@@ -150,7 +150,7 @@
       <nav class="flex justify-center items-center gap-2">
         {{ if $paginator.HasPrev }}
           <a href="{{ $paginator.Prev.URL }}"
-             class="px-4 py-2 rounded-lg bg-white border-2 border-gray-200 hover:border-[#6b63ff] hover:text-[#6b63ff] transition-colors">
+             class="px-4 py-2 rounded-lg bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 hover:border-[#6b63ff] hover:text-[#6b63ff] transition-colors">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
             </svg>
@@ -159,14 +159,14 @@
 
         {{ range $paginator.Pagers }}
           <a href="{{ .URL }}"
-             class="px-4 py-2 rounded-lg {{ if eq . $paginator }}bg-[#6b63ff] text-white{{ else }}bg-white border-2 border-gray-200 hover:border-[#6b63ff] hover:text-[#6b63ff]{{ end }} transition-colors">
+             class="px-4 py-2 rounded-lg {{ if eq . $paginator }}bg-[#6b63ff] text-white{{ else }}bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 hover:border-[#6b63ff] hover:text-[#6b63ff]{{ end }} transition-colors">
             {{ .PageNumber }}
           </a>
         {{ end }}
 
         {{ if $paginator.HasNext }}
           <a href="{{ $paginator.Next.URL }}"
-             class="px-4 py-2 rounded-lg bg-white border-2 border-gray-200 hover:border-[#6b63ff] hover:text-[#6b63ff] transition-colors">
+             class="px-4 py-2 rounded-lg bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 hover:border-[#6b63ff] hover:text-[#6b63ff] transition-colors">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>
@@ -186,7 +186,7 @@
         All {{ .Type | humanize }}
       </a>
       <a href="/posts"
-         class="inline-flex items-center gap-2 text-gray-600 hover:text-[#6b63ff] transition-colors font-medium">
+         class="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-[#6b63ff] transition-colors font-medium">
         Back to Blog
       </a>
     </div>

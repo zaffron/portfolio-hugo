@@ -1,4 +1,4 @@
-<header class="fixed top-0 w-full bg-white shadow-sm z-50">
+<header class="fixed top-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50">
   <nav class="container mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
       <a href="/" class="text-2xl font-bold text-[#6b63ff]">
@@ -9,7 +9,7 @@
       <ul class="hidden md:flex items-center gap-8">
         {{ range .Site.Menus.main }}
           <li>
-            <a href="{{ .URL }}" class="text-gray-700 hover:text-[#6b63ff] transition-colors font-medium">
+            <a href="{{ .URL }}" class="text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] transition-colors font-medium">
               {{ .Name }}
             </a>
           </li>
@@ -17,7 +17,7 @@
       </ul>
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-button" class="md:hidden text-gray-700">
+      <button id="mobile-menu-button" class="md:hidden text-gray-700 dark:text-gray-300">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -29,7 +29,7 @@
       <ul class="flex flex-col gap-4">
         {{ range .Site.Menus.main }}
           <li>
-            <a href="{{ .URL }}" class="block text-gray-700 hover:text-[#6b63ff] transition-colors font-medium">
+            <a href="{{ .URL }}" class="block text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] transition-colors font-medium">
               {{ .Name }}
             </a>
           </li>

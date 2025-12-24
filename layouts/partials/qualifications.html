@@ -1,6 +1,6 @@
 <section class="section py-20" id="qualifications">
-  <h2 class="text-4xl font-bold text-center mb-2">Qualification</h2>
-  <span class="block text-center text-gray-600 mb-12">My Personal Journey</span>
+  <h2 class="text-4xl font-bold text-center mb-2 text-gray-900 dark:text-gray-100">Qualification</h2>
+  <span class="block text-center text-gray-600 dark:text-gray-400 mb-12">My Personal Journey</span>
 
   <div class="container mx-auto px-6">
     <div class="max-w-4xl mx-auto">
@@ -14,7 +14,7 @@
           Work
         </button>
         <button onclick="showTab('education')" id="education-tab"
-                class="flex items-center gap-2 text-lg font-semibold pb-2 border-b-2 border-transparent text-gray-600 hover:text-[#6b63ff] transition-colors">
+                class="flex items-center gap-2 text-lg font-semibold pb-2 border-b-2 border-transparent text-gray-600 dark:text-gray-400 hover:text-[#6b63ff] transition-colors">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/>
           </svg>
@@ -38,8 +38,8 @@
             {{ end }}
 
             <div class="{{ if modBool $index 2 }}md:text-left{{ else }}md:text-right{{ end }}">
-              <h3 class="text-xl font-bold mb-2">{{ .title }}</h3>
-              <p class="text-gray-600 mb-2">{{ .subtitle }}</p>
+              <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">{{ .title }}</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-2">{{ .subtitle }}</p>
               <div class="flex items-center gap-2 {{ if modBool $index 2 }}{{ else }}md:justify-end{{ end }} text-sm text-gray-500">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -78,8 +78,8 @@
             {{ end }}
 
             <div class="{{ if modBool $index 2 }}md:text-left{{ else }}md:text-right{{ end }}">
-              <h3 class="text-xl font-bold mb-2">{{ .title }}</h3>
-              <p class="text-gray-600 mb-2">{{ .subtitle }}</p>
+              <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">{{ .title }}</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-2">{{ .subtitle }}</p>
               <div class="flex items-center gap-2 {{ if modBool $index 2 }}{{ else }}md:justify-end{{ end }} text-sm text-gray-500">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -115,7 +115,13 @@
     // Remove active state from all buttons
     document.querySelectorAll('[id$="-tab"]').forEach(button => {
       button.classList.remove('border-[#6b63ff]', 'text-[#6b63ff]');
-      button.classList.add('border-transparent', 'text-gray-600');
+      button.classList.add('border-transparent');
+      // Check if dark mode is active
+      if (document.documentElement.classList.contains('dark')) {
+        button.classList.add('text-gray-400');
+      } else {
+        button.classList.add('text-gray-600');
+      }
     });
 
     // Show selected tab
@@ -124,6 +130,6 @@
     // Add active state to selected button
     const activeButton = document.getElementById(tabName + '-tab');
     activeButton.classList.add('border-[#6b63ff]', 'text-[#6b63ff]');
-    activeButton.classList.remove('border-transparent', 'text-gray-600');
+    activeButton.classList.remove('border-transparent', 'text-gray-600', 'text-gray-400');
   }
 </script>
