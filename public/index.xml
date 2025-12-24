@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on My New Hugo Site</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Home on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Dec 2025 16:32:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From Clicks to Keystrokes: My Journey into the Vim Cult</title>
+      <link>http://localhost:1313/posts/from-clicks-to-keystrokes-my-journey-into-the-vim-cult/</link>
+      <pubDate>Wed, 24 Dec 2025 16:32:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/from-clicks-to-keystrokes-my-journey-into-the-vim-cult/</guid>
+      <description>&lt;p&gt;Back in the days, it was somewhere around when I first started my developer career, I was a Sublime text fan, most of you may have never herd of it but it was like &amp;ldquo;winrar&amp;rdquo; which kept bugging you for activating it but never obstructed you from using it. It was a good time. I was happy and I was productive. Sometimes, I used to give jetbrains a try but it soon phased out after my crack stopped working and I as a junior developer didn&amp;rsquo;t have enough salary to pay for their plans while paying my rent.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Post 3</title>
+      <link>http://localhost:1313/posts/post-3/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/post-3/</guid>
+      <description>&lt;p&gt;Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum. Deserunt esse cillum Lorem non magna adipisicing mollit amet consequat.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Post 2</title>
+      <link>http://localhost:1313/posts/post-2/</link>
+      <pubDate>Wed, 15 Feb 2023 10:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/post-2/</guid>
+      <description>&lt;p&gt;Anim eiusmod irure incididunt sint cupidatat. Incididunt irure irure irure nisi ipsum do ut quis fugiat consectetur proident cupidatat incididunt cillum. Dolore voluptate occaecat qui mollit laborum ullamco et. Ipsum laboris officia anim laboris culpa eiusmod ex magna ex cupidatat anim ipsum aute. Mollit aliquip occaecat qui sunt velit ut cupidatat reprehenderit enim sunt laborum. Velit veniam in officia nulla adipisicing ut duis officia.&lt;/p&gt;&#xA;&lt;p&gt;Exercitation voluptate irure in irure tempor mollit Lorem nostrud ad officia. Velit id fugiat occaecat do tempor. Sit officia Lorem aliquip eu deserunt consectetur. Aute proident deserunt in nulla aliquip dolore ipsum Lorem ut cupidatat consectetur sit sint laborum. Esse cupidatat sit sint sunt tempor exercitation deserunt. Labore dolor duis laborum est do nisi ut veniam dolor et nostrud nostrud.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Editor Setup While Working for Hiboo</title>
+      <link>http://localhost:1313/posts/editor-setup-hiboo/</link>
+      <pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/editor-setup-hiboo/</guid>
+      <description>&lt;p&gt;I use &lt;strong&gt;VSCode&lt;/strong&gt;. It&amp;rsquo;s free, simple and runs smoothly on all platforms.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s talk about extensions. In past I have used many extensions and after filtering out most of the extensions that were memory/processor hogging; I have came to these extensions for overall usage. You can copy and paste them on your terminal if you would like to install them.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;code --install-extension christian-kohler.npm-intellisense&#xA;code --install-extension dbaeumer.vscode-eslint&#xA;code --install-extension eamodio.gitlens&#xA;code --install-extension ecmel.vscode-html-css&#xA;code --install-extension eg2.vscode-npm-script&#xA;code --install-extension esbenp.prettier-vscode&#xA;code --install-extension formulahendry.auto-close-tag&#xA;code --install-extension formulahendry.auto-rename-tag&#xA;code --install-extension GraphQL.vscode-graphql&#xA;code --install-extension IronGeek.vscode-env&#xA;code --install-extension jpoissonnier.vscode-styled-components&#xA;code --install-extension kumar-harsh.graphql-for-vscode&#xA;code --install-extension lllllllqw.jsdoc&#xA;code --install-extension mike-co.import-sorter&#xA;code --install-extension ms-azuretools.vscode-docker&#xA;code --install-extension ms-vscode-remote.remote-containers&#xA;code --install-extension ms-vsliveshare.vsliveshare&#xA;code --install-extension patbenatar.advanced-new-file&#xA;code --install-extension rbbit.typescript-hero&#xA;code --install-extension sburg.vscode-javascript-booster&#xA;code --install-extension Shan.code-settings-sync&#xA;code --install-extension sleistner.vscode-fileutils&#xA;code --install-extension smlombardi.slime&#xA;code --install-extension steoates.autoimport&#xA;code --install-extension stevencl.addDocComments&#xA;code --install-extension VisualStudioExptTeam.vscodeintellicode&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;Theme&lt;/em&gt;&lt;/strong&gt;: The theme I am using is slime. It comes with the extension pack installed above. It is calm and smooth.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Serving Your Home Server with True Fiber Internet Without a Static IP</title>
+      <link>http://localhost:1313/posts/serve-home-server-with-true-fiber/</link>
+      <pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/serve-home-server-with-true-fiber/</guid>
+      <description>&lt;h3 id=&#34;problem-description&#34;&gt;Problem Description&lt;/h3&gt;&#xA;&lt;p&gt;Recently, I switched to a new internet service provider in Thailand called &amp;ldquo;True.&amp;rdquo; The name is quite inconvenient for searching solutions related to their services due to its common use as a Boolean variable or word. Previously, I was using &amp;ldquo;AIS,&amp;rdquo; which was affordable, costing only 200B to get a static IP. However, with &amp;ldquo;True,&amp;rdquo; obtaining a static IP for my home server has become quite expensive, costing around 1000B.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello to the new guitar</title>
+      <link>http://localhost:1313/posts/hello-guitar/</link>
+      <pubDate>Fri, 28 Jan 2022 15:35:03 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hello-guitar/</guid>
+      <description>&lt;p&gt;So, I brought my guitar today. It is &lt;strong&gt;Enya EA-X1 Pro&lt;/strong&gt;.&#xA;The guitar is 41&amp;rsquo;&amp;rsquo; variant. There is solid spruce top which is dried for 10 years. Side is made up of Rosewood, Neck from Mahogany, Fingerboard from Black Richlite and bridge from Black Richlite. So, no more waiting for guitar to sound good as time progress.&lt;/p&gt;&#xA;&lt;p&gt;Also, it is my first experience with trans-acoustic guitar. The self amp inside the guitar works really well and it sounds amazing when played. Here, the trans-acoustic means I don&amp;rsquo;t have to plug in the amp and do the sound modification like chores/reverb. They are built inside the guitar itself.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
