@@ -181,10 +181,22 @@
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
     <script>
-      // Wait for window to load completely, ensuring React is available
-      window.addEventListener('load', function() {
-        // Initialize CMS
-        CMS.init();
+      // Wait for CMS to be ready (it auto-initializes)
+      // Use setTimeout to ensure React and CMS are fully loaded
+      setTimeout(function() {
+        // Helper functions
+        function createClass(spec) {
+          return React.createClass ? React.createClass(spec) : class extends React.Component {
+            render() {
+              return spec.render.call(this);
+            }
+          };
+        }
+
+        function h(tag, props) {
+          var children = Array.prototype.slice.call(arguments, 2);
+          return React.createElement.apply(React, [tag, props].concat(children));
+        }
 
         // Register preview template for posts
         var PostPreview = createClass({
@@ -290,25 +302,11 @@
         }
       });
 
-      // Helper functions
-      function createClass(spec) {
-        return React.createClass ? React.createClass(spec) : class extends React.Component {
-          render() {
-            return spec.render.call(this);
-          }
-        };
-      }
+      // Register the preview template
+      CMS.registerPreviewTemplate('posts', PostPreview);
 
-      function h(tag, props) {
-        var children = Array.prototype.slice.call(arguments, 2);
-        return React.createElement.apply(React, [tag, props].concat(children));
-      }
-
-        // Register the preview template
-        CMS.registerPreviewTemplate('posts', PostPreview);
-
-        console.log('Decap CMS preview template registered successfully');
-      });
+      console.log('Decap CMS preview template registered successfully');
+      }, 1000); // Wait 1 second for CMS to fully initialize
     </script>
   </body>
 </html>
