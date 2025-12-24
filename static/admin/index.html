@@ -181,9 +181,17 @@
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
     <script>
-      // Wait for CMS to be ready (it auto-initializes)
-      // Use setTimeout to ensure React and CMS are fully loaded
-      setTimeout(function() {
+      // Wait for React and CMS to be available
+      function initPreview() {
+        // Check if React and CMS are loaded
+        if (typeof React === 'undefined' || typeof CMS === 'undefined') {
+          console.log('Waiting for React and CMS to load...');
+          setTimeout(initPreview, 100);
+          return;
+        }
+
+        console.log('React and CMS loaded, registering preview template...');
+
         // Helper functions
         function createClass(spec) {
           return React.createClass ? React.createClass(spec) : class extends React.Component {
@@ -302,11 +310,14 @@
         }
       });
 
-      // Register the preview template
-      CMS.registerPreviewTemplate('posts', PostPreview);
+        // Register the preview template
+        CMS.registerPreviewTemplate('posts', PostPreview);
 
-      console.log('Decap CMS preview template registered successfully');
-      }, 1000); // Wait 1 second for CMS to fully initialize
+        console.log('Decap CMS preview template registered successfully');
+      }
+
+      // Start checking for React and CMS availability
+      initPreview();
     </script>
   </body>
 </html>
