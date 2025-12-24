@@ -4,44 +4,113 @@
     <h1 class="text-4xl md:text-5xl font-bold text-center mb-4">{{ .Title }}</h1>
     <p class="text-center text-gray-600 mb-8">{{ .Description }}</p>
 
-    <!-- All Tags -->
-    <div class="max-w-4xl mx-auto mb-8">
+    <!-- Filters Container -->
+    <div class="max-w-4xl mx-auto mb-8 space-y-4">
+
+      <!-- Category Filters -->
       <div class="bg-white rounded-xl shadow-lg p-6">
         <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
           <svg class="w-5 h-5 text-[#6b63ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
           </svg>
-          Filter by Tags
+          Filter by Category
         </h3>
         <div class="flex flex-wrap gap-2">
-          <button onclick="filterByTag('all')"
-                  class="tag-filter active px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#6b63ff] text-white">
+          <button onclick="filterByCategory('all')"
+                  class="category-filter active px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#6b63ff] text-white">
             All Posts
           </button>
-          {{ $tags := slice }}
+          {{ $categories := slice }}
           {{ range .Pages }}
-            {{ range .Params.tags }}
-              {{ $tags = $tags | append . }}
+            {{ range .Params.categories }}
+              {{ $categories = $categories | append . }}
             {{ end }}
           {{ end }}
-          {{ range ($tags | uniq) }}
-            <button onclick="filterByTag('{{ . | urlize }}')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
+          {{ range ($categories | uniq) }}
+            <button onclick="filterByCategory('{{ . | urlize }}')"
+                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
               {{ . }}
             </button>
           {{ end }}
         </div>
       </div>
-    </div>
 
-    <!-- Search Bar -->
-    <div class="max-w-4xl mx-auto mb-8">
+      <!-- Tag Dropdown & Sort Options -->
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <div class="grid md:grid-cols-2 gap-4">
+
+          <!-- Tag Filter Dropdown -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#6b63ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+              </svg>
+              Filter by Tag
+            </label>
+            <select id="tag-filter"
+                    class="w-full px-4 py-2 rounded-lg border-2 border-gray-200 focus:border-[#6b63ff] focus:outline-none transition-colors">
+              <option value="all">All Tags</option>
+              {{ $tags := slice }}
+              {{ range .Pages }}
+                {{ range .Params.tags }}
+                  {{ $tags = $tags | append . }}
+                {{ end }}
+              {{ end }}
+              {{ range ($tags | uniq) }}
+                <option value="{{ . | urlize }}">{{ . }}</option>
+              {{ end }}
+            </select>
+          </div>
+
+          <!-- Sort Options -->
+          <div>
+            <label class="block text-sm font-semibold mb-2 flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#6b63ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"/>
+              </svg>
+              Sort By
+            </label>
+            <select id="sort-filter"
+                    class="w-full px-4 py-2 rounded-lg border-2 border-gray-200 focus:border-[#6b63ff] focus:outline-none transition-colors">
+              <option value="newest">Newest First</option>
+              <option value="oldest">Oldest First</option>
+              <option value="title">Title (A-Z)</option>
+              <option value="reading-time">Reading Time</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Clear Filters Button -->
+        <button onclick="clearAllFilters()"
+                class="mt-4 w-full px-4 py-2 rounded-lg border-2 border-gray-300 text-gray-700 hover:border-[#6b63ff] hover:text-[#6b63ff] transition-colors font-medium flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+          Clear All Filters
+        </button>
+      </div>
+
+      <!-- Search Bar -->
       <div class="relative">
-        <input type="text" id="search-input" placeholder="Search posts..."
-               class="w-full px-6 py-4 pl-12 rounded-xl border-2 border-gray-200 focus:border-[#6b63ff] focus:outline-none transition-colors">
+        <input type="text" id="search-input" placeholder="Search posts by title or content..."
+               class="w-full px-6 py-4 pl-12 rounded-xl border-2 border-gray-200 focus:border-[#6b63ff] focus:outline-none transition-colors shadow-lg">
         <svg class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
         </svg>
+      </div>
+
+      <!-- Active Filters Display -->
+      <div id="active-filters" class="hidden">
+        <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-sm font-semibold text-blue-900">Active Filters:</span>
+              <span id="active-filters-list" class="text-sm text-blue-700"></span>
+            </div>
+            <span id="results-count" class="text-sm text-blue-700 font-medium"></span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -52,27 +121,44 @@
         <article class="post-item mb-12 bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
                  data-title="{{ .Title | lower }}"
                  data-summary="{{ .Summary | lower }}"
-                 data-tags="{{ if .Params.tags }}{{ delimit .Params.tags "," | lower }}{{ end }}">
+                 data-categories="{{ if .Params.categories }}{{ delimit .Params.categories "," | lower }}{{ end }}"
+                 data-tags="{{ if .Params.tags }}{{ delimit .Params.tags "," | lower }}{{ end }}"
+                 data-date="{{ .Date.Unix }}"
+                 data-reading-time="{{ .ReadingTime }}">
+
+          <!-- Featured Image -->
+          {{ if .Params.featured_image }}
+          <div class="mb-6 rounded-lg overflow-hidden">
+            <a href="{{ .RelPermalink }}">
+              <img src="{{ .Params.featured_image }}"
+                   alt="{{ if .Params.featured_image_alt }}{{ .Params.featured_image_alt }}{{ else }}{{ .Title }}{{ end }}"
+                   class="w-full h-64 object-cover hover:scale-105 transition-transform">
+            </a>
+          </div>
+          {{ end }}
+
           <h2 class="text-2xl md:text-3xl font-bold mb-3">
             <a href="{{ .RelPermalink }}" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
               {{ .Title }}
             </a>
           </h2>
 
-          <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+          <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
             <time datetime="{{ .Date.Format "2006-01-02" }}">
               {{ .Date.Format "January 2, 2006" }}
             </time>
-            {{ if .Params.tags }}
+            {{ if .Params.categories }}
               <span>•</span>
               <div class="flex gap-2 flex-wrap">
-                {{ range .Params.tags }}
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
+                {{ range .Params.categories }}
+                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-lg text-xs font-medium">
                     {{ . }}
                   </span>
                 {{ end }}
               </div>
             {{ end }}
+            <span>•</span>
+            <span>{{ .ReadingTime }} min read</span>
           </div>
 
           <p class="text-gray-600 mb-4">{{ .Summary }}</p>
@@ -92,13 +178,14 @@
         <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
-        <p class="text-xl text-gray-500">No posts found matching your search.</p>
+        <p class="text-xl text-gray-500 mb-2">No posts found</p>
+        <p class="text-gray-400">Try adjusting your filters or search terms</p>
       </div>
     </div>
 
-    <!-- Pagination -->
+    <!-- Pagination (hidden when filtering) -->
     {{ if gt $paginator.TotalPages 1 }}
-    <div class="max-w-4xl mx-auto mt-12">
+    <div class="max-w-4xl mx-auto mt-12" id="pagination">
       <nav class="flex justify-center items-center gap-2">
         {{ if $paginator.HasPrev }}
           <a href="{{ $paginator.Prev.URL }}"
@@ -131,62 +218,190 @@
 </section>
 
 <script>
-  // Search functionality
+  // State management
+  let state = {
+    searchTerm: '',
+    activeCategory: 'all',
+    activeTag: 'all',
+    sortBy: 'newest'
+  };
+
+  // DOM elements
   const searchInput = document.getElementById('search-input');
+  const tagFilter = document.getElementById('tag-filter');
+  const sortFilter = document.getElementById('sort-filter');
   const postsContainer = document.getElementById('posts-container');
   const noResults = document.getElementById('no-results');
-  const posts = document.querySelectorAll('.post-item');
-  let activeTag = 'all';
+  const pagination = document.getElementById('pagination');
+  const activeFiltersContainer = document.getElementById('active-filters');
+  const activeFiltersList = document.getElementById('active-filters-list');
+  const resultsCount = document.getElementById('results-count');
+  const posts = Array.from(document.querySelectorAll('.post-item'));
 
+  // Search functionality
   searchInput.addEventListener('input', function(e) {
-    const searchTerm = e.target.value.toLowerCase();
-    filterPosts(searchTerm, activeTag);
+    state.searchTerm = e.target.value.toLowerCase();
+    filterAndSortPosts();
   });
 
-  // Tag filtering
-  function filterByTag(tag) {
-    activeTag = tag;
-    const searchTerm = searchInput.value.toLowerCase();
+  // Tag filter
+  tagFilter.addEventListener('change', function(e) {
+    state.activeTag = e.target.value;
+    filterAndSortPosts();
+  });
 
-    // Update active tag button
-    document.querySelectorAll('.tag-filter').forEach(btn => {
+  // Sort filter
+  sortFilter.addEventListener('change', function(e) {
+    state.sortBy = e.target.value;
+    filterAndSortPosts();
+  });
+
+  // Category filtering
+  function filterByCategory(category) {
+    state.activeCategory = category;
+
+    // Update active category button
+    document.querySelectorAll('.category-filter').forEach(btn => {
       btn.classList.remove('active', 'bg-[#6b63ff]', 'text-white');
       btn.classList.add('bg-gray-100', 'text-gray-700');
     });
     event.target.classList.add('active', 'bg-[#6b63ff]', 'text-white');
     event.target.classList.remove('bg-gray-100', 'text-gray-700');
 
-    filterPosts(searchTerm, tag);
+    filterAndSortPosts();
   }
 
-  function filterPosts(searchTerm, tag) {
-    let visibleCount = 0;
+  // Clear all filters
+  function clearAllFilters() {
+    state = {
+      searchTerm: '',
+      activeCategory: 'all',
+      activeTag: 'all',
+      sortBy: 'newest'
+    };
 
+    searchInput.value = '';
+    tagFilter.value = 'all';
+    sortFilter.value = 'newest';
+
+    // Reset category button
+    document.querySelectorAll('.category-filter').forEach(btn => {
+      btn.classList.remove('active', 'bg-[#6b63ff]', 'text-white');
+      btn.classList.add('bg-gray-100', 'text-gray-700');
+    });
+    document.querySelector('.category-filter').classList.add('active', 'bg-[#6b63ff]', 'text-white');
+    document.querySelector('.category-filter').classList.remove('bg-gray-100', 'text-gray-700');
+
+    filterAndSortPosts();
+  }
+
+  // Main filter and sort function
+  function filterAndSortPosts() {
+    let visiblePosts = [];
+
+    // Filter posts
     posts.forEach(post => {
       const title = post.dataset.title;
       const summary = post.dataset.summary;
+      const categories = post.dataset.categories;
       const tags = post.dataset.tags;
 
-      const matchesSearch = !searchTerm ||
-                           title.includes(searchTerm) ||
-                           summary.includes(searchTerm) ||
-                           tags.includes(searchTerm);
+      const matchesSearch = !state.searchTerm ||
+                           title.includes(state.searchTerm) ||
+                           summary.includes(state.searchTerm);
 
-      const matchesTag = tag === 'all' || tags.includes(tag.toLowerCase());
+      const matchesCategory = state.activeCategory === 'all' ||
+                             categories.includes(state.activeCategory.toLowerCase());
 
-      if (matchesSearch && matchesTag) {
-        post.classList.remove('hidden');
-        visibleCount++;
+      const matchesTag = state.activeTag === 'all' ||
+                        tags.includes(state.activeTag.toLowerCase());
+
+      if (matchesSearch && matchesCategory && matchesTag) {
+        visiblePosts.push(post);
+        post.style.display = 'block';
       } else {
-        post.classList.add('hidden');
+        post.style.display = 'none';
       }
     });
 
-    // Show/hide no results message
-    if (visibleCount === 0) {
+    // Sort posts
+    sortPosts(visiblePosts);
+
+    // Update UI
+    updateActiveFilters(visiblePosts.length);
+
+    // Show/hide pagination and no results
+    if (visiblePosts.length === 0) {
       noResults.classList.remove('hidden');
+      if (pagination) pagination.classList.add('hidden');
     } else {
       noResults.classList.add('hidden');
+      // Hide pagination when filters are active
+      if (pagination) {
+        const hasActiveFilters = state.searchTerm ||
+                                state.activeCategory !== 'all' ||
+                                state.activeTag !== 'all' ||
+                                state.sortBy !== 'newest';
+        if (hasActiveFilters) {
+          pagination.classList.add('hidden');
+        } else {
+          pagination.classList.remove('hidden');
+        }
+      }
+    }
+  }
+
+  // Sort posts
+  function sortPosts(visiblePosts) {
+    visiblePosts.sort((a, b) => {
+      switch(state.sortBy) {
+        case 'oldest':
+          return parseInt(a.dataset.date) - parseInt(b.dataset.date);
+        case 'title':
+          return a.dataset.title.localeCompare(b.dataset.title);
+        case 'reading-time':
+          return parseInt(a.dataset.readingTime) - parseInt(b.dataset.readingTime);
+        case 'newest':
+        default:
+          return parseInt(b.dataset.date) - parseInt(a.dataset.date);
+      }
+    });
+
+    // Reorder posts in DOM
+    visiblePosts.forEach(post => {
+      postsContainer.appendChild(post);
+    });
+  }
+
+  // Update active filters display
+  function updateActiveFilters(count) {
+    const filters = [];
+
+    if (state.searchTerm) {
+      filters.push(`Search: "${state.searchTerm}"`);
+    }
+    if (state.activeCategory !== 'all') {
+      const categoryBtn = Array.from(document.querySelectorAll('.category-filter'))
+        .find(btn => btn.textContent.trim() !== 'All Posts' && btn.onclick.toString().includes(state.activeCategory));
+      if (categoryBtn) {
+        filters.push(`Category: ${categoryBtn.textContent.trim()}`);
+      }
+    }
+    if (state.activeTag !== 'all') {
+      const tagOption = tagFilter.options[tagFilter.selectedIndex];
+      filters.push(`Tag: ${tagOption.text}`);
+    }
+    if (state.sortBy !== 'newest') {
+      const sortOption = sortFilter.options[sortFilter.selectedIndex];
+      filters.push(`Sort: ${sortOption.text}`);
+    }
+
+    if (filters.length > 0) {
+      activeFiltersContainer.classList.remove('hidden');
+      activeFiltersList.textContent = filters.join(' • ');
+      resultsCount.textContent = `${count} post${count !== 1 ? 's' : ''} found`;
+    } else {
+      activeFiltersContainer.classList.add('hidden');
     }
   }
 </script>

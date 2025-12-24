@@ -234,17 +234,19 @@
     <p class="text-center text-gray-600 mb-8"></p>
 
     
-    <div class="max-w-4xl mx-auto mb-8">
+    <div class="max-w-4xl mx-auto mb-8 space-y-4">
+
+      
       <div class="bg-white rounded-xl shadow-lg p-6">
         <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
           <svg class="w-5 h-5 text-[#6b63ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
           </svg>
-          Filter by Tags
+          Filter by Category
         </h3>
         <div class="flex flex-wrap gap-2">
-          <button onclick="filterByTag('all')"
-                  class="tag-filter active px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#6b63ff] text-white">
+          <button onclick="filterByCategory('all')"
+                  class="category-filter active px-4 py-2 rounded-full text-sm font-medium transition-all bg-[#6b63ff] text-white">
             All Posts
           </button>
           
@@ -254,54 +256,6 @@
             
               
             
-              
-            
-              
-            
-              
-            
-          
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-          
-            
-              
-            
-              
-            
-              
-            
-              
-            
-          
-            
-              
-            
-              
-            
-              
-            
-              
-            
-          
-            
-              
-            
-              
-            
-              
-            
           
             
               
@@ -320,145 +274,251 @@
             
               
             
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+            
           
           
-            <button onclick="filterByTag('programming')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              programming
+            <button onclick="filterByCategory('programming')"
+                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
+              Programming
             </button>
           
-            <button onclick="filterByTag('vim')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              vim
+            <button onclick="filterByCategory('opinion')"
+                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
+              Opinion
             </button>
           
-            <button onclick="filterByTag('neovim')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              neovim
+            <button onclick="filterByCategory('machine-learning')"
+                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
+              Machine Learning
             </button>
           
-            <button onclick="filterByTag('editor')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              editor
+            <button onclick="filterByCategory('tutorial')"
+                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
+              Tutorial
             </button>
           
-            <button onclick="filterByTag('productivity')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              productivity
+            <button onclick="filterByCategory('devops')"
+                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
+              DevOps
             </button>
           
-            <button onclick="filterByTag('python')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              python
-            </button>
-          
-            <button onclick="filterByTag('fastapi')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              fastapi
-            </button>
-          
-            <button onclick="filterByTag('cnn')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              cnn
-            </button>
-          
-            <button onclick="filterByTag('ml')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              ml
-            </button>
-          
-            <button onclick="filterByTag('api')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              api
-            </button>
-          
-            <button onclick="filterByTag('homeserver')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              homeserver
-            </button>
-          
-            <button onclick="filterByTag('networking')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              networking
-            </button>
-          
-            <button onclick="filterByTag('ddns')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              ddns
-            </button>
-          
-            <button onclick="filterByTag('nat')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              nat
-            </button>
-          
-            <button onclick="filterByTag('developer')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              developer
-            </button>
-          
-            <button onclick="filterByTag('vscode')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              vscode
-            </button>
-          
-            <button onclick="filterByTag('setup')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              setup
-            </button>
-          
-            <button onclick="filterByTag('daily-life')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              daily-life
-            </button>
-          
-            <button onclick="filterByTag('guitar')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              guitar
-            </button>
-          
-            <button onclick="filterByTag('music')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              music
-            </button>
-          
-            <button onclick="filterByTag('gatsby')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              gatsby
-            </button>
-          
-            <button onclick="filterByTag('mdx')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              mdx
-            </button>
-          
-            <button onclick="filterByTag('images')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              images
-            </button>
-          
-            <button onclick="filterByTag('beginnings')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              beginnings
-            </button>
-          
-            <button onclick="filterByTag('lorem-ipsum')"
-                    class="tag-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
-              lorem-ipsum
+            <button onclick="filterByCategory('daily-life')"
+                    class="category-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-gray-100 text-gray-700 hover:bg-[#6b63ff] hover:text-white">
+              Daily Life
             </button>
           
         </div>
       </div>
-    </div>
 
-    
-    <div class="max-w-4xl mx-auto mb-8">
+      
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <div class="grid md:grid-cols-2 gap-4">
+
+          
+          <div>
+            <label class="block text-sm font-semibold mb-2 flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#6b63ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+              </svg>
+              Filter by Tag
+            </label>
+            <select id="tag-filter"
+                    class="w-full px-4 py-2 rounded-lg border-2 border-gray-200 focus:border-[#6b63ff] focus:outline-none transition-colors">
+              <option value="all">All Tags</option>
+              
+              
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              
+                
+                  
+                
+                  
+                
+                  
+                
+              
+                
+                  
+                
+                  
+                
+                  
+                
+              
+                
+                  
+                
+                  
+                
+              
+                
+                  
+                
+              
+              
+                <option value="programming">programming</option>
+              
+                <option value="vim">vim</option>
+              
+                <option value="neovim">neovim</option>
+              
+                <option value="editor">editor</option>
+              
+                <option value="productivity">productivity</option>
+              
+                <option value="python">python</option>
+              
+                <option value="fastapi">fastapi</option>
+              
+                <option value="cnn">cnn</option>
+              
+                <option value="ml">ml</option>
+              
+                <option value="api">api</option>
+              
+                <option value="homeserver">homeserver</option>
+              
+                <option value="networking">networking</option>
+              
+                <option value="ddns">ddns</option>
+              
+                <option value="nat">nat</option>
+              
+                <option value="developer">developer</option>
+              
+                <option value="vscode">vscode</option>
+              
+                <option value="setup">setup</option>
+              
+                <option value="daily-life">daily-life</option>
+              
+                <option value="guitar">guitar</option>
+              
+                <option value="music">music</option>
+              
+                <option value="gatsby">gatsby</option>
+              
+                <option value="mdx">mdx</option>
+              
+                <option value="images">images</option>
+              
+                <option value="beginnings">beginnings</option>
+              
+                <option value="lorem-ipsum">lorem-ipsum</option>
+              
+            </select>
+          </div>
+
+          
+          <div>
+            <label class="block text-sm font-semibold mb-2 flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#6b63ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"/>
+              </svg>
+              Sort By
+            </label>
+            <select id="sort-filter"
+                    class="w-full px-4 py-2 rounded-lg border-2 border-gray-200 focus:border-[#6b63ff] focus:outline-none transition-colors">
+              <option value="newest">Newest First</option>
+              <option value="oldest">Oldest First</option>
+              <option value="title">Title (A-Z)</option>
+              <option value="reading-time">Reading Time</option>
+            </select>
+          </div>
+
+        </div>
+
+        
+        <button onclick="clearAllFilters()"
+                class="mt-4 w-full px-4 py-2 rounded-lg border-2 border-gray-300 text-gray-700 hover:border-[#6b63ff] hover:text-[#6b63ff] transition-colors font-medium flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+          Clear All Filters
+        </button>
+      </div>
+
+      
       <div class="relative">
-        <input type="text" id="search-input" placeholder="Search posts..."
-               class="w-full px-6 py-4 pl-12 rounded-xl border-2 border-gray-200 focus:border-[#6b63ff] focus:outline-none transition-colors">
+        <input type="text" id="search-input" placeholder="Search posts by title or content..."
+               class="w-full px-6 py-4 pl-12 rounded-xl border-2 border-gray-200 focus:border-[#6b63ff] focus:outline-none transition-colors shadow-lg">
         <svg class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
         </svg>
+      </div>
+
+      
+      <div id="active-filters" class="hidden">
+        <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-sm font-semibold text-blue-900">Active Filters:</span>
+              <span id="active-filters-list" class="text-sm text-blue-700"></span>
+            </div>
+            <span id="results-count" class="text-sm text-blue-700 font-medium"></span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -469,14 +529,21 @@
         <article class="post-item mb-12 bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
                  data-title="from clicks to keystrokes: my journey into the vim cult🚀🔥"
                  data-summary="&lt;p&gt;back in the days, it was somewhere around when i first started my developer career, i was a sublime text fan, most of you may have never herd of it but it was like &amp;ldquo;winrar&amp;rdquo; which kept bugging you for activating it but never obstructed you from using it. it was a good time. i was happy and i was productive. sometimes, i used to give jetbrains a try but it soon phased out after my crack stopped working and i as a junior developer didn&amp;rsquo;t have enough salary to pay for their plans while paying my rent.&lt;/p&gt;"
-                 data-tags="programming,vim,neovim,editor,productivity">
+                 data-categories="programming,opinion"
+                 data-tags="programming,vim,neovim,editor,productivity"
+                 data-date="1741910400"
+                 data-reading-time="8">
+
+          
+          
+
           <h2 class="text-2xl md:text-3xl font-bold mb-3">
             <a href="/posts/from-clicks-to-keystrokes-my-journey-into-the-vim-cult/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
               From Clicks to Keystrokes: My Journey into the Vim Cult🚀🔥
             </a>
           </h2>
 
-          <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+          <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
             <time datetime="2025-03-14">
               March 14, 2025
             </time>
@@ -484,28 +551,18 @@
               <span>•</span>
               <div class="flex gap-2 flex-wrap">
                 
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    programming
+                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-lg text-xs font-medium">
+                    Programming
                   </span>
                 
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    vim
-                  </span>
-                
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    neovim
-                  </span>
-                
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    editor
-                  </span>
-                
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    productivity
+                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-lg text-xs font-medium">
+                    Opinion
                   </span>
                 
               </div>
             
+            <span>•</span>
+            <span>8 min read</span>
           </div>
 
           <p class="text-gray-600 mb-4"><p>Back in the days, it was somewhere around when I first started my developer career, I was a Sublime text fan, most of you may have never herd of it but it was like &ldquo;winrar&rdquo; which kept bugging you for activating it but never obstructed you from using it. It was a good time. I was happy and I was productive. Sometimes, I used to give jetbrains a try but it soon phased out after my crack stopped working and I as a junior developer didn&rsquo;t have enough salary to pay for their plans while paying my rent.</p></p>
@@ -526,14 +583,21 @@
 &lt;p&gt;recently i have run into an issue with a client who asked me to build a cnn model for certain task. let&amp;rsquo;s keep &amp;ldquo;why&amp;rdquo; a secret and let&amp;rsquo;s talk about why i am writing this blog.
 the issue that we ran into later on was, my client was not ready to use the sagemaker for deploying the model even though we trained it on sagemaker. he wanted a custom repo where we could track the files and have our own custom inference.
 on top of that he wanted &lt;code&gt;fast api&lt;/code&gt;&lt;/p&gt;"
-                 data-tags="programming,python,fastapi,cnn,ml,api">
+                 data-categories="programming,machine learning,tutorial"
+                 data-tags="programming,python,fastapi,cnn,ml,api"
+                 data-date="1741132800"
+                 data-reading-time="5">
+
+          
+          
+
           <h2 class="text-2xl md:text-3xl font-bold mb-3">
             <a href="/posts/how-to-serve-cnn-models-with-fast-api/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
               How to serve CNN models with Fast API
             </a>
           </h2>
 
-          <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+          <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
             <time datetime="2025-03-05">
               March 5, 2025
             </time>
@@ -541,32 +605,22 @@ on top of that he wanted &lt;code&gt;fast api&lt;/code&gt;&lt;/p&gt;"
               <span>•</span>
               <div class="flex gap-2 flex-wrap">
                 
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    programming
+                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-lg text-xs font-medium">
+                    Programming
                   </span>
                 
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    python
+                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-lg text-xs font-medium">
+                    Machine Learning
                   </span>
                 
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    fastapi
-                  </span>
-                
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    cnn
-                  </span>
-                
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    ml
-                  </span>
-                
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    api
+                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-lg text-xs font-medium">
+                    Tutorial
                   </span>
                 
               </div>
             
+            <span>•</span>
+            <span>5 min read</span>
           </div>
 
           <p class="text-gray-600 mb-4"><p><img src="../assets/cnn-with-fast-api.webp" alt="cnn-with-fast-api" title="CNN with Fast API"></p>
@@ -588,14 +642,21 @@ On top of that he wanted <code>Fast API</code></p></p>
                  data-title="serving your home server with true fiber internet without a static ip"
                  data-summary="&lt;h3 id=&#34;problem-description&#34;&gt;problem description&lt;/h3&gt;
 &lt;p&gt;recently, i switched to a new internet service provider in thailand called &amp;ldquo;true.&amp;rdquo; the name is quite inconvenient for searching solutions related to their services due to its common use as a boolean variable or word. previously, i was using &amp;ldquo;ais,&amp;rdquo; which was affordable, costing only 200b to get a static ip. however, with &amp;ldquo;true,&amp;rdquo; obtaining a static ip for my home server has become quite expensive, costing around 1000b.&lt;/p&gt;"
-                 data-tags="homeserver,networking,ddns,nat">
+                 data-categories="devops,tutorial"
+                 data-tags="homeserver,networking,ddns,nat"
+                 data-date="1673798400"
+                 data-reading-time="3">
+
+          
+          
+
           <h2 class="text-2xl md:text-3xl font-bold mb-3">
             <a href="/posts/serve-home-server-with-true-fib/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
               Serving Your Home Server with True Fiber Internet Without a Static IP
             </a>
           </h2>
 
-          <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+          <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
             <time datetime="2023-01-15">
               January 15, 2023
             </time>
@@ -603,24 +664,18 @@ On top of that he wanted <code>Fast API</code></p></p>
               <span>•</span>
               <div class="flex gap-2 flex-wrap">
                 
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    homeserver
+                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-lg text-xs font-medium">
+                    DevOps
                   </span>
                 
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    networking
-                  </span>
-                
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    ddns
-                  </span>
-                
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    nat
+                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-lg text-xs font-medium">
+                    Tutorial
                   </span>
                 
               </div>
             
+            <span>•</span>
+            <span>3 min read</span>
           </div>
 
           <p class="text-gray-600 mb-4"><h3 id="problem-description">Problem Description</h3>
@@ -666,14 +721,29 @@ code --install-extension steoates.autoimport
 code --install-extension stevencl.adddoccomments
 code --install-extension visualstudioexptteam.vscodeintellicode
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;theme&lt;/em&gt;&lt;/strong&gt;: the theme i am using is slime. it comes with the extension pack installed above. it is calm and smooth.&lt;/p&gt;"
-                 data-tags="developer,vscode,editor,setup">
+                 data-categories="programming,devops"
+                 data-tags="developer,vscode,editor,setup"
+                 data-date="1673740800"
+                 data-reading-time="2">
+
+          
+          
+          <div class="mb-6 rounded-lg overflow-hidden">
+            <a href="/posts/editor-setup-hiboo/">
+              <img src="editor-setup-hiboo.png"
+                   alt="My Editor Setup While Working for Hiboo"
+                   class="w-full h-64 object-cover hover:scale-105 transition-transform">
+            </a>
+          </div>
+          
+
           <h2 class="text-2xl md:text-3xl font-bold mb-3">
             <a href="/posts/editor-setup-hiboo/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
               My Editor Setup While Working for Hiboo
             </a>
           </h2>
 
-          <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+          <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
             <time datetime="2023-01-15">
               January 15, 2023
             </time>
@@ -681,24 +751,18 @@ code --install-extension visualstudioexptteam.vscodeintellicode
               <span>•</span>
               <div class="flex gap-2 flex-wrap">
                 
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    developer
+                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-lg text-xs font-medium">
+                    Programming
                   </span>
                 
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    vscode
-                  </span>
-                
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    editor
-                  </span>
-                
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    setup
+                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-lg text-xs font-medium">
+                    DevOps
                   </span>
                 
               </div>
             
+            <span>•</span>
+            <span>2 min read</span>
           </div>
 
           <p class="text-gray-600 mb-4"><p>I use <strong>VSCode</strong>. It&rsquo;s free, simple and runs smoothly on all platforms.</p>
@@ -745,14 +809,29 @@ code --install-extension VisualStudioExptTeam.vscodeintellicode
                  data-summary="&lt;p&gt;so, i brought my guitar today. it is &lt;strong&gt;enya ea-x1 pro&lt;/strong&gt;.
 the guitar is 41&amp;rsquo;&amp;rsquo; variant. there is solid spruce top which is dried for 10 years. side is made up of rosewood, neck from mahogany, fingerboard from black richlite and bridge from black richlite. so, no more waiting for guitar to sound good as time progress.&lt;/p&gt;
 &lt;p&gt;also, it is my first experience with trans-acoustic guitar. the self amp inside the guitar works really well and it sounds amazing when played. here, the trans-acoustic means i don&amp;rsquo;t have to plug in the amp and do the sound modification like chores/reverb. they are built inside the guitar itself.&lt;/p&gt;"
-                 data-tags="daily-life,guitar,music">
+                 data-categories="daily life"
+                 data-tags="daily-life,guitar,music"
+                 data-date="1643328000"
+                 data-reading-time="1">
+
+          
+          
+          <div class="mb-6 rounded-lg overflow-hidden">
+            <a href="/posts/hello-guitar/">
+              <img src="eax1pro.jpg"
+                   alt="Hello to the new guitar"
+                   class="w-full h-64 object-cover hover:scale-105 transition-transform">
+            </a>
+          </div>
+          
+
           <h2 class="text-2xl md:text-3xl font-bold mb-3">
             <a href="/posts/hello-guitar/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
               Hello to the new guitar
             </a>
           </h2>
 
-          <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+          <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
             <time datetime="2022-01-28">
               January 28, 2022
             </time>
@@ -760,20 +839,14 @@ the guitar is 41&amp;rsquo;&amp;rsquo; variant. there is solid spruce top which 
               <span>•</span>
               <div class="flex gap-2 flex-wrap">
                 
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    daily-life
-                  </span>
-                
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    guitar
-                  </span>
-                
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    music
+                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-lg text-xs font-medium">
+                    Daily Life
                   </span>
                 
               </div>
             
+            <span>•</span>
+            <span>1 min read</span>
           </div>
 
           <p class="text-gray-600 mb-4"><p>So, I brought my guitar today. It is <strong>Enya EA-X1 Pro</strong>.
@@ -801,14 +874,21 @@ public_folder: ../assets
 &lt;p&gt;from &lt;a href=&#34;https://github.com/cwgw&#34;&gt;@cwgw&lt;/a&gt;:&lt;/p&gt;
 &lt;p&gt;so digging a little deeper, it looks like gatsby only looks for &amp;ldquo;subplugins&amp;rdquo; at one specific path, &lt;code&gt;options.plugins&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;gatsby-plugin-mdx&lt;/code&gt; uses &lt;code&gt;options.gatsbyremarkplugins&lt;/code&gt;. this is fine for transforming markdown as the plugin handles that itself, but gatsby-specific api files like &lt;code&gt;gatsby-browser.js&lt;/code&gt; don&amp;rsquo;t get loaded because gatsby doesn&amp;rsquo;t know they exist.&lt;/p&gt;"
-                 data-tags="gatsby,mdx,images">
+                 data-categories="daily life"
+                 data-tags="gatsby,mdx,images"
+                 data-date="1591401600"
+                 data-reading-time="1">
+
+          
+          
+
           <h2 class="text-2xl md:text-3xl font-bold mb-3">
             <a href="/posts/awesome-images/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
               Awesome Images
             </a>
           </h2>
 
-          <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+          <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
             <time datetime="2020-06-06">
               June 6, 2020
             </time>
@@ -816,20 +896,14 @@ public_folder: ../assets
               <span>•</span>
               <div class="flex gap-2 flex-wrap">
                 
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    gatsby
-                  </span>
-                
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    mdx
-                  </span>
-                
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    images
+                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-lg text-xs font-medium">
+                    Daily Life
                   </span>
                 
               </div>
             
+            <span>•</span>
+            <span>1 min read</span>
           </div>
 
           <p class="text-gray-600 mb-4"><p><img src="great.jpg" alt="Great Gatsby" title="Great Gatsby"></p>
@@ -863,14 +937,21 @@ duden flows by their place and supplies it with the necessary regelialia.&lt;/p&
 commas, wild question marks and devious semikoli, but the little blind text
 didn’t listen. she packed her seven versalia, put her initial into the belt and
 made herself on the way.&lt;/p&gt;"
-                 data-tags="beginnings,lorem-ipsum">
+                 data-categories="daily life"
+                 data-tags="beginnings,lorem-ipsum"
+                 data-date="1432771200"
+                 data-reading-time="5">
+
+          
+          
+
           <h2 class="text-2xl md:text-3xl font-bold mb-3">
             <a href="/posts/hi-folks/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
               New Beginnings
             </a>
           </h2>
 
-          <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+          <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
             <time datetime="2015-05-28">
               May 28, 2015
             </time>
@@ -878,16 +959,14 @@ made herself on the way.&lt;/p&gt;"
               <span>•</span>
               <div class="flex gap-2 flex-wrap">
                 
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    beginnings
-                  </span>
-                
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    lorem-ipsum
+                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-lg text-xs font-medium">
+                    Daily Life
                   </span>
                 
               </div>
             
+            <span>•</span>
+            <span>5 min read</span>
           </div>
 
           <p class="text-gray-600 mb-4"><p>Far far away, behind the word mountains, far from the countries Vokalia and
@@ -923,14 +1002,21 @@ charcoal paste. the eggs may also be sold with the salted paste removed,
 wrapped in plastic, and vacuum packed. from the salt curing process, the
 salted duck eggs have a briny aroma, a gelatin-like egg white and a
 firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;"
-                 data-tags="daily-life">
+                 data-categories="daily life"
+                 data-tags="daily-life"
+                 data-date="1430438400"
+                 data-reading-time="1">
+
+          
+          
+
           <h2 class="text-2xl md:text-3xl font-bold mb-3">
             <a href="/posts/hello-world/" class="text-gray-900 hover:text-[#6b63ff] transition-colors">
               Hello World
             </a>
           </h2>
 
-          <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+          <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
             <time datetime="2015-05-01">
               May 1, 2015
             </time>
@@ -938,12 +1024,14 @@ firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;"
               <span>•</span>
               <div class="flex gap-2 flex-wrap">
                 
-                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-xs font-medium">
-                    daily-life
+                  <span class="px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-lg text-xs font-medium">
+                    Daily Life
                   </span>
                 
               </div>
             
+            <span>•</span>
+            <span>1 min read</span>
           </div>
 
           <p class="text-gray-600 mb-4"><p>This is my first post on my new fake blog! How exciting!</p>
@@ -974,7 +1062,8 @@ firm-textured, round yolk that is bright orange-red in color.</p></p>
         <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
-        <p class="text-xl text-gray-500">No posts found matching your search.</p>
+        <p class="text-xl text-gray-500 mb-2">No posts found</p>
+        <p class="text-gray-400">Try adjusting your filters or search terms</p>
       </div>
     </div>
 
@@ -985,61 +1074,189 @@ firm-textured, round yolk that is bright orange-red in color.</p></p>
 
 <script>
   
+  let state = {
+    searchTerm: '',
+    activeCategory: 'all',
+    activeTag: 'all',
+    sortBy: 'newest'
+  };
+
+  
   const searchInput = document.getElementById('search-input');
+  const tagFilter = document.getElementById('tag-filter');
+  const sortFilter = document.getElementById('sort-filter');
   const postsContainer = document.getElementById('posts-container');
   const noResults = document.getElementById('no-results');
-  const posts = document.querySelectorAll('.post-item');
-  let activeTag = 'all';
+  const pagination = document.getElementById('pagination');
+  const activeFiltersContainer = document.getElementById('active-filters');
+  const activeFiltersList = document.getElementById('active-filters-list');
+  const resultsCount = document.getElementById('results-count');
+  const posts = Array.from(document.querySelectorAll('.post-item'));
 
+  
   searchInput.addEventListener('input', function(e) {
-    const searchTerm = e.target.value.toLowerCase();
-    filterPosts(searchTerm, activeTag);
+    state.searchTerm = e.target.value.toLowerCase();
+    filterAndSortPosts();
   });
 
   
-  function filterByTag(tag) {
-    activeTag = tag;
-    const searchTerm = searchInput.value.toLowerCase();
+  tagFilter.addEventListener('change', function(e) {
+    state.activeTag = e.target.value;
+    filterAndSortPosts();
+  });
+
+  
+  sortFilter.addEventListener('change', function(e) {
+    state.sortBy = e.target.value;
+    filterAndSortPosts();
+  });
+
+  
+  function filterByCategory(category) {
+    state.activeCategory = category;
 
     
-    document.querySelectorAll('.tag-filter').forEach(btn => {
+    document.querySelectorAll('.category-filter').forEach(btn => {
       btn.classList.remove('active', 'bg-[#6b63ff]', 'text-white');
       btn.classList.add('bg-gray-100', 'text-gray-700');
     });
     event.target.classList.add('active', 'bg-[#6b63ff]', 'text-white');
     event.target.classList.remove('bg-gray-100', 'text-gray-700');
 
-    filterPosts(searchTerm, tag);
+    filterAndSortPosts();
   }
 
-  function filterPosts(searchTerm, tag) {
-    let visibleCount = 0;
+  
+  function clearAllFilters() {
+    state = {
+      searchTerm: '',
+      activeCategory: 'all',
+      activeTag: 'all',
+      sortBy: 'newest'
+    };
 
+    searchInput.value = '';
+    tagFilter.value = 'all';
+    sortFilter.value = 'newest';
+
+    
+    document.querySelectorAll('.category-filter').forEach(btn => {
+      btn.classList.remove('active', 'bg-[#6b63ff]', 'text-white');
+      btn.classList.add('bg-gray-100', 'text-gray-700');
+    });
+    document.querySelector('.category-filter').classList.add('active', 'bg-[#6b63ff]', 'text-white');
+    document.querySelector('.category-filter').classList.remove('bg-gray-100', 'text-gray-700');
+
+    filterAndSortPosts();
+  }
+
+  
+  function filterAndSortPosts() {
+    let visiblePosts = [];
+
+    
     posts.forEach(post => {
       const title = post.dataset.title;
       const summary = post.dataset.summary;
+      const categories = post.dataset.categories;
       const tags = post.dataset.tags;
 
-      const matchesSearch = !searchTerm ||
-                           title.includes(searchTerm) ||
-                           summary.includes(searchTerm) ||
-                           tags.includes(searchTerm);
+      const matchesSearch = !state.searchTerm ||
+                           title.includes(state.searchTerm) ||
+                           summary.includes(state.searchTerm);
 
-      const matchesTag = tag === 'all' || tags.includes(tag.toLowerCase());
+      const matchesCategory = state.activeCategory === 'all' ||
+                             categories.includes(state.activeCategory.toLowerCase());
 
-      if (matchesSearch && matchesTag) {
-        post.classList.remove('hidden');
-        visibleCount++;
+      const matchesTag = state.activeTag === 'all' ||
+                        tags.includes(state.activeTag.toLowerCase());
+
+      if (matchesSearch && matchesCategory && matchesTag) {
+        visiblePosts.push(post);
+        post.style.display = 'block';
       } else {
-        post.classList.add('hidden');
+        post.style.display = 'none';
       }
     });
 
     
-    if (visibleCount === 0) {
+    sortPosts(visiblePosts);
+
+    
+    updateActiveFilters(visiblePosts.length);
+
+    
+    if (visiblePosts.length === 0) {
       noResults.classList.remove('hidden');
+      if (pagination) pagination.classList.add('hidden');
     } else {
       noResults.classList.add('hidden');
+      
+      if (pagination) {
+        const hasActiveFilters = state.searchTerm ||
+                                state.activeCategory !== 'all' ||
+                                state.activeTag !== 'all' ||
+                                state.sortBy !== 'newest';
+        if (hasActiveFilters) {
+          pagination.classList.add('hidden');
+        } else {
+          pagination.classList.remove('hidden');
+        }
+      }
+    }
+  }
+
+  
+  function sortPosts(visiblePosts) {
+    visiblePosts.sort((a, b) => {
+      switch(state.sortBy) {
+        case 'oldest':
+          return parseInt(a.dataset.date) - parseInt(b.dataset.date);
+        case 'title':
+          return a.dataset.title.localeCompare(b.dataset.title);
+        case 'reading-time':
+          return parseInt(a.dataset.readingTime) - parseInt(b.dataset.readingTime);
+        case 'newest':
+        default:
+          return parseInt(b.dataset.date) - parseInt(a.dataset.date);
+      }
+    });
+
+    
+    visiblePosts.forEach(post => {
+      postsContainer.appendChild(post);
+    });
+  }
+
+  
+  function updateActiveFilters(count) {
+    const filters = [];
+
+    if (state.searchTerm) {
+      filters.push(`Search: "${state.searchTerm}"`);
+    }
+    if (state.activeCategory !== 'all') {
+      const categoryBtn = Array.from(document.querySelectorAll('.category-filter'))
+        .find(btn => btn.textContent.trim() !== 'All Posts' && btn.onclick.toString().includes(state.activeCategory));
+      if (categoryBtn) {
+        filters.push(`Category: ${categoryBtn.textContent.trim()}`);
+      }
+    }
+    if (state.activeTag !== 'all') {
+      const tagOption = tagFilter.options[tagFilter.selectedIndex];
+      filters.push(`Tag: ${tagOption.text}`);
+    }
+    if (state.sortBy !== 'newest') {
+      const sortOption = sortFilter.options[sortFilter.selectedIndex];
+      filters.push(`Sort: ${sortOption.text}`);
+    }
+
+    if (filters.length > 0) {
+      activeFiltersContainer.classList.remove('hidden');
+      activeFiltersList.textContent = filters.join(' • ');
+      resultsCount.textContent = `${count} post${count !== 1 ? 's' : ''} found`;
+    } else {
+      activeFiltersContainer.classList.add('hidden');
     }
   }
 </script>
