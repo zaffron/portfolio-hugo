@@ -65,6 +65,15 @@
         font-size: 0.75rem;
       }
 
+      .preview-tag {
+        display: inline-block;
+        padding: 0.5rem 0.75rem;
+        background: #f3f4f6;
+        color: #374151;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+      }
+
       .preview-description {
         font-size: 1.25rem;
         color: #4b5563;
@@ -110,6 +119,11 @@
       .preview-content ol {
         margin-bottom: 1.5rem;
         padding-left: 1.5rem;
+        list-style: disc;
+      }
+
+      .preview-content ol {
+        list-style: decimal;
       }
 
       .preview-content li {
@@ -123,6 +137,7 @@
         border-radius: 0.25rem;
         font-size: 0.875rem;
         font-weight: 500;
+        font-family: 'Courier New', monospace;
       }
 
       .preview-content pre {
@@ -166,48 +181,69 @@
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
     <script>
-      // Register preview template for posts
-      CMS.registerPreviewTemplate('posts', createClass({
+      // Wait for window to load completely, ensuring React is available
+      window.addEventListener('load', function() {
+        // Initialize CMS
+        CMS.init();
+
+        // Register preview template for posts
+        var PostPreview = createClass({
         render: function() {
-          const entry = this.props.entry;
-          const title = entry.getIn(['data', 'title']);
-          const description = entry.getIn(['data', 'description']);
-          const body = entry.getIn(['data', 'body']);
-          const date = entry.getIn(['data', 'date']);
-          const categories = entry.getIn(['data', 'categories']);
-          const tags = entry.getIn(['data', 'tags']);
-          const author = entry.getIn(['data', 'author']) || 'Avinash Rijal';
-          const featuredImage = entry.getIn(['data', 'featured_image']);
-          const featuredImageAlt = entry.getIn(['data', 'featured_image_alt']);
+          var entry = this.props.entry;
+          var widgetFor = this.props.widgetFor;
+          var getAsset = this.props.getAsset;
+
+          var title = entry.getIn(['data', 'title']) || 'Untitled';
+          var description = entry.getIn(['data', 'description']) || '';
+          var body = entry.getIn(['data', 'body']) || '';
+          var date = entry.getIn(['data', 'date']);
+          var categories = entry.getIn(['data', 'categories']);
+          var tags = entry.getIn(['data', 'tags']);
+          var author = entry.getIn(['data', 'author']) || 'Avinash Rijal';
+          var featuredImage = entry.getIn(['data', 'featured_image']);
+          var featuredImageAlt = entry.getIn(['data', 'featured_image_alt']) || title;
 
           // Format date
-          let formattedDate = 'Draft';
+          var formattedDate = 'Draft';
           if (date) {
             try {
-              const dateObj = new Date(date);
-              formattedDate = dateObj.toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-              });
+              var dateObj = new Date(date);
+              if (!isNaN(dateObj.getTime())) {
+                formattedDate = dateObj.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                });
+              }
             } catch(e) {
-              formattedDate = date.toString();
+              formattedDate = String(date);
             }
           }
 
-          // Calculate reading time (rough estimate)
-          let readingTime = 1;
+          // Calculate reading time
+          var readingTime = 1;
           if (body) {
-            const wordCount = body.split(/\s+/).length;
-            readingTime = Math.ceil(wordCount / 200); // 200 words per minute
+            var wordCount = String(body).split(/\s+/).length;
+            readingTime = Math.ceil(wordCount / 200);
+          }
+
+          // Get image URL
+          var imageUrl = '';
+          if (featuredImage) {
+            if (typeof featuredImage === 'string') {
+              imageUrl = featuredImage;
+            } else if (getAsset) {
+              var asset = getAsset(featuredImage);
+              imageUrl = asset ? asset.toString() : '';
+            }
           }
 
           return h('div', { className: 'preview-container' },
             h('article', { className: 'preview-article' },
               // Breadcrumbs
               h('nav', { className: 'text-sm text-gray-600 mb-8' },
-                h('span', {}, 'Home / Blog'),
-                categories && categories.size > 0 ? h('span', {}, ' / ' + categories.get(0)) : null,
+                'Home / Blog',
+                categories && categories.size > 0 ? ' / ' + categories.get(0) : '',
                 h('span', { className: 'text-gray-400' }, ' / ' + title)
               ),
 
@@ -216,48 +252,24 @@
 
               // Meta information
               h('div', { className: 'preview-meta' },
-                // Author
-                h('div', { className: 'flex items-center gap-2' },
-                  h('svg', {
-                    className: 'w-5 h-5',
-                    fill: 'none',
-                    stroke: 'currentColor',
-                    viewBox: '0 0 24 24'
-                  },
-                    h('path', {
-                      strokeLinecap: 'round',
-                      strokeLinejoin: 'round',
-                      strokeWidth: '2',
-                      d: 'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z'
-                    })
-                  ),
-                  h('span', {}, author)
-                ),
-
+                h('span', {}, '👤 ' + author),
                 h('span', {}, '•'),
-
-                // Date
-                h('time', {}, formattedDate),
-
+                h('span', {}, formattedDate),
                 h('span', {}, '•'),
-
-                // Reading time
                 h('span', {}, readingTime + ' min read')
               ),
 
               // Categories
-              categories && categories.size > 0 ? h('div', { className: 'mb-6 flex flex-wrap gap-2' },
-                categories.map(function(cat) {
-                  return h('span', { className: 'preview-category' }, cat);
+              categories && categories.size > 0 ? h('div', { className: 'mb-6', style: { display: 'flex', flexWrap: 'wrap', gap: '0.5rem' } },
+                categories.map(function(cat, i) {
+                  return h('span', { key: i, className: 'preview-category' }, cat);
                 }).toArray()
               ) : null,
 
               // Tags
-              tags && tags.size > 0 ? h('div', { className: 'mb-6 flex flex-wrap gap-2' },
-                tags.map(function(tag) {
-                  return h('span', {
-                    className: 'px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs'
-                  }, '#' + tag);
+              tags && tags.size > 0 ? h('div', { className: 'mb-6', style: { display: 'flex', flexWrap: 'wrap', gap: '0.5rem' } },
+                tags.map(function(tag, i) {
+                  return h('span', { key: i, className: 'preview-tag' }, '#' + tag);
                 }).toArray()
               ) : null,
 
@@ -265,28 +277,38 @@
               description ? h('p', { className: 'preview-description' }, description) : null,
 
               // Featured image
-              featuredImage ? h('img', {
-                src: featuredImage,
-                alt: featuredImageAlt || title,
+              imageUrl ? h('img', {
+                src: imageUrl,
+                alt: featuredImageAlt,
                 className: 'preview-featured-image'
               }) : null,
 
               // Body content
-              h('div', {
-                className: 'preview-content',
-                dangerouslySetInnerHTML: {
-                  __html: this.props.widgetFor('body')
-                }
-              })
+              h('div', { className: 'preview-content' }, widgetFor('body'))
             )
           );
         }
-      }));
+      });
 
-      // Helper function to create React class
-      function createClass(methods) {
-        return React.createClass(methods);
+      // Helper functions
+      function createClass(spec) {
+        return React.createClass ? React.createClass(spec) : class extends React.Component {
+          render() {
+            return spec.render.call(this);
+          }
+        };
       }
+
+      function h(tag, props) {
+        var children = Array.prototype.slice.call(arguments, 2);
+        return React.createElement.apply(React, [tag, props].concat(children));
+      }
+
+        // Register the preview template
+        CMS.registerPreviewTemplate('posts', PostPreview);
+
+        console.log('Decap CMS preview template registered successfully');
+      });
     </script>
   </body>
 </html>
