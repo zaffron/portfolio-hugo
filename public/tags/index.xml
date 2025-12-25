@@ -2,185 +2,185 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Avinash Rijal - Personal Blog &amp; Portfolio</title>
-    <link>http://localhost:3000/tags/</link>
+    <link>https://avinashrijal.com.np/tags/</link>
     <description>Recent content in Tags on Avinash Rijal - Personal Blog &amp; Portfolio</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:3000/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://avinashrijal.com.np/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Editor</title>
-      <link>http://localhost:3000/tags/editor/</link>
+      <link>https://avinashrijal.com.np/tags/editor/</link>
       <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/editor/</guid>
+      <guid>https://avinashrijal.com.np/tags/editor/</guid>
       <description></description>
     </item>
     <item>
       <title>Neovim</title>
-      <link>http://localhost:3000/tags/neovim/</link>
+      <link>https://avinashrijal.com.np/tags/neovim/</link>
       <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/neovim/</guid>
+      <guid>https://avinashrijal.com.np/tags/neovim/</guid>
       <description></description>
     </item>
     <item>
       <title>Productivity</title>
-      <link>http://localhost:3000/tags/productivity/</link>
+      <link>https://avinashrijal.com.np/tags/productivity/</link>
       <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/productivity/</guid>
+      <guid>https://avinashrijal.com.np/tags/productivity/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
-      <link>http://localhost:3000/tags/programming/</link>
+      <link>https://avinashrijal.com.np/tags/programming/</link>
       <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/programming/</guid>
+      <guid>https://avinashrijal.com.np/tags/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>Vim</title>
-      <link>http://localhost:3000/tags/vim/</link>
+      <link>https://avinashrijal.com.np/tags/vim/</link>
       <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/vim/</guid>
+      <guid>https://avinashrijal.com.np/tags/vim/</guid>
       <description></description>
     </item>
     <item>
       <title>Api</title>
-      <link>http://localhost:3000/tags/api/</link>
+      <link>https://avinashrijal.com.np/tags/api/</link>
       <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/api/</guid>
+      <guid>https://avinashrijal.com.np/tags/api/</guid>
       <description></description>
     </item>
     <item>
       <title>Cnn</title>
-      <link>http://localhost:3000/tags/cnn/</link>
+      <link>https://avinashrijal.com.np/tags/cnn/</link>
       <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/cnn/</guid>
+      <guid>https://avinashrijal.com.np/tags/cnn/</guid>
       <description></description>
     </item>
     <item>
       <title>Fastapi</title>
-      <link>http://localhost:3000/tags/fastapi/</link>
+      <link>https://avinashrijal.com.np/tags/fastapi/</link>
       <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/fastapi/</guid>
+      <guid>https://avinashrijal.com.np/tags/fastapi/</guid>
       <description></description>
     </item>
     <item>
       <title>Ml</title>
-      <link>http://localhost:3000/tags/ml/</link>
+      <link>https://avinashrijal.com.np/tags/ml/</link>
       <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/ml/</guid>
+      <guid>https://avinashrijal.com.np/tags/ml/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://localhost:3000/tags/python/</link>
+      <link>https://avinashrijal.com.np/tags/python/</link>
       <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/python/</guid>
+      <guid>https://avinashrijal.com.np/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>Ddns</title>
-      <link>http://localhost:3000/tags/ddns/</link>
+      <link>https://avinashrijal.com.np/tags/ddns/</link>
       <pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
-      <guid>http://localhost:3000/tags/ddns/</guid>
+      <guid>https://avinashrijal.com.np/tags/ddns/</guid>
       <description></description>
     </item>
     <item>
       <title>Homeserver</title>
-      <link>http://localhost:3000/tags/homeserver/</link>
+      <link>https://avinashrijal.com.np/tags/homeserver/</link>
       <pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
-      <guid>http://localhost:3000/tags/homeserver/</guid>
+      <guid>https://avinashrijal.com.np/tags/homeserver/</guid>
       <description></description>
     </item>
     <item>
       <title>Nat</title>
-      <link>http://localhost:3000/tags/nat/</link>
+      <link>https://avinashrijal.com.np/tags/nat/</link>
       <pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
-      <guid>http://localhost:3000/tags/nat/</guid>
+      <guid>https://avinashrijal.com.np/tags/nat/</guid>
       <description></description>
     </item>
     <item>
       <title>Networking</title>
-      <link>http://localhost:3000/tags/networking/</link>
+      <link>https://avinashrijal.com.np/tags/networking/</link>
       <pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
-      <guid>http://localhost:3000/tags/networking/</guid>
+      <guid>https://avinashrijal.com.np/tags/networking/</guid>
       <description></description>
     </item>
     <item>
       <title>Developer</title>
-      <link>http://localhost:3000/tags/developer/</link>
+      <link>https://avinashrijal.com.np/tags/developer/</link>
       <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/developer/</guid>
+      <guid>https://avinashrijal.com.np/tags/developer/</guid>
       <description></description>
     </item>
     <item>
       <title>Setup</title>
-      <link>http://localhost:3000/tags/setup/</link>
+      <link>https://avinashrijal.com.np/tags/setup/</link>
       <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/setup/</guid>
+      <guid>https://avinashrijal.com.np/tags/setup/</guid>
       <description></description>
     </item>
     <item>
       <title>Vscode</title>
-      <link>http://localhost:3000/tags/vscode/</link>
+      <link>https://avinashrijal.com.np/tags/vscode/</link>
       <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/vscode/</guid>
+      <guid>https://avinashrijal.com.np/tags/vscode/</guid>
       <description></description>
     </item>
     <item>
       <title>Daily-Life</title>
-      <link>http://localhost:3000/tags/daily-life/</link>
+      <link>https://avinashrijal.com.np/tags/daily-life/</link>
       <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/daily-life/</guid>
+      <guid>https://avinashrijal.com.np/tags/daily-life/</guid>
       <description></description>
     </item>
     <item>
       <title>Guitar</title>
-      <link>http://localhost:3000/tags/guitar/</link>
+      <link>https://avinashrijal.com.np/tags/guitar/</link>
       <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/guitar/</guid>
+      <guid>https://avinashrijal.com.np/tags/guitar/</guid>
       <description></description>
     </item>
     <item>
       <title>Music</title>
-      <link>http://localhost:3000/tags/music/</link>
+      <link>https://avinashrijal.com.np/tags/music/</link>
       <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/music/</guid>
+      <guid>https://avinashrijal.com.np/tags/music/</guid>
       <description></description>
     </item>
     <item>
       <title>Gatsby</title>
-      <link>http://localhost:3000/tags/gatsby/</link>
+      <link>https://avinashrijal.com.np/tags/gatsby/</link>
       <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/gatsby/</guid>
+      <guid>https://avinashrijal.com.np/tags/gatsby/</guid>
       <description></description>
     </item>
     <item>
       <title>Images</title>
-      <link>http://localhost:3000/tags/images/</link>
+      <link>https://avinashrijal.com.np/tags/images/</link>
       <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/images/</guid>
+      <guid>https://avinashrijal.com.np/tags/images/</guid>
       <description></description>
     </item>
     <item>
       <title>Mdx</title>
-      <link>http://localhost:3000/tags/mdx/</link>
+      <link>https://avinashrijal.com.np/tags/mdx/</link>
       <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/mdx/</guid>
+      <guid>https://avinashrijal.com.np/tags/mdx/</guid>
       <description></description>
     </item>
     <item>
       <title>Beginnings</title>
-      <link>http://localhost:3000/tags/beginnings/</link>
+      <link>https://avinashrijal.com.np/tags/beginnings/</link>
       <pubDate>Thu, 28 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/beginnings/</guid>
+      <guid>https://avinashrijal.com.np/tags/beginnings/</guid>
       <description></description>
     </item>
     <item>
       <title>Lorem-Ipsum</title>
-      <link>http://localhost:3000/tags/lorem-ipsum/</link>
+      <link>https://avinashrijal.com.np/tags/lorem-ipsum/</link>
       <pubDate>Thu, 28 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/tags/lorem-ipsum/</guid>
+      <guid>https://avinashrijal.com.np/tags/lorem-ipsum/</guid>
       <description></description>
     </item>
   </channel>

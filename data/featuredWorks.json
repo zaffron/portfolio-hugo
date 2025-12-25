@@ -1,20 +1,5 @@
 [
   {
-    "name": "Studytweaks",
-    "description": "Worked on creating a site with Gatsby and Wordpress as headless API for content management",
-    "url": "https://studytweaks.com",
-    "image": "/images/project-thumbnails/studytweaks.png",
-    "technologyUsed": [
-      "React",
-      "SSR",
-      "Gatsby",
-      "Algolia",
-      "SASS",
-      "Wordpress API",
-      "GraphQL"
-    ]
-  },
-  {
     "name": "Makro(Thailand)",
     "description": "Worked on product design and development. Model developments for auto categorization, re-ranking and recommendation of products",
     "url": "https://makro.pro",
@@ -58,6 +43,21 @@
     "technologyUsed": []
   },
   {
+    "name": "Studytweaks",
+    "description": "Worked on creating a site with Gatsby and Wordpress as headless API for content management",
+    "url": "https://studytweaks.com",
+    "image": "/images/project-thumbnails/studytweaks.png",
+    "technologyUsed": [
+      "React",
+      "SSR",
+      "Gatsby",
+      "Algolia",
+      "SASS",
+      "Wordpress API",
+      "GraphQL"
+    ]
+  },
+  {
     "name": "PTE App",
     "description": "Worked on developing PTE app for Pearson Test of English(PTE) academic test. It reviews basic reading, writing, listening and speaking practices and concepts using this extensive study guide.",
     "url": "",
@@ -70,5 +70,12 @@
     "url": "",
     "image": "/images/project-thumbnails/dzango-admin.png",
     "technologyUsed": ["VueJS", "Larvel"]
+  },
+  {
+    "name": "Noora - In home beauty services",
+    "description": "Worked on developing, optimizing and deploying a website for a beauty services company. It was built with NextJS and TailwindCSS.",
+    "url": "https://nooora.ae/",
+    "image": "/images/project-thumbnails/noora.png",
+    "technologyUsed": ["NextJS", "TailwindCSS", "Strapi"]
   }
 ]

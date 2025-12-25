@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Avinash Rijal - Personal Blog &amp; Portfolio</title>
-    <link>http://localhost:3000/categories/</link>
+    <link>https://avinashrijal.com.np/categories/</link>
     <description>Recent content in Categories on Avinash Rijal - Personal Blog &amp; Portfolio</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:3000/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://avinashrijal.com.np/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Opinion</title>
-      <link>http://localhost:3000/categories/opinion/</link>
+      <link>https://avinashrijal.com.np/categories/opinion/</link>
       <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/categories/opinion/</guid>
+      <guid>https://avinashrijal.com.np/categories/opinion/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
-      <link>http://localhost:3000/categories/programming/</link>
+      <link>https://avinashrijal.com.np/categories/programming/</link>
       <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/categories/programming/</guid>
+      <guid>https://avinashrijal.com.np/categories/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>Machine Learning</title>
-      <link>http://localhost:3000/categories/machine-learning/</link>
+      <link>https://avinashrijal.com.np/categories/machine-learning/</link>
       <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/categories/machine-learning/</guid>
+      <guid>https://avinashrijal.com.np/categories/machine-learning/</guid>
       <description></description>
     </item>
     <item>
       <title>Tutorial</title>
-      <link>http://localhost:3000/categories/tutorial/</link>
+      <link>https://avinashrijal.com.np/categories/tutorial/</link>
       <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/categories/tutorial/</guid>
+      <guid>https://avinashrijal.com.np/categories/tutorial/</guid>
       <description></description>
     </item>
     <item>
       <title>DevOps</title>
-      <link>http://localhost:3000/categories/devops/</link>
+      <link>https://avinashrijal.com.np/categories/devops/</link>
       <pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
-      <guid>http://localhost:3000/categories/devops/</guid>
+      <guid>https://avinashrijal.com.np/categories/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>Daily Life</title>
-      <link>http://localhost:3000/categories/daily-life/</link>
+      <link>https://avinashrijal.com.np/categories/daily-life/</link>
       <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3000/categories/daily-life/</guid>
+      <guid>https://avinashrijal.com.np/categories/daily-life/</guid>
       <description></description>
     </item>
   </channel>
