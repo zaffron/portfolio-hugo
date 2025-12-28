@@ -769,10 +769,10 @@ video {
   padding-inline-start: 0.375em;
 }
 .prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
-  color: #6b63ff;
+  color: #8b83ff;
   font-weight: 500;
   font-size: 0.875em;
-  background-color: #f3f4f6;
+  background-color: rgba(200,200,200,0.25);
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
 }
@@ -1461,6 +1461,9 @@ video {
 .order-2 {
   order: 2;
 }
+.\!m-0 {
+  margin: 0px !important;
+}
 .-mx-6 {
   margin-left: -1.5rem;
   margin-right: -1.5rem;
@@ -1468,6 +1471,10 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 .-mt-6 {
   margin-top: -1.5rem;
@@ -1493,6 +1500,12 @@ video {
 .mb-8 {
   margin-bottom: 2rem;
 }
+.ml-8 {
+  margin-left: 2rem;
+}
+.mr-8 {
+  margin-right: 2rem;
+}
 .mt-0\.5 {
   margin-top: 0.125rem;
 }
@@ -1504,9 +1517,6 @@ video {
 }
 .mt-16 {
   margin-top: 4rem;
-}
-.mt-2 {
-  margin-top: 0.5rem;
 }
 .mt-4 {
   margin-top: 1rem;
@@ -1586,14 +1596,17 @@ video {
 .h-full {
   height: 100%;
 }
+.min-h-\[130px\] {
+  min-height: 130px;
+}
 .min-h-\[800px\] {
   min-height: 800px;
 }
 .min-h-screen {
   min-height: 100vh;
 }
-.w-0\.5 {
-  width: 0.125rem;
+.w-1 {
+  width: 0.25rem;
 }
 .w-10 {
   width: 2.5rem;
@@ -1646,7 +1659,13 @@ video {
 .max-w-none {
   max-width: none;
 }
+.flex-1 {
+  flex: 1 1 0%;
+}
 .flex-shrink-0 {
+  flex-shrink: 0;
+}
+.shrink-0 {
   flex-shrink: 0;
 }
 .-translate-x-1\/2 {
@@ -1689,6 +1708,9 @@ video {
 }
 .justify-between {
   justify-content: space-between;
+}
+.gap-0 {
+  gap: 0px;
 }
 .gap-1 {
   gap: 0.25rem;
@@ -1735,6 +1757,9 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+.self-stretch {
+  align-self: stretch;
 }
 .justify-self-center {
   justify-self: center;
@@ -2104,10 +2129,10 @@ video {
   transition-duration: 500ms;
 }
 .dark\:prose-invert:is(.dark *) {
-  --tw-prose-body: #d1d5db;
+  --tw-prose-body: #e5e7eb;
   --tw-prose-headings: #f9fafb;
   --tw-prose-lead: var(--tw-prose-invert-lead);
-  --tw-prose-links: #8b83ff;
+  --tw-prose-links: #a5b4fc;
   --tw-prose-bold: #f9fafb;
   --tw-prose-counters: var(--tw-prose-invert-counters);
   --tw-prose-bullets: var(--tw-prose-invert-bullets);

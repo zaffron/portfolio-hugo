@@ -59,20 +59,22 @@
         <div class="space-y-8">
           {{ range $index, $item := $.Site.Data.qualifications.work }}
           <div
-            class="grid md:grid-cols-[1fr_max-content_1fr] gap-6 items-start"
+            class="grid md:grid-cols-[1fr_max-content_1fr] gap-0 items-start !m-0 min-h-[130px]"
           >
             {{ if modBool $index 2 }}
             <div></div>
-            <div class="flex flex-col items-center">
-              <div class="w-4 h-4 bg-[#6b63ff] rounded-full"></div>
+
+            <div class="flex flex-col items-center self-stretch">
+              <div class="w-4 h-4 bg-[#6b63ff] rounded-full shrink-0"></div>
+
               {{ if ne (add $index 1) (len $.Site.Data.qualifications.work) }}
-              <div class="w-0.5 h-full bg-[#6b63ff] mt-2"></div>
+              <div class="w-1 flex-1 bg-[#6b63ff]"></div>
               {{ end }}
             </div>
             {{ end }}
 
             <div
-              class="{{ if modBool $index 2 }}md:text-left{{ else }}md:text-right{{ end }}"
+              class="{{ if modBool $index 2 }}md:text-left ml-8{{ else }}md:text-right mr-8{{ end }}"
             >
               <h3
                 class="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100"
@@ -103,10 +105,10 @@
             </div>
 
             {{ if not (modBool $index 2) }}
-            <div class="flex flex-col items-center">
-              <div class="w-4 h-4 bg-[#6b63ff] rounded-full"></div>
+            <div class="flex flex-col items-center self-stretch">
+              <div class="w-4 h-4 bg-[#6b63ff] rounded-full shrink-0"></div>
               {{ if ne (add $index 1) (len $.Site.Data.qualifications.work) }}
-              <div class="w-0.5 h-full bg-[#6b63ff] mt-2"></div>
+              <div class="w-1 flex-1 bg-[#6b63ff]"></div>
               {{ end }}
             </div>
             <div></div>
@@ -121,21 +123,21 @@
         <div class="space-y-8">
           {{ range $index, $item := $.Site.Data.qualifications.education }}
           <div
-            class="grid md:grid-cols-[1fr_max-content_1fr] gap-6 items-start"
+            class="grid md:grid-cols-[1fr_max-content_1fr] gap-0 items-start !m-0 min-h-[130px]"
           >
             {{ if modBool $index 2 }}
             <div></div>
-            <div class="flex flex-col items-center">
-              <div class="w-4 h-4 bg-[#6b63ff] rounded-full"></div>
+            <div class="flex flex-col items-center self-stretch">
+              <div class="w-4 h-4 bg-[#6b63ff] rounded-full shrink-0"></div>
               {{ if ne (add $index 1) (len $.Site.Data.qualifications.education)
               }}
-              <div class="w-0.5 h-full bg-[#6b63ff] mt-2"></div>
+              <div class="w-1 flex-1 bg-[#6b63ff]"></div>
               {{ end }}
             </div>
             {{ end }}
 
             <div
-              class="{{ if modBool $index 2 }}md:text-left{{ else }}md:text-right{{ end }}"
+              class="{{ if modBool $index 2 }}md:text-left ml-8{{ else }}md:text-right mr-8{{ end }}"
             >
               <h3
                 class="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100"
@@ -166,11 +168,11 @@
             </div>
 
             {{ if not (modBool $index 2) }}
-            <div class="flex flex-col items-center">
-              <div class="w-4 h-4 bg-[#6b63ff] rounded-full"></div>
+            <div class="flex flex-col items-center self-stretch">
+              <div class="w-4 h-4 bg-[#6b63ff] rounded-full shrink-0"></div>
               {{ if ne (add $index 1) (len $.Site.Data.qualifications.education)
               }}
-              <div class="w-0.5 h-full bg-[#6b63ff] mt-2"></div>
+              <div class="w-1 flex-1 bg-[#6b63ff]"></div>
               {{ end }}
             </div>
             <div></div>
