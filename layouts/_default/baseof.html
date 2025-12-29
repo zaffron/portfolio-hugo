@@ -25,7 +25,7 @@
       rel="stylesheet"
     />
 
-    {{ $css := resources.Get "css/main.css" | css.PostCSS | fingerprint }}
+    {{ $css := resources.Get "css/main.css" | css.PostCSS }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
 
     <!-- Dark mode init script (prevents flash) -->
