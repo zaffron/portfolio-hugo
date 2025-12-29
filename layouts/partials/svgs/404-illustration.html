@@ -1,0 +1,76 @@
+<!-- 404 Page Illustration: Magnifying glass with sad face -->
+<svg
+  class="w-64 md:w-80 mx-auto"
+  viewBox="0 0 400 300"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Background circles -->
+  <circle
+    cx="200"
+    cy="150"
+    r="120"
+    fill="#6b63ff"
+    opacity="0.1"
+    class="animate-404-pulse"
+  />
+  <circle cx="200" cy="150" r="80" fill="#6b63ff" opacity="0.15" />
+
+  <!-- 404 Text -->
+  <text
+    x="200"
+    y="170"
+    font-size="100"
+    font-weight="bold"
+    fill="#6b63ff"
+    text-anchor="middle"
+    class="dark:fill-[#8b83ff]"
+  >
+    404
+  </text>
+
+  <!-- Magnifying glass -->
+  <circle
+    cx="320"
+    cy="100"
+    r="30"
+    stroke="#6b63ff"
+    stroke-width="6"
+    fill="none"
+  />
+  <line
+    x1="342"
+    y1="122"
+    x2="365"
+    y2="145"
+    stroke="#6b63ff"
+    stroke-width="6"
+    stroke-linecap="round"
+  />
+
+  <!-- Sad face in magnifying glass -->
+  <circle cx="312" cy="95" r="3" fill="#6b63ff" />
+  <circle cx="328" cy="95" r="3" fill="#6b63ff" />
+  <path
+    d="M 312 110 Q 320 105 328 110"
+    stroke="#6b63ff"
+    stroke-width="2"
+    fill="none"
+    stroke-linecap="round"
+  />
+</svg>
+
+<style>
+  @keyframes pulse404 {
+    0%,
+    100% {
+      opacity: 0.1;
+    }
+    50% {
+      opacity: 0.2;
+    }
+  }
+  .animate-404-pulse {
+    animation: pulse404 3s ease-in-out infinite;
+  }
+</style>
