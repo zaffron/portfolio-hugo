@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Content Manager</title>
+    <script
+      type="text/javascript"
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
   </head>
   <body>
     <!-- Include the script that builds the page and powers Decap CMS -->
@@ -16,159 +20,179 @@
 
       // Register preview template for posts
       var PostPreview = createClass({
-          render: function () {
-            var entry = this.props.entry;
-            var widgetFor = this.props.widgetFor;
-            var getAsset = this.props.getAsset;
+        render: function () {
+          var entry = this.props.entry;
+          var widgetFor = this.props.widgetFor;
+          var getAsset = this.props.getAsset;
 
-            var title = entry.getIn(["data", "title"]) || "Untitled";
-            var description = entry.getIn(["data", "description"]) || "";
-            var body = entry.getIn(["data", "body"]) || "";
-            var date = entry.getIn(["data", "date"]);
-            var categories = entry.getIn(["data", "categories"]);
-            var tags = entry.getIn(["data", "tags"]);
-            var author = entry.getIn(["data", "author"]) || "Avinash Rijal";
-            var featuredImage = entry.getIn(["data", "featured_image"]);
-            var featuredImageAlt =
-              entry.getIn(["data", "featured_image_alt"]) || title;
+          var title = entry.getIn(["data", "title"]) || "Untitled";
+          var description = entry.getIn(["data", "description"]) || "";
+          var body = entry.getIn(["data", "body"]) || "";
+          var date = entry.getIn(["data", "date"]);
+          var categories = entry.getIn(["data", "categories"]);
+          var tags = entry.getIn(["data", "tags"]);
+          var author = entry.getIn(["data", "author"]) || "Avinash Rijal";
+          var featuredImage = entry.getIn(["data", "featured_image"]);
+          var featuredImageAlt =
+            entry.getIn(["data", "featured_image_alt"]) || title;
 
-            // Format date
-            var formattedDate = "Draft";
-            if (date) {
-              try {
-                var dateObj = new Date(date);
-                if (!isNaN(dateObj.getTime())) {
-                  formattedDate = dateObj.toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  });
-                }
-              } catch (e) {
-                formattedDate = String(date);
+          // Format date
+          var formattedDate = "Draft";
+          if (date) {
+            try {
+              var dateObj = new Date(date);
+              if (!isNaN(dateObj.getTime())) {
+                formattedDate = dateObj.toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                });
               }
+            } catch (e) {
+              formattedDate = String(date);
             }
+          }
 
-            // Calculate reading time
-            var readingTime = 1;
-            if (body) {
-              var wordCount = String(body).split(/\s+/).length;
-              readingTime = Math.ceil(wordCount / 200);
+          // Calculate reading time
+          var readingTime = 1;
+          if (body) {
+            var wordCount = String(body).split(/\s+/).length;
+            readingTime = Math.ceil(wordCount / 200);
+          }
+
+          // Get image URL
+          var imageUrl = "";
+          if (featuredImage) {
+            if (typeof featuredImage === "string") {
+              imageUrl = featuredImage;
+            } else if (getAsset) {
+              var asset = getAsset(featuredImage);
+              imageUrl = asset ? asset.toString() : "";
             }
+          }
 
-            // Get image URL
-            var imageUrl = "";
-            if (featuredImage) {
-              if (typeof featuredImage === "string") {
-                imageUrl = featuredImage;
-              } else if (getAsset) {
-                var asset = getAsset(featuredImage);
-                imageUrl = asset ? asset.toString() : "";
-              }
-            }
+          return h(
+            "article",
+            { className: "py-12 md:py-20" },
+            h(
+              "div",
+              { className: "container mx-auto px-6 max-w-4xl" },
 
-            return h(
-              "article",
-              { className: "py-12 md:py-20" },
+              // Breadcrumbs
               h(
-                "div",
-                { className: "container mx-auto px-6 max-w-4xl" },
+                "nav",
+                { className: "mb-8 text-sm text-gray-600" },
+                "Home / Blog",
+                categories && categories.size > 0
+                  ? " / " + categories.get(0)
+                  : "",
+                h("span", { className: "text-gray-400" }, " / " + title),
+              ),
 
-                // Breadcrumbs
+              // Header
+              h(
+                "header",
+                { className: "mb-12" },
+
+                // Title
                 h(
-                  "nav",
-                  { className: "mb-8 text-sm text-gray-600" },
-                  "Home / Blog",
-                  categories && categories.size > 0
-                    ? " / " + categories.get(0)
-                    : "",
-                  h("span", { className: "text-gray-400" }, " / " + title),
+                  "h1",
+                  {
+                    className:
+                      "text-4xl md:text-5xl font-bold mb-6 text-gray-900",
+                  },
+                  title,
                 ),
 
-                // Header
+                // Meta information
                 h(
-                  "header",
-                  { className: "mb-12" },
-
-                  // Title
-                  h("h1", { className: "text-4xl md:text-5xl font-bold mb-6 text-gray-900" }, title),
-
-                  // Meta information
-                  h(
-                    "div",
-                    { className: "flex flex-wrap items-center gap-4 text-gray-600 mb-6" },
-                    author ? h("span", {}, "👤 " + author) : null,
-                    author ? h("span", {}, "•") : null,
-                    h("time", {}, formattedDate),
-                    h("span", {}, "•"),
-                    h("span", {}, readingTime + " min read"),
-                  ),
-
-                  // Categories (larger badges)
-                  categories && categories.size > 0
-                    ? h(
-                        "div",
-                        { className: "flex flex-wrap gap-2 mb-6" },
-                        categories
-                          .map(function (cat, i) {
-                            return h(
-                              "span",
-                              {
-                                key: i,
-                                className: "px-4 py-2 bg-[#6b63ff] bg-opacity-15 text-[#6b63ff] rounded-lg font-medium"
-                              },
-                              cat,
-                            );
-                          })
-                          .toArray(),
-                      )
-                    : null,
-
-                  // Tags (smaller badges)
-                  tags && tags.size > 0
-                    ? h(
-                        "div",
-                        { className: "flex flex-wrap gap-2 mb-6" },
-                        tags
-                          .map(function (tag, i) {
-                            return h(
-                              "span",
-                              {
-                                key: i,
-                                className: "px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
-                              },
-                              "#" + tag,
-                            );
-                          })
-                          .toArray(),
-                      )
-                    : null,
-
-                  // Description
-                  description
-                    ? h("p", { className: "text-xl text-gray-600 leading-relaxed" }, description)
-                    : null,
+                  "div",
+                  {
+                    className:
+                      "flex flex-wrap items-center gap-4 text-gray-600 mb-6",
+                  },
+                  author ? h("span", {}, "👤 " + author) : null,
+                  author ? h("span", {}, "•") : null,
+                  h("time", {}, formattedDate),
+                  h("span", {}, "•"),
+                  h("span", {}, readingTime + " min read"),
                 ),
 
-                // Featured image
-                imageUrl
+                // Categories (larger badges)
+                categories && categories.size > 0
                   ? h(
                       "div",
-                      { className: "mb-12 rounded-xl overflow-hidden shadow-lg" },
-                      h("img", {
-                        src: imageUrl,
-                        alt: featuredImageAlt,
-                        className: "w-full h-auto",
-                      }),
+                      { className: "flex flex-wrap gap-2 mb-6" },
+                      categories
+                        .map(function (cat, i) {
+                          return h(
+                            "span",
+                            {
+                              key: i,
+                              className:
+                                "px-4 py-2 bg-[#6b63ff] bg-opacity-15 text-[#6b63ff] rounded-lg font-medium",
+                            },
+                            cat,
+                          );
+                        })
+                        .toArray(),
                     )
                   : null,
 
-                // Body content with prose styling
-                h("div", { className: "prose prose-lg max-w-none mb-12" }, widgetFor("body")),
+                // Tags (smaller badges)
+                tags && tags.size > 0
+                  ? h(
+                      "div",
+                      { className: "flex flex-wrap gap-2 mb-6" },
+                      tags
+                        .map(function (tag, i) {
+                          return h(
+                            "span",
+                            {
+                              key: i,
+                              className:
+                                "px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm",
+                            },
+                            "#" + tag,
+                          );
+                        })
+                        .toArray(),
+                    )
+                  : null,
+
+                // Description
+                description
+                  ? h(
+                      "p",
+                      { className: "text-xl text-gray-600 leading-relaxed" },
+                      description,
+                    )
+                  : null,
               ),
-            );
-          },
-        });
+
+              // Featured image
+              imageUrl
+                ? h(
+                    "div",
+                    { className: "mb-12 rounded-xl overflow-hidden shadow-lg" },
+                    h("img", {
+                      src: imageUrl,
+                      alt: featuredImageAlt,
+                      className: "w-full h-auto",
+                    }),
+                  )
+                : null,
+
+              // Body content with prose styling
+              h(
+                "div",
+                { className: "prose prose-lg max-w-none mb-12" },
+                widgetFor("body"),
+              ),
+            ),
+          );
+        },
+      });
 
       // Register the preview template
       CMS.registerPreviewTemplate("posts", PostPreview);
