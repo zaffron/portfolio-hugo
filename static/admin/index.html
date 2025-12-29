@@ -16,9 +16,7 @@
 
     <script>
       // Register the preview stylesheet
-      CMS.registerPreviewStyle(
-        "view-source:https://avinashrijal.com.np/css/main.css",
-      );
+      CMS.registerPreviewStyle("/css/main.css", { raw: true });
 
       // Register preview template for posts
       var PostPreview = createClass({
