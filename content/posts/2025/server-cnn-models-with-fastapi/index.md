@@ -1,18 +1,25 @@
-+++
-title = "How to serve CNN models with Fast API"
-slug = "how-to-serve-cnn-models-with-fast-api"
-date = "2025-03-05"
-lastmod = "2025-03-05"
-author = "Avinash Rijal"
-description = "Blog about serving CNN models with Fast API"
-categories = ["Programming", "Machine Learning", "Tutorial"]
-tags = ["programming", "python", "fastapi", "cnn", "ml", "api"]
-+++
-
-![cnn-with-fast-api](../assets/cnn-with-fast-api.webp "CNN with Fast API")
-
-Tags: #programming, #python
-
+---
+title: How to serve CNN models with Fast API
+slug: how-to-serve-cnn-models-with-fast-api
+description: Blog about serving CNN models with Fast API
+date: 2025-03-05
+lastmod: 2025-03-05
+draft: false
+author: Avinash Rijal
+categories:
+  - Programming
+  - Machine Learning
+  - Tutorial
+tags:
+  - programming
+  - python
+  - fastapi
+  - cnn
+  - ml
+  - api
+featured_image: /uploads/cnn-with-fast-api.webp
+featured_image_alt: cnn-with-fast-api
+---
 Recently I have run into an issue with a client who asked me to build a CNN model for certain task. Let's keep "why" a secret and let's talk about why I am writing this blog.
 The issue that we ran into later on was, my client was not ready to use the sagemaker for deploying the model even though we trained it on sagemaker. He wanted a custom repo where we could track the files and have our own custom inference.
 On top of that he wanted `Fast API`
@@ -21,17 +28,17 @@ On top of that he wanted `Fast API`
 
 I don't want to write a full page of elaboration on why fast API and why not others. To keep it simple, the client just wanted it on Fast API. His reasons being:
 
-- It was easier to learn, so if in future anyone else wants to modify something they can quickly make changes
-- It was fast
-- Has satisfactory performance
+* It was easier to learn, so if in future anyone else wants to modify something they can quickly make changes
+* It was fast
+* Has satisfactory performance
 
 I am pretty sure, you already know somewhat ins and out of all the frameworks and already thinking why this guy is talking BS over showing us actual code. As a developer I think that is what would come to your mind so I will just start writing things which you came for.
 
 ### Basically we will follow these rules
 
-- we will keep it simple
-- we will write as much less code as possible
-- and the code should just do the job as POC to test
+* we will keep it simple
+* we will write as much less code as possible
+* and the code should just do the job as POC to test
 
 ### The Code
 
@@ -183,7 +190,7 @@ So, we have two methods:
 `/health` which we will be using to check the health of the API
 `/predict` for predictions
 
----
+- - -
 
 the `get_predictions_from_model` method handles the incoming request where it will take the incoming queries and pass it onto the prediction function to get the predictions
 I am using `loguru` for logging but you can go for any other loggers of your choice.

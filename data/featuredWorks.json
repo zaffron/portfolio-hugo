@@ -16,7 +16,7 @@
   {
     "name": "Slimwiki 2.0",
     "description": "Worked extensively on development and migration to v2.0 of slimwiki",
-    "url": "https://oozou.com",
+    "url": "https://slimwiki.com",
     "image": "/images/project-thumbnails/slimwiki.png",
     "technologyUsed": []
   },
@@ -45,7 +45,7 @@
   {
     "name": "Studytweaks",
     "description": "Worked on creating a site with Gatsby and Wordpress as headless API for content management",
-    "url": "https://studytweaks.com",
+    "url": "",
     "image": "/images/project-thumbnails/studytweaks.png",
     "technologyUsed": [
       "React",

@@ -1,16 +1,19 @@
-+++
-title = "Awesome Images"
-slug = "awesome-images"
-date = "2020-06-06"
-lastmod = "2020-06-06"
-author = "Avinash Rijal"
-tags = ["gatsby", "mdx", "images"]
-description = "Fix for gatsby-plugin-mdx and gatsby-remark-images"
-categories = ["Daily Life"]
-+++
-
-![Great Gatsby](great.jpg "Great Gatsby")
-
+---
+title: Awesome Images
+slug: awesome-images
+description: Fix for gatsby-plugin-mdx and gatsby-remark-images
+date: 2020-06-06T19:39:00+07:00
+lastmod: 2020-06-06T19:39:00+07:00
+draft: false
+author: Avinash Rijal
+categories:
+  - Daily Life
+tags:
+  - gatsby
+  - mdx
+  - images
+featured_image: /uploads/great.jpg
+---
 ## Netlify CMS Media Configuration
 
 First, in your `static/admin/config.yml`, make sure you have the following:
@@ -43,4 +46,3 @@ If you try this…
 ```
 
 …everything works as it should.
-

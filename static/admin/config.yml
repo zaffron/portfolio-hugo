@@ -3,7 +3,6 @@ backend:
   branch: main
 
 site_url: https://avinashrijal.com.np
-local_backend: true
 
 # Global media library for general uploads
 media_folder: "static/uploads"
@@ -18,6 +17,8 @@ collections:
     create: true
     slug: "{{slug}}"
     preview_path: "posts/{{slug}}"
+    media_folder: "/static/uploads"
+    public_folder: "/uploads"
 
     # View filters for better organization
     view_filters:

@@ -1,14 +1,22 @@
-+++
-title = "Serving Your Home Server with True Fiber Internet Without a Static IP"
-slug = "serve-home-server-with-true-fib"
-date = 2023-01-15T09:00:00-07:00
-lastmod = "2023-01-15"
-author = "Avinash Rijal"
-draft = false
-description = "Serve your home server without buying static IP and using IP behind NAT"
-categories = ["DevOps", "Tutorial"]
-tags = ['homeserver', 'networking', 'ddns', 'nat']
-+++
+---
+title: Serving Your Home Server with True Fiber Internet Without a Static IP
+slug: serve-home-server-with-true-fib
+description: Serve your home server without buying static IP and using IP behind NAT
+date: 2023-01-15T16:00:00.000Z
+lastmod: 2023-01-15
+draft: false
+author: Avinash Rijal
+categories:
+  - DevOps
+  - Tutorial
+tags:
+  - homeserver
+  - networking
+  - ddns
+  - nat
+featured_image: /uploads/home-server-setup.webp
+featured_image_alt: serve-homeserver-with-true-fiber
+---
 
 ### Problem Description
 

@@ -28,12 +28,12 @@
 
       <div>
         <h4 class="text-lg font-semibold mb-4">Connect</h4>
-        <div class="flex gap-4">
+        <div class="flex gap-4 not-prose">
           <a
             href="{{ .Site.Params.social.linkedin }}"
             target="_blank"
             rel="noopener"
-            class="w-10 h-10 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#6b63ff] transition-colors"
+            class="w-10 h-10 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#6b63ff] hover:text-white dark:hover:bg-[#6b63ff] transition-colors"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -45,7 +45,7 @@
             href="{{ .Site.Params.social.github }}"
             target="_blank"
             rel="noopener"
-            class="w-10 h-10 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#6b63ff] transition-colors"
+            class="w-10 h-10 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#6b63ff] hover:text-white dark:hover:bg-[#6b63ff] transition-colors"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -57,7 +57,7 @@
             href="{{ .Site.Params.social.twitter }}"
             target="_blank"
             rel="noopener"
-            class="w-10 h-10 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#6b63ff] transition-colors"
+            class="w-10 h-10 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#6b63ff] hover:text-white dark:hover:bg-[#6b63ff] transition-colors"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -73,7 +73,14 @@
       class="border-t border-gray-300 dark:border-gray-700 mt-8 pt-8 text-center text-gray-600 dark:text-gray-400"
     >
       <p class="mb-2">
-        Developed with ❤️ in <a href="https://gohugo.io">Hugo</a>
+        Developed with ❤️ in
+        <a
+          class="hover:text-[#6b63ff] dark:hover:text-[#6b63ff] transition-colors"
+          href="https://gohugo.io"
+          target="_blank"
+          rel="noopener"
+          >Hugo</a
+        >
       </p>
       <p>
         &copy; {{ now.Year }} {{ .Site.Params.author }}. All rights reserved.

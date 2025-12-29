@@ -21,7 +21,7 @@ I use **VSCode**. It's free, simple and runs smoothly on all platforms.
 
 Let's talk about extensions. In past I have used many extensions and after filtering out most of the extensions that were memory/processor hogging; I have came to these extensions for overall usage. You can copy and paste them on your terminal if you would like to install them.
 
-```jsonc
+```toml
 code --install-extension christian-kohler.npm-intellisense
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension eamodio.gitlens

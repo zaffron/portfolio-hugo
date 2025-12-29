@@ -16,14 +16,11 @@ export default {
               },
             },
             code: {
-              color: "inherit",
-              backgroundColor: "inherit",
+              color: "#8b83ff",
+              backgroundColor: "rgba(200,200,200,0.2)",
               padding: "0.25rem 0.5rem",
               borderRadius: "0.25rem",
               fontWeight: "500",
-            },
-            pre: {
-              color: "inherit",
             },
             "code::before": {
               content: '""',
@@ -43,12 +40,6 @@ export default {
             "--tw-prose-quotes": "#d1d5db",
             "--tw-prose-quote-borders": "#6b63ff",
             "--tw-prose-hr": "#374151",
-            code: {
-              color: "inherit",
-            },
-            pre: {
-              color: "inherit",
-            },
           },
         },
       },
