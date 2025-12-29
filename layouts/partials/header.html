@@ -8,14 +8,14 @@
       <!-- Desktop Menu -->
       <ul class="hidden md:flex items-center gap-8">
         {{ range .Site.Menus.main }}
-        <li>
-          <a
-            href="{{ .URL }}"
-            class="text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] transition-colors font-medium"
-          >
-            {{ .Name }}
-          </a>
-        </li>
+          <li>
+            <a
+              href="{{ .URL }}"
+              class="text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] transition-colors font-medium"
+            >
+              {{ .Name }}
+            </a>
+          </li>
         {{ end }}
       </ul>
 
@@ -44,14 +44,14 @@
     <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
       <ul class="flex flex-col gap-4">
         {{ range .Site.Menus.main }}
-        <li>
-          <a
-            href="{{ .URL }}"
-            class="block text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] transition-colors font-medium"
-          >
-            {{ .Name }}
-          </a>
-        </li>
+          <li>
+            <a
+              href="{{ .URL }}"
+              class="block text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] transition-colors font-medium"
+            >
+              {{ .Name }}
+            </a>
+          </li>
         {{ end }}
       </ul>
     </div>

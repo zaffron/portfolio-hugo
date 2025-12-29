@@ -58,62 +58,70 @@
       <div id="work-content" class="tab-content">
         <div class="space-y-8">
           {{ range $index, $item := $.Site.Data.qualifications.work }}
-          <div
-            class="grid md:grid-cols-[1fr_max-content_1fr] gap-0 items-start !m-0 min-h-[130px]"
-          >
-            {{ if modBool $index 2 }}
-            <div></div>
-
-            <div class="flex flex-col items-center self-stretch">
-              <div class="w-4 h-4 bg-[#6b63ff] rounded-full shrink-0"></div>
-
-              {{ if ne (add $index 1) (len $.Site.Data.qualifications.work) }}
-              <div class="w-1 flex-1 bg-[#6b63ff]"></div>
-              {{ end }}
-            </div>
-            {{ end }}
-
             <div
-              class="{{ if modBool $index 2 }}md:text-left ml-8{{ else }}md:text-right mr-8{{ end }}"
+              class="grid md:grid-cols-[1fr_max-content_1fr] gap-0 items-start !m-0 min-h-[130px]"
             >
-              <h3
-                class="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100"
-              >
-                {{ .title }}
-              </h3>
-              <p class="text-gray-600 dark:text-gray-300 mb-2">
-                {{ .subtitle }}
-              </p>
-              <div
-                class="flex items-center gap-2 {{ if modBool $index 2 }}{{ else }}md:justify-end{{ end }} text-sm text-gray-500"
-              >
-                <svg
-                  class="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                <span>{{ .time }}</span>
-              </div>
-            </div>
+              {{ if modBool $index 2 }}
+                <div></div>
 
-            {{ if not (modBool $index 2) }}
-            <div class="flex flex-col items-center self-stretch">
-              <div class="w-4 h-4 bg-[#6b63ff] rounded-full shrink-0"></div>
-              {{ if ne (add $index 1) (len $.Site.Data.qualifications.work) }}
-              <div class="w-1 flex-1 bg-[#6b63ff]"></div>
+                <div class="flex flex-col items-center self-stretch">
+                  <div class="w-4 h-4 bg-[#6b63ff] rounded-full shrink-0"></div>
+
+                  {{ if ne (add $index 1) (len $.Site.Data.qualifications.work) }}
+                    <div class="w-1 flex-1 bg-[#6b63ff]"></div>
+                  {{ end }}
+                </div>
+              {{ end }}
+
+
+              <div
+                class="{{ if modBool $index 2 }}
+                  md:text-left ml-8
+                {{ else }}
+                  md:text-right mr-8
+                {{ end }}"
+              >
+                <h3
+                  class="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100"
+                >
+                  {{ .title }}
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-2">
+                  {{ .subtitle }}
+                </p>
+                <div
+                  class="flex items-center gap-2 {{ if modBool $index 2 }}
+                  {{ else }}
+                    md:justify-end
+                  {{ end }} text-sm text-gray-500"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                  <span>{{ .time }}</span>
+                </div>
+              </div>
+
+              {{ if not (modBool $index 2) }}
+                <div class="flex flex-col items-center self-stretch">
+                  <div class="w-4 h-4 bg-[#6b63ff] rounded-full shrink-0"></div>
+                  {{ if ne (add $index 1) (len $.Site.Data.qualifications.work) }}
+                    <div class="w-1 flex-1 bg-[#6b63ff]"></div>
+                  {{ end }}
+                </div>
+                <div></div>
               {{ end }}
             </div>
-            <div></div>
-            {{ end }}
-          </div>
           {{ end }}
         </div>
       </div>
@@ -122,62 +130,68 @@
       <div id="education-content" class="tab-content hidden">
         <div class="space-y-8">
           {{ range $index, $item := $.Site.Data.qualifications.education }}
-          <div
-            class="grid md:grid-cols-[1fr_max-content_1fr] gap-0 items-start !m-0 min-h-[130px]"
-          >
-            {{ if modBool $index 2 }}
-            <div></div>
-            <div class="flex flex-col items-center self-stretch">
-              <div class="w-4 h-4 bg-[#6b63ff] rounded-full shrink-0"></div>
-              {{ if ne (add $index 1) (len $.Site.Data.qualifications.education)
-              }}
-              <div class="w-1 flex-1 bg-[#6b63ff]"></div>
-              {{ end }}
-            </div>
-            {{ end }}
-
             <div
-              class="{{ if modBool $index 2 }}md:text-left ml-8{{ else }}md:text-right mr-8{{ end }}"
+              class="grid md:grid-cols-[1fr_max-content_1fr] gap-0 items-start !m-0 min-h-[130px]"
             >
-              <h3
-                class="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100"
-              >
-                {{ .title }}
-              </h3>
-              <p class="text-gray-600 dark:text-gray-300 mb-2">
-                {{ .subtitle }}
-              </p>
-              <div
-                class="flex items-center gap-2 {{ if modBool $index 2 }}{{ else }}md:justify-end{{ end }} text-sm text-gray-500"
-              >
-                <svg
-                  class="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                <span>{{ .time }}</span>
-              </div>
-            </div>
+              {{ if modBool $index 2 }}
+                <div></div>
+                <div class="flex flex-col items-center self-stretch">
+                  <div class="w-4 h-4 bg-[#6b63ff] rounded-full shrink-0"></div>
+                  {{ if ne (add $index 1) (len $.Site.Data.qualifications.education) }}
+                    <div class="w-1 flex-1 bg-[#6b63ff]"></div>
+                  {{ end }}
+                </div>
+              {{ end }}
 
-            {{ if not (modBool $index 2) }}
-            <div class="flex flex-col items-center self-stretch">
-              <div class="w-4 h-4 bg-[#6b63ff] rounded-full shrink-0"></div>
-              {{ if ne (add $index 1) (len $.Site.Data.qualifications.education)
-              }}
-              <div class="w-1 flex-1 bg-[#6b63ff]"></div>
+
+              <div
+                class="{{ if modBool $index 2 }}
+                  md:text-left ml-8
+                {{ else }}
+                  md:text-right mr-8
+                {{ end }}"
+              >
+                <h3
+                  class="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100"
+                >
+                  {{ .title }}
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-2">
+                  {{ .subtitle }}
+                </p>
+                <div
+                  class="flex items-center gap-2 {{ if modBool $index 2 }}
+                  {{ else }}
+                    md:justify-end
+                  {{ end }} text-sm text-gray-500"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                  <span>{{ .time }}</span>
+                </div>
+              </div>
+
+              {{ if not (modBool $index 2) }}
+                <div class="flex flex-col items-center self-stretch">
+                  <div class="w-4 h-4 bg-[#6b63ff] rounded-full shrink-0"></div>
+                  {{ if ne (add $index 1) (len $.Site.Data.qualifications.education) }}
+                    <div class="w-1 flex-1 bg-[#6b63ff]"></div>
+                  {{ end }}
+                </div>
+                <div></div>
               {{ end }}
             </div>
-            <div></div>
-            {{ end }}
-          </div>
           {{ end }}
         </div>
       </div>

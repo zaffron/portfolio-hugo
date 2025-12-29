@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title
-      }}{{ end }}
+      {{ if .IsHome }}
+        {{ .Site.Title }}
+      {{ else }}
+        {{ .Title }} |
+        {{ .Site.Title }}
+      {{ end }}
     </title>
 
     <!-- Favicon -->
@@ -14,8 +18,10 @@
     <!-- SEO Meta Tags -->
     {{ partial "seo.html" . }}
 
+
     <!-- Structured Data -->
     {{ partial "schema.html" . }}
+
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,8 +31,11 @@
       rel="stylesheet"
     />
 
-    {{ $css := resources.Get "css/main.css" | css.PostCSS }}
-    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+    <!-- CSS -->
+    {{ with (templates.Defer (dict "key" "global")) }}
+      {{ partial "css.html" . }}
+    {{ end }}
+
 
     <!-- Dark mode init script (prevents flash) -->
     {{ partial "dark-mode-init.html" . }}
@@ -36,12 +45,15 @@
   >
     {{ partial "header.html" . }}
 
+
     <main>{{ block "main" . }}{{ end }}</main>
 
     {{ partial "footer.html" . }}
 
+
     <!-- Dark mode toggle button -->
     {{ partial "dark-mode-toggle.html" . }}
+
 
     <!-- Dark mode JavaScript -->
     {{ $darkModeJS := resources.Get "js/dark-mode.js" }}

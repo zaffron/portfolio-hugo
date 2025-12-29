@@ -1,82 +1,126 @@
 {{ define "main" }}
-<section class="py-20 min-h-screen">
-  <div class="container mx-auto px-6 max-w-6xl">
-    <!-- Header -->
-    <div class="text-center mb-12">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4 dark:text-gray-100">
-        {{ if eq .Type "categories" }}
-          All Categories
-        {{ else if eq .Type "tags" }}
-          All Tags
-        {{ else if eq .Type "series" }}
-          All Series
-        {{ else }}
-          {{ .Title }}
-        {{ end }}
-      </h1>
-      <p class="text-gray-600 dark:text-gray-400 text-lg">
-        {{ if eq .Type "categories" }}
-          Browse posts by category
-        {{ else if eq .Type "tags" }}
-          Browse posts by tag
-        {{ else if eq .Type "series" }}
-          Browse posts by series
-        {{ else }}
-          Explore all {{ .Title | lower }}
-        {{ end }}
-      </p>
-    </div>
-
-    <!-- Terms Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {{ range .Data.Terms.ByCount }}
-      <a href="{{ .Page.Permalink }}"
-         class="block bg-white dark:bg-gray-800 rounded-xl shadow-md dark:shadow-gray-900/50 hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all p-6 group">
-        <div class="flex items-start justify-between mb-3">
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100 group-hover:text-[#6b63ff] transition-colors">
-            {{ .Page.Title }}
-          </h2>
-          <span class="flex-shrink-0 px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-sm font-semibold">
-            {{ .Count }}{{ if eq .Count 1 }} post{{ else }} posts{{ end }}
-          </span>
-        </div>
-
-        <!-- Preview of recent posts -->
-        {{ $recentPosts := first 3 .Pages }}
-        {{ if $recentPosts }}
-        <div class="space-y-2">
-          {{ range $recentPosts }}
-          <div class="text-sm text-gray-600 dark:text-gray-400 truncate flex items-center gap-2">
-            <svg class="w-4 h-4 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-            </svg>
-            <span class="truncate">{{ .Title }}</span>
-          </div>
+  <section class="py-20 min-h-screen">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 dark:text-gray-100">
+          {{ if eq .Type "categories" }}
+            All Categories
+          {{ else if eq .Type "tags" }}
+            All Tags
+          {{ else if eq .Type "series" }}
+            All Series
+          {{ else }}
+            {{ .Title }}
           {{ end }}
-        </div>
+        </h1>
+        <p class="text-gray-600 dark:text-gray-400 text-lg">
+          {{ if eq .Type "categories" }}
+            Browse posts by category
+          {{ else if eq .Type "tags" }}
+            Browse posts by tag
+          {{ else if eq .Type "series" }}
+            Browse posts by series
+          {{ else }}
+            Explore all
+            {{ .Title | lower }}
+          {{ end }}
+        </p>
+      </div>
+
+      <!-- Terms Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {{ range .Data.Terms.ByCount }}
+          <a
+            href="{{ .Page.Permalink }}"
+            class="block bg-white dark:bg-gray-800 rounded-xl shadow-md dark:shadow-gray-900/50 hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all p-6 group"
+          >
+            <div class="flex items-start justify-between mb-3">
+              <h2
+                class="text-2xl font-bold text-gray-900 dark:text-gray-100 group-hover:text-[#6b63ff] transition-colors"
+              >
+                {{ .Page.Title }}
+              </h2>
+              <span
+                class="flex-shrink-0 px-3 py-1 bg-[#6b63ff] bg-opacity-10 text-[#6b63ff] rounded-full text-sm font-semibold"
+              >
+                {{ .Count }}{{ if eq .Count 1 }}post{{ else }}posts{{ end }}
+              </span>
+            </div>
+
+            <!-- Preview of recent posts -->
+            {{ $recentPosts := first 3 .Pages }}
+            {{ if $recentPosts }}
+              <div class="space-y-2">
+                {{ range $recentPosts }}
+                  <div
+                    class="text-sm text-gray-600 dark:text-gray-400 truncate flex items-center gap-2"
+                  >
+                    <svg
+                      class="w-4 h-4 flex-shrink-0 text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      />
+                    </svg>
+                    <span class="truncate">{{ .Title }}</span>
+                  </div>
+                {{ end }}
+              </div>
+            {{ end }}
+
+
+            <!-- View all arrow -->
+            <div
+              class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700 flex items-center justify-end gap-2 text-[#6b63ff] font-medium group-hover:gap-3 transition-all"
+            >
+              <span>View all</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </div>
+          </a>
         {{ end }}
+      </div>
 
-        <!-- View all arrow -->
-        <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700 flex items-center justify-end gap-2 text-[#6b63ff] font-medium group-hover:gap-3 transition-all">
-          <span>View all</span>
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+      <!-- Back to Blog -->
+      <div class="mt-12 text-center">
+        <a
+          href="/posts"
+          class="inline-flex items-center gap-2 text-[#6b63ff] hover:gap-3 transition-all font-medium"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M11 17l-5-5m0 0l5-5m-5 5h12"
+            />
           </svg>
-        </div>
-      </a>
-      {{ end }}
+          Back to Blog
+        </a>
+      </div>
     </div>
-
-    <!-- Back to Blog -->
-    <div class="mt-12 text-center">
-      <a href="/posts"
-         class="inline-flex items-center gap-2 text-[#6b63ff] hover:gap-3 transition-all font-medium">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"/>
-        </svg>
-        Back to Blog
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 {{ end }}

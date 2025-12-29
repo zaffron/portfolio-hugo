@@ -1,0 +1,181 @@
+{{ define "main" }}
+<section class="min-h-[calc(100vh-200px)] flex items-center py-12 md:py-20">
+  <div class="container mx-auto px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <!-- 404 Illustration -->
+      <div class="mb-8">
+        <svg
+          class="w-64 md:w-80 mx-auto"
+          viewBox="0 0 400 300"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- Background circles -->
+          <circle
+            cx="200"
+            cy="150"
+            r="120"
+            fill="#6b63ff"
+            opacity="0.1"
+            class="animate-pulse"
+          />
+          <circle cx="200" cy="150" r="80" fill="#6b63ff" opacity="0.15" />
+
+          <!-- 404 Text -->
+          <text
+            x="200"
+            y="170"
+            font-size="100"
+            font-weight="bold"
+            fill="#6b63ff"
+            text-anchor="middle"
+            class="dark:fill-[#8b83ff]"
+          >
+            404
+          </text>
+
+          <!-- Magnifying glass -->
+          <circle
+            cx="320"
+            cy="100"
+            r="30"
+            stroke="#6b63ff"
+            stroke-width="6"
+            fill="none"
+          />
+          <line
+            x1="342"
+            y1="122"
+            x2="365"
+            y2="145"
+            stroke="#6b63ff"
+            stroke-width="6"
+            stroke-linecap="round"
+          />
+
+          <!-- Sad face in magnifying glass -->
+          <circle cx="312" cy="95" r="3" fill="#6b63ff" />
+          <circle cx="328" cy="95" r="3" fill="#6b63ff" />
+          <path
+            d="M 312 110 Q 320 105 328 110"
+            stroke="#6b63ff"
+            stroke-width="2"
+            fill="none"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+
+      <!-- Error Message -->
+      <h1
+        class="text-5xl md:text-7xl font-bold mb-4 text-gray-900 dark:text-gray-100"
+      >
+        Oops!
+      </h1>
+      <h2
+        class="text-2xl md:text-3xl font-semibold mb-6 text-gray-700 dark:text-gray-300"
+      >
+        Page Not Found
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+        The page you're looking for seems to have wandered off into the digital
+        void. It might have been moved, deleted, or perhaps it never existed.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 bg-[#6b63ff] text-white px-8 py-3 rounded-lg hover:bg-[#5a52e8] transition-all shadow-md hover:shadow-lg font-medium"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            />
+          </svg>
+          Go Home
+        </a>
+
+        <a
+          href="/posts"
+          class="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-8 py-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-all font-medium"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+            />
+          </svg>
+          Read Blog
+        </a>
+      </div>
+
+      <!-- Helpful Links -->
+      <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+          You might also want to check out:
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 text-sm">
+          <a
+            href="/#about"
+            class="text-[#6b63ff] hover:underline transition-all"
+          >
+            About Me
+          </a>
+          <span class="text-gray-400">•</span>
+          <a
+            href="/#portfolio"
+            class="text-[#6b63ff] hover:underline transition-all"
+          >
+            Portfolio
+          </a>
+          <span class="text-gray-400">•</span>
+          <a
+            href="/#services"
+            class="text-[#6b63ff] hover:underline transition-all"
+          >
+            Services
+          </a>
+          <span class="text-gray-400">•</span>
+          <a
+            href="/#contact"
+            class="text-[#6b63ff] hover:underline transition-all"
+          >
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 0.1;
+    }
+    50% {
+      opacity: 0.2;
+    }
+  }
+  .animate-pulse {
+    animation: pulse 3s ease-in-out infinite;
+  }
+</style>
+{{ end }}

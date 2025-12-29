@@ -46,7 +46,8 @@
     "wordCount": {{ .WordCount }}{{ end }}
   }
 </script>
-{{ end }} {{ if .IsHome }}
+{{ end }}
+{{ if .IsHome }}
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -59,8 +60,7 @@
       "name": "{{ .Site.Params.author }}"
     }
   }
-</script>
-<script type="application/ld+json">
+</script><script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",

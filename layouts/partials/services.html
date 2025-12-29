@@ -11,83 +11,55 @@
   <div class="container mx-auto px-6">
     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
       {{ range $index, $service := $.Site.Data.services }}
-      <div
-        class="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg dark:shadow-gray-900/50 hover:shadow-xl dark:hover:shadow-gray-900/70 transition-all duration-300 flex flex-col"
-      >
-        <div class="text-center mb-6">
-          <div
-            class="w-16 h-16 bg-[#6b63ff] bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4"
-          >
-            {{ if eq .title "Frontend Developer" }}
-            <svg
-              class="w-8 h-8 text-[#6b63ff]"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M3 3h18v18H3V3m4.5 13.5h9v-3h-9v3z" />
-            </svg>
-            {{ else if eq .title "Backend Developer" }}
-            <svg
-              class="w-8 h-8 text-[#6b63ff]"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M4 1h16a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1V2a1 1 0 011-1m0 8h16a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4a1 1 0 011-1m0 8h16a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4a1 1 0 011-1z"
-              />
-            </svg>
-            {{ else }}
-            <svg
-              class="w-8 h-8 text-[#6b63ff]"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M21 16V8H7v8h14m0-10a2 2 0 012 2v8a2 2 0 01-2 2H7a2 2 0 01-2-2V8a2 2 0 012-2h14M3 12H1v8a2 2 0 002 2h14v-2H3v-8z"
-              />
-            </svg>
-            {{ end }}
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100">
-            {{ .title }}
-          </h3>
-        </div>
-
-        <button
-          onclick="openModal({{ $index }})"
-          class="mt-auto flex items-center gap-2 text-[#6b63ff] hover:gap-3 transition-all font-medium"
-        >
-          View More
-          <svg
-            class="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M13 7l5 5m0 0l-5 5m5-5H6"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <!-- Modal -->
-      <div
-        id="modal-{{ $index }}"
-        class="modal fixed inset-0 bg-black bg-opacity-50 dark:bg-opacity-70 hidden items-center justify-center z-50 p-4"
-      >
         <div
-          class="bg-white dark:bg-gray-800 rounded-2xl p-8 max-w-md w-full relative animate-modal"
+          class="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg dark:shadow-gray-900/50 hover:shadow-xl dark:hover:shadow-gray-900/70 transition-all duration-300 flex flex-col"
         >
+          <div class="text-center mb-6">
+            <div
+              class="w-16 h-16 bg-[#6b63ff] bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4"
+            >
+              {{ if eq .title "Frontend Developer" }}
+                <svg
+                  class="w-8 h-8 text-[#6b63ff]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M3 3h18v18H3V3m4.5 13.5h9v-3h-9v3z" />
+                </svg>
+              {{ else if eq .title "Backend Developer" }}
+                <svg
+                  class="w-8 h-8 text-[#6b63ff]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M4 1h16a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1V2a1 1 0 011-1m0 8h16a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4a1 1 0 011-1m0 8h16a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4a1 1 0 011-1z"
+                  />
+                </svg>
+              {{ else }}
+                <svg
+                  class="w-8 h-8 text-[#6b63ff]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M21 16V8H7v8h14m0-10a2 2 0 012 2v8a2 2 0 01-2 2H7a2 2 0 01-2-2V8a2 2 0 012-2h14M3 12H1v8a2 2 0 002 2h14v-2H3v-8z"
+                  />
+                </svg>
+              {{ end }}
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100">
+              {{ .title }}
+            </h3>
+          </div>
+
           <button
-            onclick="closeModal({{ $index }})"
-            class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+            onclick="openModal({{ $index }})"
+            class="mt-auto flex items-center gap-2 text-[#6b63ff] hover:gap-3 transition-all font-medium"
           >
+            View More
             <svg
-              class="w-6 h-6"
+              class="w-5 h-5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -96,33 +68,63 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
               />
             </svg>
           </button>
+        </div>
 
-          <h3
-            class="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-gray-100"
+        <!-- Modal -->
+        <div
+          id="modal-{{ $index }}"
+          class="modal fixed inset-0 bg-black bg-opacity-50 dark:bg-opacity-70 hidden items-center justify-center z-50 p-4"
+        >
+          <div
+            class="bg-white dark:bg-gray-800 rounded-2xl p-8 max-w-md w-full relative animate-modal"
           >
-            {{ .title }}
-          </h3>
-
-          <ul class="space-y-4">
-            {{ range .items }}
-            <li class="flex items-start gap-3">
+            <button
+              onclick="closeModal({{ $index }})"
+              class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+            >
               <svg
-                class="w-5 h-5 text-[#6b63ff] flex-shrink-0 mt-0.5"
-                fill="currentColor"
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
-              <span class="text-gray-600 dark:text-gray-300">{{ . }}</span>
-            </li>
-            {{ end }}
-          </ul>
+            </button>
+
+            <h3
+              class="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-gray-100"
+            >
+              {{ .title }}
+            </h3>
+
+            <ul class="space-y-4">
+              {{ range .items }}
+                <li class="flex items-start gap-3">
+                  <svg
+                    class="w-5 h-5 text-[#6b63ff] flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                    />
+                  </svg>
+                  <span class="text-gray-600 dark:text-gray-300">{{ . }}</span>
+                </li>
+              {{ end }}
+            </ul>
+          </div>
         </div>
-      </div>
       {{ end }}
     </div>
   </div>
