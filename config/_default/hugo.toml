@@ -2,6 +2,13 @@ baseURL = 'https://avinashrijal.com.np/'
 languageCode = 'en-us'
 title = 'Avinash Rijal - Personal Blog & Portfolio'
 
+[imaging]
+  anchor = 'smart'
+  bgColor = '#6b63ff'
+  hint = 'photo'
+  quality = 75
+  resampleFilter = 'box'
+
 [pagination]
 pagerSize = 10
 path = 'page'
