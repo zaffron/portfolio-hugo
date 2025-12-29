@@ -322,7 +322,7 @@
                   </a>
                 </h3>
                 <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                  {{ .Summary | truncate 100 }}
+                  {{ .Summary | truncate 200 | plainify }}
                 </p>
                 <div
                   class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-500"
