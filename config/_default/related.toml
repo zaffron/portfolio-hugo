@@ -1,0 +1,15 @@
+threshold = 80
+includeNewer = true
+toLower = true
+
+[[indices]]
+  name = 'tags'
+  weight = 100
+
+[[indices]]
+  name = 'categories'
+  weight = 80
+
+[[indices]]
+  name = 'date'
+  weight = 10

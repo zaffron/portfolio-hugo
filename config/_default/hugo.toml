@@ -1,0 +1,18 @@
+baseURL = 'https://avinashrijal.com.np/'
+languageCode = 'en-us'
+title = 'Avinash Rijal - Personal Blog & Portfolio'
+
+[pagination]
+pagerSize = 10
+path = 'page'
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+  series = 'series'
+
+[permalinks]
+  posts = '/posts/:year/:slug/'
+
+[server]
+port = 3000
