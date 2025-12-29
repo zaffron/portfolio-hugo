@@ -12,7 +12,7 @@ path = 'page'
   series = 'series'
 
 [permalinks]
-  posts = '/posts/:slug/'
+  posts = '/posts/:year/:slug/'
 
 [params]
   author = 'Avinash Rijal'

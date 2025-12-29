@@ -16,7 +16,7 @@ collections:
     path: "{{year}}/{{slug}}/index"
     create: true
     slug: "{{slug}}"
-    preview_path: "posts/{{slug}}"
+    preview_path: "posts/{{year}}/{{slug}}"
     media_folder: "/static/uploads"
     public_folder: "/uploads"
 
