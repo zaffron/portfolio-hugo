@@ -18,11 +18,13 @@
             <div
               class="relative overflow-hidden h-64 bg-gray-200 dark:bg-gray-700 flex-shrink-0"
             >
-              <img
-                src="{{ .image }}"
-                alt="{{ .name }}"
-                class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-              />
+              {{ partial "responsive-image.html" (dict
+                "src" .image
+                "alt" .name
+                "class" "w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                "loading" "lazy"
+                "widths" (slice 400 600 800)
+              ) }}
             </div>
           {{ end }}
 

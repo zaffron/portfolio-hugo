@@ -1,0 +1,67 @@
+{{- $src := .src -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "w-full h-auto" -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $sizes := .sizes | default "(min-width: 1024px) 1024px, 100vw" -}}
+{{- $widths := .widths | default (slice 400 800 1200) -}}
+
+{{- if $src -}}
+  {{- $image := "" -}}
+
+  {{- /* Try to get image from assets first */ -}}
+  {{- $image = resources.Get $src -}}
+
+  {{- /* If not in assets, try removing leading slash and check assets */ -}}
+  {{- if not $image -}}
+    {{- $cleanSrc := strings.TrimPrefix "/" $src -}}
+    {{- $image = resources.Get $cleanSrc -}}
+  {{- end -}}
+
+  {{- if $image -}}
+    {{- /* Image found in assets - process it */ -}}
+    <picture>
+      {{- /* WebP source */ -}}
+      <source
+        type="image/webp"
+        srcset="
+        {{- range $i, $width := $widths -}}
+          {{- $resized := $image.Resize (printf "%dx webp q85" $width) -}}
+          {{- $resized.RelPermalink }} {{ $width }}w
+          {{- if lt $i (sub (len $widths) 1) -}}, {{ end -}}
+        {{- end -}}"
+        sizes="{{ $sizes }}"
+      />
+
+      {{- /* Fallback to original format */ -}}
+      <source
+        srcset="
+        {{- range $i, $width := $widths -}}
+          {{- $resized := $image.Resize (printf "%dx q85" $width) -}}
+          {{- $resized.RelPermalink }} {{ $width }}w
+          {{- if lt $i (sub (len $widths) 1) -}}, {{ end -}}
+        {{- end -}}"
+        sizes="{{ $sizes }}"
+      />
+
+      {{- $fallback := $image.Resize "800x q85" -}}
+      <img
+        src="{{ $fallback.RelPermalink }}"
+        alt="{{ $alt }}"
+        width="{{ $fallback.Width }}"
+        height="{{ $fallback.Height }}"
+        class="{{ $class }}"
+        loading="{{ $loading }}"
+        decoding="async"
+      />
+    </picture>
+  {{- else -}}
+    {{- /* Image in static folder - fallback to basic optimization */ -}}
+    <img
+      src="{{ $src }}"
+      alt="{{ $alt }}"
+      class="{{ $class }}"
+      loading="{{ $loading }}"
+      decoding="async"
+    />
+  {{- end -}}
+{{- end -}}

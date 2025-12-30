@@ -171,15 +171,13 @@
         <div
           class="mb-12 rounded-xl overflow-hidden shadow-lg dark:shadow-gray-900/50"
         >
-          <img
-            src="{{ .Params.featured_image }}"
-            alt="{{ if .Params.featured_image_alt }}
-              {{ .Params.featured_image_alt }}
-            {{ else }}
-              {{ .Title }}
-            {{ end }}"
-            class="w-full h-auto"
-          />
+          {{ partial "responsive-image.html" (dict
+            "src" .Params.featured_image
+            "alt" (cond .Params.featured_image_alt .Params.featured_image_alt .Title)
+            "class" "w-full h-auto"
+            "loading" "eager"
+            "widths" (slice 600 900 1200 1600)
+          ) }}
         </div>
       {{ end }}
 
@@ -306,11 +304,13 @@
               >
                 {{ if .Params.featured_image }}
                   <div class="mb-4 rounded-lg overflow-hidden">
-                    <img
-                      src="{{ .Params.featured_image }}"
-                      alt="{{ .Title }}"
-                      class="w-full h-40 object-cover"
-                    />
+                    {{ partial "responsive-image.html" (dict
+                      "src" .Params.featured_image
+                      "alt" .Title
+                      "class" "w-full h-40 object-cover"
+                      "loading" "lazy"
+                      "widths" (slice 300 400 600)
+                    ) }}
                   </div>
                 {{ end }}
                 <h3 class="text-xl font-bold mb-2">

@@ -1,12 +1,12 @@
 <header class="fixed top-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50">
-  <nav class="container mx-auto px-6 py-4">
+  <nav class="container mx-auto px-6 py-4" aria-label="Main navigation">
     <div class="flex items-center justify-between">
-      <a href="/" class="text-2xl font-bold text-[#6b63ff]">
+      <a href="/" class="text-2xl font-bold text-[#6b63ff]" aria-label="Home - {{ .Site.Params.author }}">
         {{ .Site.Params.author }}
       </a>
 
       <!-- Desktop Menu -->
-      <ul class="hidden md:flex items-center gap-8">
+      <ul class="hidden md:flex items-center gap-8" role="list">
         {{ range .Site.Menus.main }}
           <li>
             <a
@@ -23,12 +23,16 @@
       <button
         id="mobile-menu-button"
         class="md:hidden text-gray-700 dark:text-gray-300"
+        aria-label="Toggle mobile menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
       >
         <svg
           class="w-6 h-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
+          aria-hidden="true"
         >
           <path
             stroke-linecap="round"
@@ -41,8 +45,8 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-      <ul class="flex flex-col gap-4">
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4" aria-hidden="true">
+      <ul class="flex flex-col gap-4" role="list">
         {{ range .Site.Menus.main }}
           <li>
             <a
@@ -62,9 +66,40 @@
 <div class="h-20"></div>
 
 <script>
-  document
-    .getElementById("mobile-menu-button")
-    .addEventListener("click", function () {
-      document.getElementById("mobile-menu").classList.toggle("hidden");
+  (function() {
+    const menuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuButton.addEventListener("click", function () {
+      const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+
+      // Toggle menu visibility
+      mobileMenu.classList.toggle("hidden");
+
+      // Update ARIA attributes
+      menuButton.setAttribute("aria-expanded", !isExpanded);
+      mobileMenu.setAttribute("aria-hidden", isExpanded);
     });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function(event) {
+      if (!menuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+        if (!mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.add("hidden");
+          menuButton.setAttribute("aria-expanded", "false");
+          mobileMenu.setAttribute("aria-hidden", "true");
+        }
+      }
+    });
+
+    // Close menu on ESC key
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape" && !mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden");
+        menuButton.setAttribute("aria-expanded", "false");
+        mobileMenu.setAttribute("aria-hidden", "true");
+        menuButton.focus();
+      }
+    });
+  })();
 </script>

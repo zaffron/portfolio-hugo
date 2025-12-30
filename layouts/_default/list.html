@@ -177,15 +177,13 @@
                 class="mb-6 -mx-6 md:-mx-8 -mt-6 md:-mt-8 rounded-t-xl overflow-hidden"
               >
                 <a href="{{ .RelPermalink }}">
-                  <img
-                    src="{{ .Params.featured_image }}"
-                    alt="{{ if .Params.featured_image_alt }}
-                      {{ .Params.featured_image_alt }}
-                    {{ else }}
-                      {{ .Title }}
-                    {{ end }}"
-                    class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform"
-                  />
+                  {{ partial "responsive-image.html" (dict
+                    "src" .Params.featured_image
+                    "alt" (cond .Params.featured_image_alt .Params.featured_image_alt .Title)
+                    "class" "w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform"
+                    "loading" "lazy"
+                    "widths" (slice 400 600 800 1200)
+                  ) }}
                 </a>
               </div>
             {{ end }}

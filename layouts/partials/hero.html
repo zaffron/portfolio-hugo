@@ -5,38 +5,42 @@
   <div class="container mx-auto px-6 relative">
     <div class="grid md:grid-cols-[max-content_1fr] gap-12 items-center">
       <!-- Social Links -->
-      <div class="flex flex-row justify-evenly md:flex-col md:gap-8">
+      <div class="flex flex-row justify-evenly md:flex-col md:gap-8" role="list">
         <a
           href="{{ .Site.Params.social.linkedin }}"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           class="text-2xl text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] dark:hover:text-[#6b63ff] transition-colors"
+          aria-label="Visit my LinkedIn profile (opens in new tab)"
         >
-          {{ partial "svgs/linkedin.html" . }}
+          {{ partial "svgs/linkedin.html" (dict "aria-hidden" "true") }}
         </a>
         <a
           href="{{ .Site.Params.social.facebook }}"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           class="text-2xl text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] dark:hover:text-[#6b63ff] transition-colors"
+          aria-label="Visit my Facebook page (opens in new tab)"
         >
-          {{ partial "svgs/facebook.html" . }}
+          {{ partial "svgs/facebook.html" (dict "aria-hidden" "true") }}
         </a>
         <a
           href="{{ .Site.Params.social.twitter }}"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           class="text-2xl text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] dark:hover:text-[#6b63ff] transition-colors"
+          aria-label="Visit my Twitter profile (opens in new tab)"
         >
-          {{ partial "svgs/twitter.html" . }}
+          {{ partial "svgs/twitter.html" (dict "aria-hidden" "true") }}
         </a>
         <a
           href="{{ .Site.Params.social.github }}"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           class="text-2xl text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] dark:hover:text-[#6b63ff] transition-colors"
+          aria-label="Visit my GitHub profile (opens in new tab)"
         >
-          {{ partial "svgs/github.html" . }}
+          {{ partial "svgs/github.html" (dict "aria-hidden" "true") }}
         </a>
       </div>
 
@@ -89,9 +93,10 @@
       <a
         href="#about"
         class="flex flex-col items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-[#6b63ff] transition-colors"
+        aria-label="Scroll down to about section"
       >
-        {{ partial "svgs/arrow-down.html" . }}
-        <span class="text-sm">Scroll down</span>
+        {{ partial "svgs/arrow-down.html" (dict "aria-hidden" "true") }}
+        <span class="text-sm" aria-hidden="true">Scroll down</span>
       </a>
     </div>
   </div>

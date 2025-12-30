@@ -6,8 +6,13 @@ title = 'Avinash Rijal - Personal Blog & Portfolio'
   anchor = 'smart'
   bgColor = '#6b63ff'
   hint = 'photo'
-  quality = 75
-  resampleFilter = 'box'
+  quality = 85
+  resampleFilter = 'CatmullRom'
+
+[imaging.exif]
+  disableDate = false
+  disableLatLong = true
+  excludeFields = 'GPS.*'
 
 [pagination]
 pagerSize = 10

@@ -5,6 +5,14 @@
       <link rel="stylesheet" href="{{ .RelPermalink }}" />
     {{ else }}
       {{ with . | fingerprint }}
+        <!-- Preload CSS for faster initial render -->
+        <link
+          rel="preload"
+          as="style"
+          href="{{ .RelPermalink }}"
+          integrity="{{ .Data.Integrity }}"
+          crossorigin="anonymous"
+        />
         <link
           rel="stylesheet"
           href="{{ .RelPermalink }}"

@@ -2,6 +2,9 @@ backend:
   name: git-gateway
   branch: main
 
+# Enable local development mode
+local_backend: true
+
 site_url: https://avinashrijal.com.np
 
 # Global media library for general uploads
@@ -15,8 +18,8 @@ collections:
     folder: "content/posts"
     path: "{{year}}/{{slug}}/index"
     create: true
-    slug: "{{slug}}"
-    preview_path: "posts/{{year}}/{{slug}}"
+    slug: "{{fields.slug}}"
+    preview_path: "posts/{{year}}/{{fields.slug}}"
     media_folder: "/static/uploads"
     public_folder: "/uploads"
 

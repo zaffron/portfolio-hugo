@@ -1,0 +1,16 @@
+{{ $darkModeJS := resources.Get "js/dark-mode.js" }}
+{{ if $darkModeJS }}
+  {{ if hugo.IsDevelopment }}
+    {{/* Development: Use unminified JS for easier debugging */}}
+    <script src="{{ $darkModeJS.RelPermalink }}"></script>
+  {{ else }}
+    {{/* Production: Minify and fingerprint for cache busting */}}
+    {{ $minified := $darkModeJS | minify }}
+    {{ $hashed := $minified | fingerprint }}
+    <script
+      src="{{ $hashed.RelPermalink }}"
+      integrity="{{ $hashed.Data.Integrity }}"
+      crossorigin="anonymous"
+    ></script>
+  {{ end }}
+{{ end }}
