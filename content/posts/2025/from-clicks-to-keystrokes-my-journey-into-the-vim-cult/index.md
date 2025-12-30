@@ -1,14 +1,23 @@
-+++
-title = "From Clicks to Keystrokes: My Journey into the Vim Cult🚀🔥"
-slug = "from-clicks-to-keystrokes-my-journey-into-the-vim-cult"
-description = "A nostalgic yet fiery journey from Sublime Text to embracing the Vim cult, battling the learning curve, and ultimately finding enlightenment in Neovim's efficiency and freedom. 🚀💻"
-date = "2025-03-14"
-lastmod = "2025-03-14"
-author = "Avinash Rijal"
-draft = false
-categories = ["Programming", "Opinion"]
-tags = ["programming", "vim", "neovim", "editor", "productivity"]
-+++
+---
+title: "From Clicks to Keystrokes: My Journey into the Vim"
+slug: from-clicks-to-keystrokes-my-journey-into-the-vim
+description: A nostalgic yet fiery journey from Sublime Text to embracing the
+  Vim cult, battling the learning curve, and ultimately finding enlightenment in
+  Neovim's efficiency and freedom. 🚀💻
+date: 2025-03-14
+lastmod: 2025-03-14
+draft: false
+author: Avinash Rijal
+categories:
+  - Programming
+  - Opinion
+tags:
+  - programming
+  - vim
+  - neovim
+  - editor
+  - productivity
+---
 
 Back in the days, it was somewhere around when I first started my developer career, I was a Sublime text fan, most of you may have never herd of it but it was like "winrar" which kept bugging you for activating it but never obstructed you from using it. It was a good time. I was happy and I was productive. Sometimes, I used to give jetbrains a try but it soon phased out after my crack stopped working and I as a junior developer didn't have enough salary to pay for their plans while paying my rent.
 
