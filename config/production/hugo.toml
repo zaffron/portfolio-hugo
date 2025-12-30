@@ -12,7 +12,7 @@ baseURL = 'https://avinashrijal.com.np/'
     keepWhitespace = false
 
   [minify.tdewolff.css]
-    keepCSS2 = true
+    version = 2
     precision = 0
 
   [minify.tdewolff.js]

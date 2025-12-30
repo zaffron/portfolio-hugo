@@ -84,4 +84,6 @@
       scroll-behavior: auto !important;
     }
   }
+
+  /* Image lazy loading - native browser lazy loading handles everything */
 }

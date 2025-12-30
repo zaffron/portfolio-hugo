@@ -4,6 +4,7 @@
 {{- $loading := .loading | default "lazy" -}}
 {{- $sizes := .sizes | default "(min-width: 1024px) 1024px, 100vw" -}}
 {{- $widths := .widths | default (slice 400 800 1200) -}}
+{{- $format := .format | default "auto" -}}
 
 {{- if $src -}}
   {{- $image := "" -}}
@@ -18,14 +19,57 @@
   {{- end -}}
 
   {{- if $image -}}
+    {{- /* Generate tiny blurred placeholder (LQIP) */ -}}
+    {{- $placeholder := "" -}}
+    {{- if eq $format "square" -}}
+      {{- $placeholder = $image.Fill "20x20 webp q20 Smart" -}}
+    {{- else -}}
+      {{- $placeholder = $image.Resize "20x webp q20" -}}
+    {{- end -}}
+    {{- $placeholderBase64 := $placeholder.Content | base64Encode -}}
+    {{- $placeholderDataURI := printf "data:image/webp;base64,%s" $placeholderBase64 -}}
+
     {{- /* Image found in assets - process it */ -}}
+    {{- $fallback := "" -}}
+    {{- if eq $format "square" -}}
+      {{- $fallback = $image.Fill "800x800 q85 Smart" -}}
+    {{- else -}}
+      {{- $fallback = $image.Resize "800x q85" -}}
+    {{- end -}}
     <picture>
-      {{- /* WebP source */ -}}
+      {{- /* AVIF source - best compression */ -}}
+      {{- $avifSupport := true -}}
+      {{- with hugo.Version -}}
+        {{- if ge hugo.Version "0.148.0" -}}
+          <source
+            type="image/avif"
+            srcset="
+            {{- range $i, $width := $widths -}}
+              {{- $resized := "" -}}
+              {{- if eq $format "square" -}}
+                {{- $resized = $image.Fill (printf "%dx%d avif q80 Smart" $width $width) -}}
+              {{- else -}}
+                {{- $resized = $image.Resize (printf "%dx avif q80" $width) -}}
+              {{- end -}}
+              {{- $resized.RelPermalink }} {{ $width }}w
+              {{- if lt $i (sub (len $widths) 1) -}}, {{ end -}}
+            {{- end -}}"
+            sizes="{{ $sizes }}"
+          />
+        {{- end -}}
+      {{- end -}}
+
+      {{- /* WebP source - good compression */ -}}
       <source
         type="image/webp"
         srcset="
         {{- range $i, $width := $widths -}}
-          {{- $resized := $image.Resize (printf "%dx webp q85" $width) -}}
+          {{- $resized := "" -}}
+          {{- if eq $format "square" -}}
+            {{- $resized = $image.Fill (printf "%dx%d webp q85 Smart" $width $width) -}}
+          {{- else -}}
+            {{- $resized = $image.Resize (printf "%dx webp q85" $width) -}}
+          {{- end -}}
           {{- $resized.RelPermalink }} {{ $width }}w
           {{- if lt $i (sub (len $widths) 1) -}}, {{ end -}}
         {{- end -}}"
@@ -36,19 +80,32 @@
       <source
         srcset="
         {{- range $i, $width := $widths -}}
-          {{- $resized := $image.Resize (printf "%dx q85" $width) -}}
+          {{- $resized := "" -}}
+          {{- if eq $format "square" -}}
+            {{- $resized = $image.Fill (printf "%dx%d q85 Smart" $width $width) -}}
+          {{- else -}}
+            {{- $resized = $image.Resize (printf "%dx q85" $width) -}}
+          {{- end -}}
           {{- $resized.RelPermalink }} {{ $width }}w
           {{- if lt $i (sub (len $widths) 1) -}}, {{ end -}}
         {{- end -}}"
         sizes="{{ $sizes }}"
       />
 
-      {{- $fallback := $image.Resize "800x q85" -}}
+      {{- /* Get first width for proper dimensions */ -}}
+      {{- $firstWidth := index $widths 0 -}}
+      {{- $displayImage := "" -}}
+      {{- if eq $format "square" -}}
+        {{- $displayImage = $image.Fill (printf "%dx%d q85 Smart" $firstWidth $firstWidth) -}}
+      {{- else -}}
+        {{- $displayImage = $image.Resize (printf "%dx q85" $firstWidth) -}}
+      {{- end -}}
+
       <img
-        src="{{ $fallback.RelPermalink }}"
+        src="{{ $placeholderDataURI | safeURL }}"
         alt="{{ $alt }}"
-        width="{{ $fallback.Width }}"
-        height="{{ $fallback.Height }}"
+        width="{{ $displayImage.Width }}"
+        height="{{ $displayImage.Height }}"
         class="{{ $class }}"
         loading="{{ $loading }}"
         decoding="async"
