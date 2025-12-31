@@ -4,6 +4,7 @@
     {{ if hugo.IsDevelopment }}
       <link rel="stylesheet" href="{{ .RelPermalink }}" />
     {{ else }}
+      {{/* Generate fingerprinted version for main site */}}
       {{ with . | fingerprint }}
         <!-- Preload CSS for faster initial render -->
         <link
@@ -20,6 +21,8 @@
           crossorigin="anonymous"
         />
       {{ end }}
+      {{/* Also generate non-fingerprinted version for CMS admin preview */}}
+      {{ $nonFingerprinted := . | resources.Copy "css/main.css" }}
     {{ end }}
   {{ end }}
 {{ end }}
