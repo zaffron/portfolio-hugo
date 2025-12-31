@@ -6,42 +6,50 @@
     <div class="grid md:grid-cols-[max-content_1fr] gap-12 items-center">
       <!-- Social Links -->
       <div class="flex flex-row justify-evenly md:flex-col md:gap-8" role="list">
-        <a
-          href="{{ .Site.Params.social.linkedin }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-2xl text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] dark:hover:text-[#6b63ff] transition-colors"
-          aria-label="Visit my LinkedIn profile (opens in new tab)"
-        >
-          {{ partial "svgs/linkedin.html" (dict "aria-hidden" "true") }}
-        </a>
-        <a
-          href="{{ .Site.Params.social.facebook }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-2xl text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] dark:hover:text-[#6b63ff] transition-colors"
-          aria-label="Visit my Facebook page (opens in new tab)"
-        >
-          {{ partial "svgs/facebook.html" (dict "aria-hidden" "true") }}
-        </a>
-        <a
-          href="{{ .Site.Params.social.twitter }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-2xl text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] dark:hover:text-[#6b63ff] transition-colors"
-          aria-label="Visit my Twitter profile (opens in new tab)"
-        >
-          {{ partial "svgs/twitter.html" (dict "aria-hidden" "true") }}
-        </a>
-        <a
-          href="{{ .Site.Params.social.github }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-2xl text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] dark:hover:text-[#6b63ff] transition-colors"
-          aria-label="Visit my GitHub profile (opens in new tab)"
-        >
-          {{ partial "svgs/github.html" (dict "aria-hidden" "true") }}
-        </a>
+        <div role="listitem">
+          <a
+            href="{{ .Site.Params.social.linkedin }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-2xl text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] dark:hover:text-[#6b63ff] transition-colors"
+            aria-label="Visit my LinkedIn profile (opens in new tab)"
+          >
+            {{ partial "svgs/linkedin.html" (dict "aria-hidden" "true") }}
+          </a>
+        </div>
+        <div role="listitem">
+          <a
+            href="{{ .Site.Params.social.facebook }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-2xl text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] dark:hover:text-[#6b63ff] transition-colors"
+            aria-label="Visit my Facebook page (opens in new tab)"
+          >
+            {{ partial "svgs/facebook.html" (dict "aria-hidden" "true") }}
+          </a>
+        </div>
+        <div role="listitem">
+          <a
+            href="{{ .Site.Params.social.twitter }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-2xl text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] dark:hover:text-[#6b63ff] transition-colors"
+            aria-label="Visit my Twitter profile (opens in new tab)"
+          >
+            {{ partial "svgs/twitter.html" (dict "aria-hidden" "true") }}
+          </a>
+        </div>
+        <div role="listitem">
+          <a
+            href="{{ .Site.Params.social.github }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-2xl text-gray-700 dark:text-gray-300 hover:text-[#6b63ff] dark:hover:text-[#6b63ff] transition-colors"
+            aria-label="Visit my GitHub profile (opens in new tab)"
+          >
+            {{ partial "svgs/github.html" (dict "aria-hidden" "true") }}
+          </a>
+        </div>
       </div>
 
       <div class="grid md:grid-cols-2 gap-12 items-center">
