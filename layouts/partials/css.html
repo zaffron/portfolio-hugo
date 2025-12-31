@@ -21,8 +21,9 @@
           crossorigin="anonymous"
         />
       {{ end }}
-      {{/* Also generate non-fingerprinted version for CMS admin preview */}}
+      {{/* Generate non-fingerprinted version for CMS admin preview */}}
       {{ $nonFingerprinted := . | resources.Copy "css/main.css" }}
+      {{ $nonFingerprinted.Publish }}
     {{ end }}
   {{ end }}
 {{ end }}
