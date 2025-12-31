@@ -62,12 +62,13 @@
         </div>
       </div>
 
-      <!-- Hidden form for Netlify detection (no reCAPTCHA) -->
-      <form name="contact" method="POST" data-netlify="true" hidden>
+      <!-- Hidden form for Netlify detection -->
+      <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" hidden>
         <input type="hidden" name="form-name" value="contact" />
         <input type="text" name="name" />
         <input type="email" name="email" />
         <textarea name="message"></textarea>
+        <div data-netlify-recaptcha="true"></div>
       </form>
 
       <!-- Visible contact form (lazy-loaded) -->
@@ -81,7 +82,8 @@
         <form
           name="contact"
           method="POST"
-          action="/contact-success"
+          data-netlify="true"
+          data-netlify-recaptcha="true"
           class="space-y-6 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg dark:shadow-gray-900/50"
         >
         <input type="hidden" name="form-name" value="contact" />
@@ -134,8 +136,8 @@
           ></textarea>
         </div>
 
-        <!-- Honeypot field for spam protection -->
-        <input type="text" name="bot-field" style="display: none;" />
+        <!-- reCAPTCHA (loads with form) -->
+        <div data-netlify-recaptcha="true"></div>
 
         <button
           type="submit"
@@ -165,6 +167,16 @@
         const formContent = template.content.cloneNode(true);
         container.innerHTML = '';
         container.appendChild(formContent);
+
+        // Load reCAPTCHA script dynamically
+        if (!document.querySelector('script[src*="recaptcha"]')) {
+          const script = document.createElement('script');
+          script.src = 'https://www.google.com/recaptcha/api.js';
+          script.async = true;
+          script.defer = true;
+          document.body.appendChild(script);
+        }
+
         observer.disconnect();
       }
     });
