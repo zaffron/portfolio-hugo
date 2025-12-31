@@ -23,9 +23,11 @@
     {{ partial "schema.html" . }}
 
 
-    <!-- Preload and load Google Fonts with optimized strategy -->
+    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.google.com" />
+    <link rel="dns-prefetch" href="https://www.gstatic.com" />
     <link
       rel="preload"
       as="style"
@@ -47,6 +49,14 @@
     <!-- CSS -->
     {{ partial "css.html" . }}
 
+    <!-- Preload LCP image for homepage -->
+    {{ if .IsHome }}
+      {{- $image := resources.Get "images/me.png" -}}
+      {{- if $image -}}
+        {{- $optimized := $image.Resize "640x webp q70" -}}
+        <link rel="preload" as="image" href="{{ $optimized.RelPermalink }}" type="image/webp" fetchpriority="high" />
+      {{- end -}}
+    {{ end }}
 
     <!-- Dark mode init script (prevents flash) -->
     {{ partial "dark-mode-init.html" . }}

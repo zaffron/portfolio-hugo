@@ -2,7 +2,7 @@
 {{ if $darkModeJS }}
   {{ if hugo.IsDevelopment }}
     {{/* Development: Use unminified JS for easier debugging */}}
-    <script src="{{ $darkModeJS.RelPermalink }}"></script>
+    <script src="{{ $darkModeJS.RelPermalink }}" defer></script>
   {{ else }}
     {{/* Production: Minify and fingerprint for cache busting */}}
     {{ $minified := $darkModeJS | minify }}
@@ -11,6 +11,7 @@
       src="{{ $hashed.RelPermalink }}"
       integrity="{{ $hashed.Data.Integrity }}"
       crossorigin="anonymous"
+      defer
     ></script>
   {{ end }}
 {{ end }}

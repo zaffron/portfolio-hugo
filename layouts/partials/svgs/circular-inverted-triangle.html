@@ -1,6 +1,6 @@
 {{- $image := resources.Get "images/me.png" -}}
 {{- if $image -}}
-  {{- $optimized := $image.Resize "640x webp q85" -}}
+  {{- $optimized := $image.Resize "640x webp q70" -}}
   <svg
     class="w-[280px] md:w-[320px]"
     viewBox="0 0 200 187"
