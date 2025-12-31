@@ -62,14 +62,28 @@
         </div>
       </div>
 
-      <!-- Contact Form -->
-      <form
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        data-netlify-recaptcha="true"
-        class="space-y-6 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg dark:shadow-gray-900/50"
-      >
+      <!-- Hidden form for Netlify detection (no reCAPTCHA) -->
+      <form name="contact" method="POST" data-netlify="true" hidden>
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
+      </form>
+
+      <!-- Visible contact form (lazy-loaded) -->
+      <div id="contact-form-container">
+        <div class="space-y-6 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg dark:shadow-gray-900/50 min-h-[400px] flex items-center justify-center">
+          <p class="text-gray-500 dark:text-gray-400">Loading contact form...</p>
+        </div>
+      </div>
+
+      <template id="contact-form-template">
+        <form
+          name="contact"
+          method="POST"
+          action="/contact-success"
+          class="space-y-6 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg dark:shadow-gray-900/50"
+        >
         <input type="hidden" name="form-name" value="contact" />
 
         <div>
@@ -120,7 +134,8 @@
           ></textarea>
         </div>
 
-        <div data-netlify-recaptcha="true"></div>
+        <!-- Honeypot field for spam protection -->
+        <input type="text" name="bot-field" style="display: none;" />
 
         <button
           type="submit"
@@ -130,6 +145,33 @@
           {{ partial "svgs/paper-plane.html" . }}
         </button>
       </form>
+      </template>
     </div>
   </div>
 </section>
+
+<script>
+// Lazy load contact form to defer reCAPTCHA
+(function() {
+  const container = document.getElementById('contact-form-container');
+  const template = document.getElementById('contact-form-template');
+
+  if (!container || !template) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Load the form
+        const formContent = template.content.cloneNode(true);
+        container.innerHTML = '';
+        container.appendChild(formContent);
+        observer.disconnect();
+      }
+    });
+  }, {
+    rootMargin: '200px' // Load 200px before it comes into view
+  });
+
+  observer.observe(container);
+})();
+</script>
