@@ -9,12 +9,13 @@
     ]
   },
   {
-    "title": "Backend Developer",
+    "title": "Backend Developer & DevOps",
     "items": [
       "REST API development with Nestjs/ExpressJS",
-      "GraphQL API development",
+      "GraphQL/REST API development",
       "PHP/Node/Python supported backend development",
-      "Automating deployment pipelines (CI/CD)"
+      "Automating deployment pipelines (CI/CD)",
+      "Managing and monitoring server resources"
     ]
   },
   {

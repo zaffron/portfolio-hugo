@@ -11,6 +11,7 @@
   <div class="container mx-auto px-6">
     <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
       {{ range $.Site.Data.skills }}
+        {{ $total := .total | default 0 | int }}
         <div
           class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg dark:shadow-gray-900/50 hover:shadow-xl dark:hover:shadow-gray-900/70 transition-shadow"
         >
@@ -45,13 +46,14 @@
                 {{ .title }}
               </h3>
               <p class="text-sm text-gray-600 dark:text-gray-400">
-                {{ .subtitle }}
+                More than {{ $total }} years
               </p>
             </div>
           </div>
 
           <div class="space-y-4">
             {{ range .skills }}
+              {{ $years := .years | default 1 | int }}
               <div>
                 <div class="flex justify-between mb-2">
                   <span
@@ -59,8 +61,8 @@
                     >{{ .name }}</span
                   >
                   <span class="text-sm text-gray-500"
-                    >{{ .years }}
-                    {{ if eq .years 1 }}year{{ else }}years{{ end }}</span
+                    >{{ $years }}
+                    {{ if eq $years 1 }}year{{ else }}years{{ end }}</span
                   >
                 </div>
                 <div
@@ -68,7 +70,7 @@
                 >
                   <div
                     class="bg-[#6b63ff] h-2 rounded-full transition-all duration-500"
-                    style="width: {{ mul .years 20 }}%"
+                    style="width: {{ mul (div (float $years) (float $total)) 100 }}%"
                   ></div>
                 </div>
               </div>

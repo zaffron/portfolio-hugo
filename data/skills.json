@@ -2,30 +2,30 @@
   {
     "id": 1,
     "title": "Frontend Developer",
-    "subtitle": "More than 6 years",
+    "total": 6,
     "skills": [
       {
         "name": "HTML / CSS / SCSS / LESS",
-        "years": 4
+        "years": 6
       },
       {
         "name": "JS / React / VueJS",
-        "years": 4
+        "years": 6
       },
       {
-        "name": "Gatsby / NextJS / Netlify",
-        "years": 2
+        "name": "Gatsby / NextJS / Netlify / Hugo",
+        "years": 3
       }
     ]
   },
   {
     "id": 2,
     "title": "ML Engineer",
-    "subtitle": "Around 1 year",
+    "total": 2,
     "skills": [
       {
         "name": "Auto categorization",
-        "years": 1
+        "years": 2
       },
       {
         "name": "Re-ranking",
@@ -40,7 +40,7 @@
   {
     "id": 3,
     "title": "Backend Developer",
-    "subtitle": "More than 5 years",
+    "total": 6,
     "skills": [
       {
         "name": "PHP / Laravel / MySQL",
@@ -71,19 +71,19 @@
   {
     "id": 4,
     "title": "DevOps Engineer",
-    "subtitle": "More than 3 years",
+    "total": 6,
     "skills": [
       {
         "name": "CI/CD",
-        "years": 3
-      },
-      {
-        "name": "Docker",
         "years": 4
       },
       {
+        "name": "Docker",
+        "years": 6
+      },
+      {
         "name": "Ansible/Terraform",
-        "years": 1
+        "years": 2
       }
     ]
   }
